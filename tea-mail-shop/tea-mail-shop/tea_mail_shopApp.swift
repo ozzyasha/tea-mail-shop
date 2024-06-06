@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct tea_mail_shopApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     var body: some Scene {
         WindowGroup {
-            ViewCoordinator()
+            NavigationView {
+                ViewCoordinator()
+            }
         }
     }
 }

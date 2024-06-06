@@ -15,7 +15,7 @@ struct BackgroundView: View {
         ZStack {
             Color.additional.ignoresSafeArea()
             LazyVGrid(columns: [GridItem(), GridItem(), GridItem(), GridItem(), GridItem(), GridItem(), GridItem()]) {
-                ForEach(0..<84) { _ in
+                ForEach(0..<60) { _ in
                     Image("leaf")
                         .renderingMode(.template)
                         .resizable()
@@ -26,6 +26,7 @@ struct BackgroundView: View {
                 }
             }
         }
+        
     }
 }
 
