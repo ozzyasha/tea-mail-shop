@@ -12,7 +12,7 @@ struct ViewCoordinator: View {
     
     var body: some View {
         if isActive {
-            ContentView()
+            SignInView()
         } else {
             SplashView(isActive: $isActive)
         }

@@ -8,21 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		7A01C53E2C10802E00642DD7 /* tea_mail_shopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01C53D2C10802E00642DD7 /* tea_mail_shopApp.swift */; };
-		7A01C5402C10802E00642DD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01C53F2C10802E00642DD7 /* ContentView.swift */; };
 		7A01C5422C10803000642DD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A01C5412C10803000642DD7 /* Assets.xcassets */; };
 		7A01C5452C10803000642DD7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A01C5442C10803000642DD7 /* Preview Assets.xcassets */; };
 		7A01C54C2C10820000642DD7 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01C54B2C10820000642DD7 /* SplashView.swift */; };
 		7A01C54E2C10860400642DD7 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01C54D2C10860400642DD7 /* ViewCoordinator.swift */; };
+		7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F44E22C11C116008F4B53 /* SignInView.swift */; };
+		7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F44E42C11F666008F4B53 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A01C53A2C10802E00642DD7 /* tea-mail-shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tea-mail-shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A01C53D2C10802E00642DD7 /* tea_mail_shopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tea_mail_shopApp.swift; sourceTree = "<group>"; };
-		7A01C53F2C10802E00642DD7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A01C5412C10803000642DD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A01C5442C10803000642DD7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A01C54B2C10820000642DD7 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		7A01C54D2C10860400642DD7 /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
+		7A1F44E22C11C116008F4B53 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		7A1F44E42C11F666008F4B53 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				7A01C53D2C10802E00642DD7 /* tea_mail_shopApp.swift */,
-				7A01C53F2C10802E00642DD7 /* ContentView.swift */,
-				7A01C54B2C10820000642DD7 /* SplashView.swift */,
+				7A1F44E12C11BF1F008F4B53 /* Views */,
 				7A01C54D2C10860400642DD7 /* ViewCoordinator.swift */,
 				7A01C5412C10803000642DD7 /* Assets.xcassets */,
 				7A01C5432C10803000642DD7 /* Preview Content */,
@@ -71,6 +72,16 @@
 				7A01C5442C10803000642DD7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7A1F44E12C11BF1F008F4B53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A01C54B2C10820000642DD7 /* SplashView.swift */,
+				7A1F44E22C11C116008F4B53 /* SignInView.swift */,
+				7A1F44E42C11F666008F4B53 /* BackgroundView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A01C5402C10802E00642DD7 /* ContentView.swift in Sources */,
+				7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */,
 				7A01C53E2C10802E00642DD7 /* tea_mail_shopApp.swift in Sources */,
 				7A01C54C2C10820000642DD7 /* SplashView.swift in Sources */,
 				7A01C54E2C10860400642DD7 /* ViewCoordinator.swift in Sources */,
+				7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +305,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.tea-mail-shop";
+				PRODUCT_BUNDLE_IDENTIFIER = "by.tea-mail.tea-mail-shop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -322,7 +334,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.tea-mail-shop";
+				PRODUCT_BUNDLE_IDENTIFIER = "by.tea-mail.tea-mail-shop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
