@@ -1,5 +1,5 @@
 //
-//  SignInView.swift
+//  SignUpView.swift
 //  tea-mail-shop
 //
 //  Created by Наталья Мазур on 6.06.24.
@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct SignInView: View {
+struct SignUpView: View {
     
+    @State
+    private var username: String = ""
     @State
     private var email: String = ""
     @State
@@ -17,6 +19,8 @@ struct SignInView: View {
     private var errorText: String = ""
     @State
     private var showDetails = false
+    @State
+    private var isUsernameTextFieldValid = true
     @State
     private var isEmailTextFieldValid = true
     @State
@@ -36,11 +40,18 @@ struct SignInView: View {
                     .clipShape(Circle())
                     .padding(EdgeInsets(top: 50, leading: 0, bottom: 20, trailing: 0))
                 VStack {
-                    Text("Sign In")
+                    Text("Sign Up")
                         .font(.largeTitle)
                         .bold()
                         .foregroundStyle(Color.accentColor)
                         .padding(.bottom)
+                    TextField("username", text: $username)
+                        .overlay(RoundedRectangle(cornerRadius: 5)
+                            .stroke(isUsernameTextFieldValid ? Color.clear : Color.accentColor, lineWidth: 1))
+                        .textFieldStyle(.roundedBorder)
+                        .frame(maxWidth: 300)
+                        .padding(.bottom)
+                        .environment(\.colorScheme, .light)
                     TextField("e-mail", text: $email)
                         .overlay(RoundedRectangle(cornerRadius: 5)
                             .stroke(isEmailTextFieldValid ? Color.clear : Color.accentColor, lineWidth: 1))
@@ -85,8 +96,7 @@ struct SignInView: View {
                         }
                         
                         self.errorText = ""
-                        // перенести во ViewModel
-                        AuthService.shared.signInWithEmail(email: email, password: password) { errorText in
+                        AuthService.shared.signUpWithEmail(email: email, username: username, password: password) { errorText in
                             if errorText == "No errors" {
                                 return
                             } else {
@@ -94,7 +104,7 @@ struct SignInView: View {
                             }
                         }
                     } label: {
-                        Text("Sign In")
+                        Text("Sign Up")
                             .foregroundStyle(Color.white)
                             .frame(maxWidth: 300, maxHeight: 50)
                             .background(Color.accentColor)
@@ -103,26 +113,14 @@ struct SignInView: View {
                     }.navigationDestination(isPresented: $showDetails) {
                         // MainView()
                     }
-                    Text("or sign in with")
-                        .font(.system(size: 12))
-                        .foregroundStyle(Color.gray)
-                    Button {
-                        // google sign in
-                    } label: {
-                        Image("googleIcon")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxWidth: 30, maxHeight: 30)
-                    }
-                    .padding(.vertical)
                     HStack {
-                        Text("Don't have an account?")
+                        Text("Already have an account?")
                             .font(.system(size: 12))
                             .foregroundStyle(Color.black)
                         Button {
-                            // navigation to Sign Up
+                            // navigation to Sign In
                         } label: {
-                            Text("Sign Up")
+                            Text("Sign In")
                                 .font(.system(size: 12))
                                 .foregroundStyle(Color.accentColor)
                         }
@@ -138,5 +136,5 @@ struct SignInView: View {
 }
 
 #Preview {
-    SignInView()
+    SignUpView()
 }
