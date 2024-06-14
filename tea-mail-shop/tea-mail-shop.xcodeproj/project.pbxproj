@@ -14,7 +14,6 @@
 		7A01C54E2C10860400642DD7 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01C54D2C10860400642DD7 /* ViewCoordinator.swift */; };
 		7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F44E22C11C116008F4B53 /* SignInView.swift */; };
 		7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F44E42C11F666008F4B53 /* BackgroundView.swift */; };
-		7A1F44E72C1237B4008F4B53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A1F44E62C1237B4008F4B53 /* GoogleService-Info.plist */; };
 		7A1F44EA2C123EFA008F4B53 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F44E92C123EFA008F4B53 /* FirebaseAnalytics */; };
 		7A1F44EC2C123EFA008F4B53 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F44EB2C123EFA008F4B53 /* FirebaseAnalyticsOnDeviceConversion */; };
 		7A1F44EE2C123EFA008F4B53 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F44ED2C123EFA008F4B53 /* FirebaseAnalyticsSwift */; };
@@ -44,10 +43,20 @@
 		7A1F451E2C123EFA008F4B53 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F451D2C123EFA008F4B53 /* FirebaseStorageCombine-Community */; };
 		7A1F45202C123EFA008F4B53 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F451F2C123EFA008F4B53 /* FirebaseVertexAI-Preview */; };
 		7A1F45252C12463D008F4B53 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F45242C12463D008F4B53 /* FirestoreService.swift */; };
-		7A1F45272C14735C008F4B53 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F45262C14735C008F4B53 /* AuthService.swift */; };
+		7A1F45272C14735C008F4B53 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F45262C14735C008F4B53 /* AuthViewModel.swift */; };
 		7A1F452A2C147466008F4B53 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F45292C147466008F4B53 /* GoogleSignIn */; };
 		7A1F452C2C147466008F4B53 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F452B2C147466008F4B53 /* GoogleSignInSwift */; };
 		7A1F452E2C1478B1008F4B53 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F452D2C1478B1008F4B53 /* SignUpView.swift */; };
+		7A6796BA2C15D0210011ED2D /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796B92C15D0210011ED2D /* UsersViewModel.swift */; };
+		7A6796BD2C15D8350011ED2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796BC2C15D8350011ED2D /* User.swift */; };
+		7A6796BF2C161A690011ED2D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796BE2C161A690011ED2D /* MainView.swift */; };
+		7A6796C12C161BEE0011ED2D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C02C161BEE0011ED2D /* AccountView.swift */; };
+		7A6796C32C161D840011ED2D /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C22C161D840011ED2D /* FavoritesView.swift */; };
+		7A6796C52C161DD60011ED2D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C42C161DD60011ED2D /* SearchView.swift */; };
+		7A6796C72C161DE00011ED2D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C62C161DE00011ED2D /* HomeView.swift */; };
+		7A6796CD2C170E010011ED2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A6796CC2C170E010011ED2D /* GoogleService-Info.plist */; };
+		7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */; };
+		7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B242C1C865700A74D28 /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,10 +68,20 @@
 		7A01C54D2C10860400642DD7 /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
 		7A1F44E22C11C116008F4B53 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		7A1F44E42C11F666008F4B53 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		7A1F44E62C1237B4008F4B53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A1F45242C12463D008F4B53 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
-		7A1F45262C14735C008F4B53 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		7A1F45262C14735C008F4B53 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthViewModel.swift; path = ../Services/AuthViewModel.swift; sourceTree = "<group>"; };
 		7A1F452D2C1478B1008F4B53 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		7A6796B92C15D0210011ED2D /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		7A6796BC2C15D8350011ED2D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7A6796BE2C161A690011ED2D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7A6796C02C161BEE0011ED2D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		7A6796C22C161D840011ED2D /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		7A6796C42C161DD60011ED2D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		7A6796C62C161DE00011ED2D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7A6796CB2C170CA80011ED2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7A6796CC2C170E010011ED2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		7AE01B242C1C865700A74D28 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,12 +144,15 @@
 		7A01C53C2C10802E00642DD7 /* tea-mail-shop */ = {
 			isa = PBXGroup;
 			children = (
+				7A6796CB2C170CA80011ED2D /* Info.plist */,
 				7A01C53D2C10802E00642DD7 /* tea_mail_shopApp.swift */,
 				7A1F44E12C11BF1F008F4B53 /* Views */,
-				7A01C54D2C10860400642DD7 /* ViewCoordinator.swift */,
+				7AE01B212C1C4D4300A74D28 /* Coordinators */,
+				7A6796B82C15CFC60011ED2D /* ViewModels */,
+				7A6796BB2C15D8170011ED2D /* Models */,
 				7A1F45232C1245F3008F4B53 /* Services */,
-				7A1F44E62C1237B4008F4B53 /* GoogleService-Info.plist */,
 				7A01C5412C10803000642DD7 /* Assets.xcassets */,
+				7A6796CC2C170E010011ED2D /* GoogleService-Info.plist */,
 				7A01C5432C10803000642DD7 /* Preview Content */,
 			);
 			path = "tea-mail-shop";
@@ -150,6 +172,7 @@
 				7A01C54B2C10820000642DD7 /* SplashView.swift */,
 				7A1F44E22C11C116008F4B53 /* SignInView.swift */,
 				7A1F452D2C1478B1008F4B53 /* SignUpView.swift */,
+				7A6796C82C161E9C0011ED2D /* MainView */,
 				7A1F44E42C11F666008F4B53 /* BackgroundView.swift */,
 			);
 			path = Views;
@@ -159,9 +182,55 @@
 			isa = PBXGroup;
 			children = (
 				7A1F45242C12463D008F4B53 /* FirestoreService.swift */,
-				7A1F45262C14735C008F4B53 /* AuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7A6796B82C15CFC60011ED2D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7A6796B92C15D0210011ED2D /* UsersViewModel.swift */,
+				7A1F45262C14735C008F4B53 /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7A6796BB2C15D8170011ED2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A6796BC2C15D8350011ED2D /* User.swift */,
+				7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A6796C82C161E9C0011ED2D /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				7A6796BE2C161A690011ED2D /* MainView.swift */,
+				7A6796C62C161DE00011ED2D /* HomeView.swift */,
+				7A6796C42C161DD60011ED2D /* SearchView.swift */,
+				7A6796C22C161D840011ED2D /* FavoritesView.swift */,
+				7A6796C02C161BEE0011ED2D /* AccountView.swift */,
+				7AE01B262C1C866400A74D28 /* AccountViewSubviews */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		7AE01B212C1C4D4300A74D28 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				7A01C54D2C10860400642DD7 /* ViewCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		7AE01B262C1C866400A74D28 /* AccountViewSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				7AE01B242C1C865700A74D28 /* AvatarView.swift */,
+			);
+			path = AccountViewSubviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +329,7 @@
 			files = (
 				7A01C5452C10803000642DD7 /* Preview Assets.xcassets in Resources */,
 				7A01C5422C10803000642DD7 /* Assets.xcassets in Resources */,
-				7A1F44E72C1237B4008F4B53 /* GoogleService-Info.plist in Resources */,
+				7A6796CD2C170E010011ED2D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +340,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6796C12C161BEE0011ED2D /* AccountView.swift in Sources */,
+				7A6796BF2C161A690011ED2D /* MainView.swift in Sources */,
+				7A6796C32C161D840011ED2D /* FavoritesView.swift in Sources */,
+				7A6796C72C161DE00011ED2D /* HomeView.swift in Sources */,
 				7A1F45252C12463D008F4B53 /* FirestoreService.swift in Sources */,
 				7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */,
 				7A01C53E2C10802E00642DD7 /* tea_mail_shopApp.swift in Sources */,
@@ -278,7 +351,12 @@
 				7A01C54E2C10860400642DD7 /* ViewCoordinator.swift in Sources */,
 				7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */,
 				7A1F452E2C1478B1008F4B53 /* SignUpView.swift in Sources */,
-				7A1F45272C14735C008F4B53 /* AuthService.swift in Sources */,
+				7A6796C52C161DD60011ED2D /* SearchView.swift in Sources */,
+				7A6796BA2C15D0210011ED2D /* UsersViewModel.swift in Sources */,
+				7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */,
+				7A6796BD2C15D8350011ED2D /* User.swift in Sources */,
+				7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */,
+				7A1F45272C14735C008F4B53 /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +493,7 @@
 				DEVELOPMENT_TEAM = BLSN95DCGL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "tea-mail-shop/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -444,6 +523,7 @@
 				DEVELOPMENT_TEAM = BLSN95DCGL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "tea-mail-shop/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
