@@ -26,6 +26,7 @@ struct BackgroundView: View {
                 }
             }
         }
+        .background(.accent)
         
     }
 }

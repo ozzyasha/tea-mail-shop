@@ -15,28 +15,26 @@ struct MainView: View {
     }
     
     var body: some View {
-        
-        TabView {
-            HomeView()
-                .tabItem {
-                    Label("Home", systemImage: "house.fill")
-                }
-            SearchView()
-                .tabItem {
-                    Label("Search", systemImage: "magnifyingglass.circle.fill")
-                }
-            FavoritesView()
-                .tabItem {
-                    Label("Favorites", systemImage: "heart.fill")
-                }
-            AccountView()
-                .badge("+")
-                .tabItem {
-                    Label("Account", systemImage: "person.crop.circle.fill")
-                }
-        }
-        .tint(.white)
-        
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Label("Home", systemImage: "house.fill")
+                    }
+                SearchView()
+                    .tabItem {
+                        Label("Search", systemImage: "magnifyingglass.circle.fill")
+                    }
+                FavoritesView()
+                    .tabItem {
+                        Label("Favorites", systemImage: "heart.fill")
+                    }
+                AccountView()
+                    .badge("+")
+                    .tabItem {
+                        Label("Account", systemImage: "person.crop.circle.fill")
+                    }
+            }
+            .tint(.white)
     }
 }
 

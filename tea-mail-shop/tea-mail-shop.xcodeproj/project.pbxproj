@@ -56,6 +56,22 @@
 		7A6796CD2C170E010011ED2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A6796CC2C170E010011ED2D /* GoogleService-Info.plist */; };
 		7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */; };
 		7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B242C1C865700A74D28 /* AvatarView.swift */; };
+		7AE01B2A2C1DF83400A74D28 /* TeaCatalogueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */; };
+		7AE01B2E2C1DF87500A74D28 /* CachedImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B2B2C1DF87400A74D28 /* CachedImageInfo.swift */; };
+		7AE01B2F2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B2C2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift */; };
+		7AE01B302C1DF87500A74D28 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B2D2C1DF87500A74D28 /* APIError.swift */; };
+		7AE01B372C1DFA5200A74D28 /* TeaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B362C1DFA5200A74D28 /* TeaViewModel.swift */; };
+		7AE01B3B2C1DFA9F00A74D28 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B382C1DFA9E00A74D28 /* APIService.swift */; };
+		7AE01B3C2C1DFA9F00A74D28 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B392C1DFA9E00A74D28 /* RealmService.swift */; };
+		7AE01B3D2C1DFA9F00A74D28 /* URL+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B3A2C1DFA9F00A74D28 /* URL+Cache.swift */; };
+		7AE01B3F2C1DFB3000A74D28 /* CachedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B3E2C1DFB3000A74D28 /* CachedImageViewModel.swift */; };
+		7AE01B422C1DFC1000A74D28 /* CachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B412C1DFC1000A74D28 /* CachedImage.swift */; };
+		7AE01B452C1DFC4100A74D28 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B432C1DFC4000A74D28 /* GridView.swift */; };
+		7AE01B462C1DFC4100A74D28 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B442C1DFC4100A74D28 /* ListView.swift */; };
+		7AE01B4B2C1DFD0F00A74D28 /* TeaViewGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B482C1DFD0F00A74D28 /* TeaViewGridCell.swift */; };
+		7AE01B4C2C1DFD0F00A74D28 /* TeaViewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B492C1DFD0F00A74D28 /* TeaViewImageView.swift */; };
+		7AE01B4D2C1DFD0F00A74D28 /* TeaViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B4A2C1DFD0F00A74D28 /* TeaViewListCell.swift */; };
+		7AE01B502C1DFF1700A74D28 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7AE01B4F2C1DFF1700A74D28 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +96,21 @@
 		7A6796CC2C170E010011ED2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		7AE01B242C1C865700A74D28 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaCatalogueModel.swift; sourceTree = "<group>"; };
+		7AE01B2B2C1DF87400A74D28 /* CachedImageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedImageInfo.swift; sourceTree = "<group>"; };
+		7AE01B2C2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaCatalogueRealmModel.swift; sourceTree = "<group>"; };
+		7AE01B2D2C1DF87500A74D28 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		7AE01B362C1DFA5200A74D28 /* TeaViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaViewModel.swift; sourceTree = "<group>"; };
+		7AE01B382C1DFA9E00A74D28 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		7AE01B392C1DFA9E00A74D28 /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		7AE01B3A2C1DFA9F00A74D28 /* URL+Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Cache.swift"; sourceTree = "<group>"; };
+		7AE01B3E2C1DFB3000A74D28 /* CachedImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedImageViewModel.swift; sourceTree = "<group>"; };
+		7AE01B412C1DFC1000A74D28 /* CachedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedImage.swift; sourceTree = "<group>"; };
+		7AE01B432C1DFC4000A74D28 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		7AE01B442C1DFC4100A74D28 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		7AE01B482C1DFD0F00A74D28 /* TeaViewGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaViewGridCell.swift; sourceTree = "<group>"; };
+		7AE01B492C1DFD0F00A74D28 /* TeaViewImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaViewImageView.swift; sourceTree = "<group>"; };
+		7AE01B4A2C1DFD0F00A74D28 /* TeaViewListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaViewListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +147,7 @@
 				7A1F45202C123EFA008F4B53 /* FirebaseVertexAI-Preview in Frameworks */,
 				7A1F45042C123EFA008F4B53 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				7A1F45142C123EFA008F4B53 /* FirebaseMessaging in Frameworks */,
+				7AE01B502C1DFF1700A74D28 /* RealmSwift in Frameworks */,
 				7A1F45102C123EFA008F4B53 /* FirebaseInstallations in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,10 +176,10 @@
 			children = (
 				7A6796CB2C170CA80011ED2D /* Info.plist */,
 				7A01C53D2C10802E00642DD7 /* tea_mail_shopApp.swift */,
-				7A1F44E12C11BF1F008F4B53 /* Views */,
-				7AE01B212C1C4D4300A74D28 /* Coordinators */,
-				7A6796B82C15CFC60011ED2D /* ViewModels */,
 				7A6796BB2C15D8170011ED2D /* Models */,
+				7A1F44E12C11BF1F008F4B53 /* Views */,
+				7A6796B82C15CFC60011ED2D /* ViewModels */,
+				7AE01B212C1C4D4300A74D28 /* Coordinators */,
 				7A1F45232C1245F3008F4B53 /* Services */,
 				7A01C5412C10803000642DD7 /* Assets.xcassets */,
 				7A6796CC2C170E010011ED2D /* GoogleService-Info.plist */,
@@ -180,6 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				7A1F45242C12463D008F4B53 /* FirestoreService.swift */,
+				7AE01B382C1DFA9E00A74D28 /* APIService.swift */,
+				7AE01B392C1DFA9E00A74D28 /* RealmService.swift */,
+				7AE01B3A2C1DFA9F00A74D28 /* URL+Cache.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -188,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				7A1F45262C14735C008F4B53 /* AuthViewModel.swift */,
+				7AE01B362C1DFA5200A74D28 /* TeaViewModel.swift */,
+				7AE01B3E2C1DFB3000A74D28 /* CachedImageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -195,8 +232,12 @@
 		7A6796BB2C15D8170011ED2D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7A6796BC2C15D8350011ED2D /* TeamailUser.swift */,
 				7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */,
+				7A6796BC2C15D8350011ED2D /* TeamailUser.swift */,
+				7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */,
+				7AE01B2C2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift */,
+				7AE01B2B2C1DF87400A74D28 /* CachedImageInfo.swift */,
+				7AE01B2D2C1DF87500A74D28 /* APIError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +248,7 @@
 				7A6796BE2C161A690011ED2D /* MainView.swift */,
 				7A6796C62C161DE00011ED2D /* HomeView.swift */,
 				7A6796C42C161DD60011ED2D /* SearchView.swift */,
+				7AE01B402C1DFBAF00A74D28 /* SearchViewSubviews */,
 				7A6796C22C161D840011ED2D /* FavoritesView.swift */,
 				7A6796C02C161BEE0011ED2D /* AccountView.swift */,
 				7AE01B262C1C866400A74D28 /* AccountViewSubviews */,
@@ -228,6 +270,27 @@
 				7AE01B242C1C865700A74D28 /* AvatarView.swift */,
 			);
 			path = AccountViewSubviews;
+			sourceTree = "<group>";
+		};
+		7AE01B402C1DFBAF00A74D28 /* SearchViewSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				7AE01B412C1DFC1000A74D28 /* CachedImage.swift */,
+				7AE01B432C1DFC4000A74D28 /* GridView.swift */,
+				7AE01B442C1DFC4100A74D28 /* ListView.swift */,
+				7AE01B472C1DFD0F00A74D28 /* Cells */,
+			);
+			path = SearchViewSubviews;
+			sourceTree = "<group>";
+		};
+		7AE01B472C1DFD0F00A74D28 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7AE01B482C1DFD0F00A74D28 /* TeaViewGridCell.swift */,
+				7AE01B492C1DFD0F00A74D28 /* TeaViewImageView.swift */,
+				7AE01B4A2C1DFD0F00A74D28 /* TeaViewListCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +340,7 @@
 				7A1F451F2C123EFA008F4B53 /* FirebaseVertexAI-Preview */,
 				7A1F45292C147466008F4B53 /* GoogleSignIn */,
 				7A1F452B2C147466008F4B53 /* GoogleSignInSwift */,
+				7AE01B4F2C1DFF1700A74D28 /* RealmSwift */,
 			);
 			productName = "tea-mail-shop";
 			productReference = 7A01C53A2C10802E00642DD7 /* tea-mail-shop.app */;
@@ -309,6 +373,7 @@
 			packageReferences = (
 				7A1F44E82C123EFA008F4B53 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				7A1F45282C147466008F4B53 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				7AE01B4E2C1DFF1700A74D28 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 7A01C53B2C10802E00642DD7 /* Products */;
 			projectDirPath = "";
@@ -338,21 +403,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A6796C12C161BEE0011ED2D /* AccountView.swift in Sources */,
+				7AE01B2E2C1DF87500A74D28 /* CachedImageInfo.swift in Sources */,
 				7A6796BF2C161A690011ED2D /* MainView.swift in Sources */,
 				7A6796C32C161D840011ED2D /* FavoritesView.swift in Sources */,
+				7AE01B3B2C1DFA9F00A74D28 /* APIService.swift in Sources */,
+				7AE01B3C2C1DFA9F00A74D28 /* RealmService.swift in Sources */,
+				7AE01B372C1DFA5200A74D28 /* TeaViewModel.swift in Sources */,
+				7AE01B452C1DFC4100A74D28 /* GridView.swift in Sources */,
 				7A6796C72C161DE00011ED2D /* HomeView.swift in Sources */,
 				7A1F45252C12463D008F4B53 /* FirestoreService.swift in Sources */,
 				7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */,
+				7AE01B2A2C1DF83400A74D28 /* TeaCatalogueModel.swift in Sources */,
+				7AE01B2F2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift in Sources */,
+				7AE01B3D2C1DFA9F00A74D28 /* URL+Cache.swift in Sources */,
+				7AE01B3F2C1DFB3000A74D28 /* CachedImageViewModel.swift in Sources */,
 				7A01C53E2C10802E00642DD7 /* tea_mail_shopApp.swift in Sources */,
 				7A01C54C2C10820000642DD7 /* SplashView.swift in Sources */,
 				7A01C54E2C10860400642DD7 /* ViewCoordinator.swift in Sources */,
 				7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */,
+				7AE01B4B2C1DFD0F00A74D28 /* TeaViewGridCell.swift in Sources */,
+				7AE01B302C1DF87500A74D28 /* APIError.swift in Sources */,
 				7A1F452E2C1478B1008F4B53 /* SignUpView.swift in Sources */,
 				7A6796C52C161DD60011ED2D /* SearchView.swift in Sources */,
 				7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */,
 				7A6796BD2C15D8350011ED2D /* TeamailUser.swift in Sources */,
+				7AE01B462C1DFC4100A74D28 /* ListView.swift in Sources */,
+				7AE01B4C2C1DFD0F00A74D28 /* TeaViewImageView.swift in Sources */,
 				7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */,
 				7A1F45272C14735C008F4B53 /* AuthViewModel.swift in Sources */,
+				7AE01B4D2C1DFD0F00A74D28 /* TeaViewListCell.swift in Sources */,
+				7AE01B422C1DFC1000A74D28 /* CachedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +658,14 @@
 				minimumVersion = 7.1.0;
 			};
 		};
+		7AE01B4E2C1DFF1700A74D28 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -730,6 +818,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7A1F45282C147466008F4B53 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		7AE01B4F2C1DFF1700A74D28 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AE01B4E2C1DFF1700A74D28 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
