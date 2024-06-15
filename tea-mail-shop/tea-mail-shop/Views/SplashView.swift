@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SplashView: View {
-    @State private var scale = 0.7
     @Binding var isActive: Bool
     
     var body: some View {

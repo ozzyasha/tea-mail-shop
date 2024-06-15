@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    init() {
+        UITabBar.appearance().unselectedItemTintColor = UIColor.additional
+        UITabBar.appearance().backgroundColor = .accent
+    }
+    
     var body: some View {
         
         TabView {
@@ -16,7 +22,6 @@ struct MainView: View {
                     Label("Home", systemImage: "house.fill")
                 }
             SearchView()
-                .badge(2)
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass.circle.fill")
                 }
@@ -30,6 +35,8 @@ struct MainView: View {
                     Label("Account", systemImage: "person.crop.circle.fill")
                 }
         }
+        .tint(.white)
+        
     }
 }
 

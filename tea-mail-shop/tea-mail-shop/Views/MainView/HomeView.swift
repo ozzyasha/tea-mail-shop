@@ -18,7 +18,7 @@ struct HomeView: View {
                 Rectangle()
                     .fill(Color.clear)
                     .frame(height: 10)
-                    .background(.secondAdditional)
+                    .background(.accent)
             }
         }
     }

@@ -22,7 +22,7 @@ struct BackgroundView: View {
                         .scaledToFit()
                         .foregroundStyle(.secondAdditional)
                         .frame(width: 50, height: 50)
-                        Spacer()
+                    Spacer()
                 }
             }
         }

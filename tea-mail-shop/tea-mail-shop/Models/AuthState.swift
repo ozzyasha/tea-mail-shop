@@ -8,6 +8,6 @@
 import Foundation
 
 enum AuthState {
-  case authenticated
-  case unauthenticated
+    case authenticated
+    case unauthenticated
 }

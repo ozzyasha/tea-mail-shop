@@ -5,6 +5,7 @@
 //  Created by Наталья Мазур on 8.06.24.
 //
 
+import SwiftUI
 import Foundation
 import FirebaseCore
 import FirebaseAnalytics
@@ -16,6 +17,8 @@ class AuthViewModel: ObservableObject {
     
     @Published var authState: AuthState = .unauthenticated
     @Published var errorMessage: String?
+    @ObservedObject
+    var firestore = FirestoreService()
     
     init() {
         Auth.auth().addStateDidChangeListener { auth, user in
@@ -33,11 +36,11 @@ class AuthViewModel: ObservableObject {
                 self.errorMessage = "Sign Up error: \(error?.localizedDescription ?? "Undefined error")"
                 return
             }
-            FirestoreService.shared.writeFirestore(username: username)
+            self.firestore.writeFirestore(username: username)
             self.signInWithEmail(email: email, password: password)
             
         }
-        Analytics.logEvent("SignUpEvent", parameters: nil)
+        Analytics.logEvent("sign_up", parameters: nil)
     }
     
     func signInWithEmail(email: String, password: String) {
@@ -47,7 +50,7 @@ class AuthViewModel: ObservableObject {
                 return
             }
         }
-        Analytics.logEvent("SignInEvent", parameters: nil)
+        Analytics.logEvent("login", parameters: nil)
     }
     
     func signInWithGoogle() {
@@ -73,7 +76,7 @@ class AuthViewModel: ObservableObject {
             
             Auth.auth().signIn(with: credential) { result, error in
                 if result?.user != nil {
-                    FirestoreService.shared.writeFirestore(username: result?.user.displayName ?? "Anonymous")
+                    self.firestore.writeFirestore(username: result?.user.displayName ?? "Anonymous")
                 }
                 
                 guard error == nil else {
@@ -82,6 +85,7 @@ class AuthViewModel: ObservableObject {
                 }
             }
         }
+        Analytics.logEvent("sign_up_google", parameters: nil)
     }
     
     func getCurrentUser() -> User? {
@@ -101,6 +105,7 @@ class AuthViewModel: ObservableObject {
         } catch let signOutError as NSError {
             self.errorMessage = "Sign Out Error: \(signOutError.localizedDescription)"
         }
+        Analytics.logEvent("sign_out", parameters: nil)
     }
     
 }
