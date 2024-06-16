@@ -14,9 +14,7 @@ struct tea_mail_shopApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ViewCoordinator()
-            }
+            ViewCoordinator()
         }
     }
 }

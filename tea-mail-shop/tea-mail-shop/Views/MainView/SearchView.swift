@@ -15,64 +15,33 @@ struct SearchView: View {
     var isGrid = false
     
     var body: some View {
-//        ZStack(alignment: .center) {
-//            Color.green.ignoresSafeArea()
-//            VStack {
+        ZStack(alignment: .center) {
+            Color.additional.ignoresSafeArea()
+            VStack(spacing: 0) {
                 VStack {
-        
-                HStack {
-                    Spacer()
-                    Toggle(isOn: $isGrid) {
-                        Image(systemName: isGrid ? "rectangle.grid.1x2" : "rectangle.grid.2x2")
-                            .font(.system(size: 25))
-                            .foregroundStyle(.accent)
-                    }
-                    .toggleStyle(.button)
-                    .padding(.trailing)
-                    .frame(height: 30)
-                }
-//                .frame(height: 30)
-//                    NavigationStack {
-                        if isGrid {
-                            GridView(vm: vm)
-//                                .toolbar {
-//                                    Button(
-//                                        action: {
-//                                            isGrid.toggle()
-//                                        },
-//                                        label: {
-//                                            Image(systemName: "rectangle.grid.1x2")
-//                                            .font(.system(size: 25))
-//                                            .foregroundStyle(Color.secondAdditional)
-//                                        }
-//                                    )
-//                                }
-//                                .toolbarBackground(.additional, for: .navigationBar)
-                        } else {
-                            ListView(vm: vm)
-//                                .toolbar {
-//                                    Button(
-//                                        action: {
-//                                            isGrid.toggle()
-//                                        },
-//                                        label: {
-//                                            Image(systemName: "rectangle.grid.2x2")
-//                                            .font(.system(size: 25))
-//                                            .foregroundStyle(Color.secondAdditional)
-//                                        }
-//                                    )
-//                                }
-//                                .toolbarBackground(.additional, for: .navigationBar)
+                    HStack {
+                        Spacer()
+                        Toggle(isOn: $isGrid) {
+                            Image(systemName: isGrid ? "rectangle.grid.1x2" : "rectangle.grid.2x2")
+                                .font(.system(size: 25))
+                                .foregroundStyle(.accent)
                         }
-//                    }
-                    
-//                }
-//                .frame(maxHeight: .infinity)
-//                Rectangle()
-//                    .fill(Color.clear)
-//                    .frame(height: 10)
-//                    .background(.accent)
-//            }
+                        .toggleStyle(.button)
+                        .padding(.trailing)
+                        .frame(height: 30)
+                    }
+                    if isGrid {
+                        GridView(vm: vm)
+                    } else {
+                        ListView(vm: vm)
+                    }
+                }
+                .frame(maxHeight: .infinity)
+                Rectangle()
+                    .fill(Color.clear)
+                    .frame(height: 10)
+                    .background(.accent)
+            }
         }
     }
 }
