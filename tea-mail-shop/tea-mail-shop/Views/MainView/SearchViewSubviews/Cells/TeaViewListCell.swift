@@ -22,25 +22,37 @@ struct TeaViewListCell: View {
                 .padding(.trailing)
             
             VStack {
-                HStack {
+                HStack() {
                     Text(tea.name)
                         .font(.headline)
                         .foregroundStyle(Color.black)
+                    Spacer()
                 }
+                .padding(.top)
                 Spacer()
-            }
-            Spacer()
-            
-            VStack {
-                Spacer()
-                Button(action: {
-                    isLiked.toggle()
-                }) {
-                    Image(systemName: isLiked ? "heart.fill" : "heart")
-                        .foregroundColor(.accent)
-                        .font(.system(size: 30))
+                Divider()
+                HStack(alignment: .bottom) {
+                    VStack(alignment: .leading) {
+                        Text("\(tea.price)")
+                            .font(.system(size: 20, weight: .bold))
+                        Text("(\(tea.quantity))")
+                            .font(.system(size: 15))
+                            .italic()
+                    }
+                    Spacer()
+                    VStack(alignment: .trailing) {
+                        Button(action: {
+                            isLiked.toggle()
+                        }) {
+                            Image(systemName: isLiked ? "heart.fill" : "heart")
+                                .foregroundColor(.accent)
+                                .font(.system(size: 30))
+                        }
+                        .frame(width: 40, height: 40, alignment: .bottomTrailing)
+                    }
                 }
-                .frame(width: 40, height: 40, alignment: .bottomTrailing)
+                .padding(.bottom)
+                
             }
         }
         .padding()

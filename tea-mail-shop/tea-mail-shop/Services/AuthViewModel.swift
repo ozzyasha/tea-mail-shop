@@ -17,6 +17,7 @@ class AuthViewModel: ObservableObject {
     
     @Published var authState: AuthState = .unauthenticated
     @Published var errorMessage: String?
+    @Published var newUsername: String?
     @ObservedObject
     var firestore = FirestoreService()
     
@@ -90,6 +91,10 @@ class AuthViewModel: ObservableObject {
     
     func getCurrentUser() -> User? {
         return Auth.auth().currentUser
+    }
+    
+    func getCurrentUsername() -> String {
+        return firestore.teamailUser?.username ?? "Anonymous"
     }
     
     func getAvatar() -> URL {

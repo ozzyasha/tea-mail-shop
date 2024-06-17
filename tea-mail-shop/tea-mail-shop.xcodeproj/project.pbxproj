@@ -72,6 +72,7 @@
 		7AE01B4C2C1DFD0F00A74D28 /* TeaViewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B492C1DFD0F00A74D28 /* TeaViewImageView.swift */; };
 		7AE01B4D2C1DFD0F00A74D28 /* TeaViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B4A2C1DFD0F00A74D28 /* TeaViewListCell.swift */; };
 		7AE01B502C1DFF1700A74D28 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7AE01B4F2C1DFF1700A74D28 /* RealmSwift */; };
+		7AE7BEB52C207104000655FA /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE7BEB42C207104000655FA /* SearchFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		7AE01B482C1DFD0F00A74D28 /* TeaViewGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaViewGridCell.swift; sourceTree = "<group>"; };
 		7AE01B492C1DFD0F00A74D28 /* TeaViewImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaViewImageView.swift; sourceTree = "<group>"; };
 		7AE01B4A2C1DFD0F00A74D28 /* TeaViewListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaViewListCell.swift; sourceTree = "<group>"; };
+		7AE7BEB42C207104000655FA /* SearchFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 				7AE01B412C1DFC1000A74D28 /* CachedImage.swift */,
 				7AE01B432C1DFC4000A74D28 /* GridView.swift */,
 				7AE01B442C1DFC4100A74D28 /* ListView.swift */,
+				7AE7BEB42C207104000655FA /* SearchFieldView.swift */,
 				7AE01B472C1DFD0F00A74D28 /* Cells */,
 			);
 			path = SearchViewSubviews;
@@ -407,6 +410,7 @@
 				7A6796BF2C161A690011ED2D /* MainView.swift in Sources */,
 				7A6796C32C161D840011ED2D /* FavoritesView.swift in Sources */,
 				7AE01B3B2C1DFA9F00A74D28 /* APIService.swift in Sources */,
+				7AE7BEB52C207104000655FA /* SearchFieldView.swift in Sources */,
 				7AE01B3C2C1DFA9F00A74D28 /* RealmService.swift in Sources */,
 				7AE01B372C1DFA5200A74D28 /* TeaViewModel.swift in Sources */,
 				7AE01B452C1DFC4100A74D28 /* GridView.swift in Sources */,

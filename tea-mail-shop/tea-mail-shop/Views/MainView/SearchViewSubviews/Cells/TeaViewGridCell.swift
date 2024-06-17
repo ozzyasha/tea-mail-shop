@@ -23,13 +23,19 @@ struct TeaViewGridCell: View {
                 Text(tea.name)
                     .font(.headline)
                     .foregroundStyle(Color.black)
-                    .padding(.leading)
                 Spacer()
             }
             
             Spacer()
-            
-            HStack {
+            Divider()
+            HStack(alignment: .bottom) {
+                VStack(alignment: .leading) {
+                    Text("\(tea.price)")
+                        .font(.system(size: 20, weight: .bold))
+                    Text("(\(tea.quantity))")
+                        .font(.system(size: 15))
+                        .italic()
+                }
                 Spacer()
                 Button(action: {
                     isLiked.toggle()

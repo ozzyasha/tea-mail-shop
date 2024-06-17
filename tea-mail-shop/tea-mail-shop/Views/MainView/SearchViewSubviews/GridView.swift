@@ -12,6 +12,9 @@ struct GridView: View {
     var vm: TeaViewModel
     
     @State
+    var searchRequest: String = ""
+    
+    @State
     private var columns: [GridItem] = [
         GridItem(.flexible(minimum: 100, maximum: 500)),
         GridItem(.flexible(minimum: 100, maximum: 500)),
@@ -21,10 +24,9 @@ struct GridView: View {
         ScrollView {
             LazyVGrid(columns: columns,
                       alignment: .center,
-                      spacing: 16,
+                      spacing: 10,
                       pinnedViews: [.sectionHeaders, .sectionFooters]
             ) {
-                
                 ForEach(vm.teaCatalogueModel, id: \.id) { tea in
                     TeaViewGridCell(tea: tea)
                 }

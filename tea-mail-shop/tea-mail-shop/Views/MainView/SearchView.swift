@@ -20,6 +20,8 @@ struct SearchView: View {
             VStack(spacing: 0) {
                 VStack {
                     HStack {
+                        SearchFieldView()
+                            .padding(.leading)
                         Spacer()
                         Toggle(isOn: $isGrid) {
                             Image(systemName: isGrid ? "rectangle.grid.1x2" : "rectangle.grid.2x2")
@@ -28,7 +30,6 @@ struct SearchView: View {
                         }
                         .toggleStyle(.button)
                         .padding(.trailing)
-                        .frame(height: 30)
                     }
                     if isGrid {
                         GridView(vm: vm)

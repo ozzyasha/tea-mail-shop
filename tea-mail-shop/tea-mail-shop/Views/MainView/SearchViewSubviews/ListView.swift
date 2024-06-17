@@ -11,9 +11,19 @@ struct ListView: View {
     
     @ObservedObject
     var vm: TeaViewModel
+    @State
+    private var searchText = ""
+    
+    var searchResults: [TeaCatalogueModel] {
+        if searchText.isEmpty {
+            return vm.teaCatalogueModel.map { $0 }
+        } else {
+            return vm.teaCatalogueModel.filter { $0.name.contains(searchText) }
+        }
+    }
     
     var body: some View {
-        List(vm.teaCatalogueModel, id: \.id) { tea in
+        List(searchResults, id: \.id) { tea in
                 TeaViewListCell(tea: tea)
                 .listRowBackground(Color.clear)
                 .listRowSeparator(.hidden)
@@ -22,6 +32,7 @@ struct ListView: View {
         .listStyle(.plain)
         .background(.additional)
         .buttonStyle(.borderless)
+        .searchable(text: $searchText)
     }
         
 }
