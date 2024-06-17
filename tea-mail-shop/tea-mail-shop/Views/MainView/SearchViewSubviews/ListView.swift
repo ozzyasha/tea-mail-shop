@@ -11,12 +11,12 @@ struct ListView: View {
     
     @ObservedObject
     var vm: TeaViewModel
-    @State
-    private var searchText = ""
+    @Binding
+    var searchText: String
     
     var searchResults: [TeaCatalogueModel] {
         if searchText.isEmpty {
-            return vm.teaCatalogueModel.map { $0 }
+            return vm.teaCatalogueModel
         } else {
             return vm.teaCatalogueModel.filter { $0.name.contains(searchText) }
         }
@@ -37,6 +37,6 @@ struct ListView: View {
         
 }
 
-#Preview {
-    ListView(vm: TeaViewModel())
-}
+//#Preview {
+//    ListView(vm: TeaViewModel())
+//}

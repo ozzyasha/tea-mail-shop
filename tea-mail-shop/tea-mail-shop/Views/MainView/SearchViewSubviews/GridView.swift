@@ -11,14 +11,22 @@ struct GridView: View {
     @ObservedObject
     var vm: TeaViewModel
     
-    @State
-    var searchRequest: String = ""
+    @Binding
+    var searchText: String
     
     @State
     private var columns: [GridItem] = [
         GridItem(.flexible(minimum: 100, maximum: 500)),
         GridItem(.flexible(minimum: 100, maximum: 500)),
     ]
+    
+    var searchResults: [TeaCatalogueModel] {
+        if searchText.isEmpty {
+            return vm.teaCatalogueModel
+        } else {
+            return vm.teaCatalogueModel.filter { $0.name.contains(searchText) }
+        }
+    }
     
     var body: some View {
         ScrollView {
@@ -27,7 +35,7 @@ struct GridView: View {
                       spacing: 10,
                       pinnedViews: [.sectionHeaders, .sectionFooters]
             ) {
-                ForEach(vm.teaCatalogueModel, id: \.id) { tea in
+                ForEach(searchResults, id: \.id) { tea in
                     TeaViewGridCell(tea: tea)
                 }
             }
@@ -39,6 +47,6 @@ struct GridView: View {
     }
 }
 
-#Preview {
-    GridView(vm: TeaViewModel())
-}
+//#Preview {
+//    GridView(vm: TeaViewModel())
+//}

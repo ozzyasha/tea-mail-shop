@@ -12,6 +12,9 @@ struct SearchView: View {
     var vm = TeaViewModel()
     
     @State
+    var searchRequest = ""
+    
+    @State
     var isGrid = false
     
     var body: some View {
@@ -20,7 +23,7 @@ struct SearchView: View {
             VStack(spacing: 0) {
                 VStack {
                     HStack {
-                        SearchFieldView()
+                        SearchFieldView(searchRequest: $searchRequest)
                             .padding(.leading)
                         Spacer()
                         Toggle(isOn: $isGrid) {
@@ -32,9 +35,9 @@ struct SearchView: View {
                         .padding(.trailing)
                     }
                     if isGrid {
-                        GridView(vm: vm)
+                        GridView(vm: vm, searchText: $searchRequest)
                     } else {
-                        ListView(vm: vm)
+                        ListView(vm: vm, searchText: $searchRequest)
                     }
                 }
                 .frame(maxHeight: .infinity)

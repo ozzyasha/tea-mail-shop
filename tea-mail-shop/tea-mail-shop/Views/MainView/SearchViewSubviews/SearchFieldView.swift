@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SearchFieldView: View {
-    @State
-    private var searchRequest = ""
+    @Binding
+    var searchRequest: String
     
     var body: some View {
         HStack{
@@ -26,6 +26,6 @@ struct SearchFieldView: View {
     }
 }
 
-#Preview {
-    SearchFieldView()
-}
+//#Preview {
+////    SearchFieldView(searchRequest: Binding<"">)
+//}
