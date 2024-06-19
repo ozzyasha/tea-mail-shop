@@ -10,16 +10,23 @@ import Foundation
 import FirebaseCore
 import FirebaseAnalytics
 import FirebaseCrashlytics
+import FirebaseCrashlyticsSwift
 import FirebaseAuth
 import GoogleSignIn
+import Combine
 
 class AuthViewModel: ObservableObject {
     
-    @Published var authState: AuthState = .unauthenticated
-    @Published var errorMessage: String?
-    @Published var newUsername: String?
+    @Published 
+    var authState: AuthState = .unauthenticated
+    @Published 
+    var errorMessage: String?
+    @Published 
+    var currentUsername: String = ""
     @ObservedObject
     var firestore = FirestoreService()
+    
+    private var cancellables: [AnyCancellable] = []
     
     init() {
         Auth.auth().addStateDidChangeListener { auth, user in
@@ -29,6 +36,12 @@ class AuthViewModel: ObservableObject {
                 self.authState = .unauthenticated
             }
         }
+        
+        firestore.$teamailUser.sink { [weak self] user in
+            if let user = user {
+                self?.currentUsername = user.username
+            }
+        }.store(in: &cancellables)
     }
     
     func signUpWithEmail(email: String, username: String, password: String) {
@@ -37,7 +50,9 @@ class AuthViewModel: ObservableObject {
                 self.errorMessage = "Sign Up error: \(error?.localizedDescription ?? "Undefined error")"
                 return
             }
-            self.firestore.writeFirestore(username: username)
+            self.firestore.readFirestore { user in
+                self.firestore.writeFirestore(username: user?.username ?? username)
+            }
             self.signInWithEmail(email: email, password: password)
             
         }
@@ -77,7 +92,9 @@ class AuthViewModel: ObservableObject {
             
             Auth.auth().signIn(with: credential) { result, error in
                 if result?.user != nil {
-                    self.firestore.writeFirestore(username: result?.user.displayName ?? "Anonymous")
+                    self.firestore.readFirestore { user in
+                        self.firestore.writeFirestore(username: (user?.username ?? result?.user.displayName) ?? "Anonymous")
+                    }
                 }
                 
                 guard error == nil else {

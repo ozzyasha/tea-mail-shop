@@ -13,14 +13,8 @@ struct AccountView: View {
     @ObservedObject
     var firestore = FirestoreService()
     @State
-    private var newUsername = ""
-    @State
     private var showingEditProfileAlert = false
     
-    
-    init() {
-        newUsername = viewModel.getCurrentUsername()
-    }
     var body: some View {
         ZStack(alignment: .center) {
             Color.additional.ignoresSafeArea()
@@ -33,7 +27,7 @@ struct AccountView: View {
                             AvatarView()
                         }
                         VStack(alignment: .leading) {
-                            Text(newUsername)
+                            Text(viewModel.currentUsername)
                                 .font(.title)
                         }
                         Spacer()
@@ -73,8 +67,10 @@ struct AccountView: View {
                             .padding(.vertical)
                     }
                     .alert("Edit profile", isPresented: $showingEditProfileAlert) {
-                                TextField("Enter your name", text: $newUsername)
-                        Button("OK", action: submit)
+                        TextField("Enter your name", text: $viewModel.currentUsername)
+                        Button("OK") {
+                            viewModel.firestore.writeFirestore(username: viewModel.currentUsername)
+                        }
                         Button("Cancel", role: .cancel) { }
                             } message: {
                                 Text("You can edit your username in the field below. When it will be ready, press OK to continue.")
@@ -99,11 +95,6 @@ struct AccountView: View {
                     .background(.accent)
             }
         }
-    }
-    
-    func submit() {
-        firestore.writeFirestore(username: newUsername)
-        firestore.fetchUser()
     }
 }
 

@@ -16,7 +16,6 @@ class CachedImageViewModel: ObservableObject {
     @Published
     var imageUrl: String
     
-    
     init(imageUrl: String) {
         self.imageUrl = imageUrl
         if let filename = RealmService.shared.getCachedImage(for: imageUrl)?.filename,

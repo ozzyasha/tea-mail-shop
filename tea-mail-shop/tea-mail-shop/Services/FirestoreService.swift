@@ -8,6 +8,8 @@
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseAuth
+import FirebaseCrashlytics
+import FirebaseCrashlyticsSwift
 import Combine
 
 class FirestoreService: ObservableObject {
@@ -58,7 +60,32 @@ class FirestoreService: ObservableObject {
             let uid = data[self.uid] as? String ?? ""
             let email = data[self.email] as? String ?? ""
             let username = data[self.username] as? String ?? ""
+            
             self.teamailUser = TeamailUser(uid: uid, email: email, username: username)
+        }
+    }
+    
+    func readFirestore(completion: @escaping (TeamailUser?) -> ()) {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        store.collection(path).document(uid).getDocument { snapshot, error in
+            if let error = error {
+                self.errorMessage = "Failed to fetch current user: \(error)"
+                return
+            }
+            
+            guard let data = snapshot?.data() else {
+                completion(nil)
+                self.errorMessage = "No data found"
+                return
+            }
+            
+            let uid = data[self.uid] as? String ?? ""
+            let email = data[self.email] as? String ?? ""
+            let username = data[self.username] as? String ?? ""
+            
+            completion(TeamailUser(uid: uid, email: email, username: username))
         }
     }
 }

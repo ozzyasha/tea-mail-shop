@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ViewCoordinator: View {
-    @State private var isAppActive = false
-    @State private var isSignInModeActive = true
-    @ObservedObject var viewModel = AuthViewModel()
+    @State
+    private var isAppActive = false
+    @State
+    private var isSignInModeActive = true
+    @ObservedObject
+    var viewModel = AuthViewModel()
     
     var body: some View {
         if isAppActive {

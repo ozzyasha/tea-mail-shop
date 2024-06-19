@@ -10,7 +10,6 @@ class SearchFieldViewModel: ObservableObject {
     
     @ObservedObject
     var teaVM: TeaViewModel
-    
     @Published
     var searchText = ""
     

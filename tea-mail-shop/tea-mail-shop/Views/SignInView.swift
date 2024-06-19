@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SignInView: View {
     
-    @Binding var isActive: Bool
+    @Binding
+    var isActive: Bool
     @State
     private var email: String = ""
     @State

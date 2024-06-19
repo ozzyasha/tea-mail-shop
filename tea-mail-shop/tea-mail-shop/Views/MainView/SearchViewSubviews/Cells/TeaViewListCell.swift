@@ -11,7 +11,6 @@ struct TeaViewListCell: View {
     
     @State
     var tea: TeaCatalogueModel
-    
     @State
     private var isLiked = false
     

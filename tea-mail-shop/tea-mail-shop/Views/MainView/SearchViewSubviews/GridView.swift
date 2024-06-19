@@ -11,7 +11,6 @@ struct GridView: View {
     
     @ObservedObject
     var searchViewModel: SearchFieldViewModel
-    
     @State
     private var columns: [GridItem] = [
         GridItem(.flexible(minimum: 100, maximum: 500)),

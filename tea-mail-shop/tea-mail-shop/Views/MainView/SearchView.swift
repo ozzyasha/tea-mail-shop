@@ -10,10 +10,8 @@ import SwiftUI
 struct SearchView: View {
     @StateObject
     private var searchVM = SearchFieldViewModel(teaVM: TeaViewModel())
-    
     @State
     private var searchText = ""
-    
     @State
     var isGrid = false
     

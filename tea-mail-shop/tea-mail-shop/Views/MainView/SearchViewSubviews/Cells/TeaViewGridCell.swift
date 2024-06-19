@@ -10,7 +10,6 @@ import SwiftUI
 struct TeaViewGridCell: View {
     @State
     var tea: TeaCatalogueModel
-    
     @State
     private var isLiked = false
     
@@ -18,14 +17,12 @@ struct TeaViewGridCell: View {
         
         VStack {
             TeaViewImageView(imageURL: tea.img)
-            
             HStack {
                 Text(tea.name)
                     .font(.headline)
                     .foregroundStyle(Color.black)
                 Spacer()
             }
-            
             Spacer()
             Divider()
             HStack(alignment: .bottom) {
