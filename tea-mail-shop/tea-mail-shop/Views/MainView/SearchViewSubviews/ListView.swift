@@ -26,6 +26,6 @@ struct ListView: View {
         
 }
 
-//#Preview {
-//    ListView(vm: TeaViewModel())
-//}
+#Preview {
+    ListView(searchViewModel: SearchFieldViewModel(teaVM: TeaViewModel()))
+}

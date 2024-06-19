@@ -18,7 +18,6 @@ class SearchFieldViewModel: ObservableObject {
         self.teaVM = teaVM
     }
     
-    
     var searchResults: [TeaCatalogueModel] {
         if searchText.isEmpty {
             return teaVM.teaCatalogueModel

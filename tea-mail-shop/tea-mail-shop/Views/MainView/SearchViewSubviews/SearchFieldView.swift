@@ -26,6 +26,6 @@ struct SearchFieldView: View {
     }
 }
 
-//#Preview {
-////    SearchFieldView(searchRequest: Binding<"">)
-//}
+#Preview {
+    SearchFieldView(searchRequest: .constant(""))
+}

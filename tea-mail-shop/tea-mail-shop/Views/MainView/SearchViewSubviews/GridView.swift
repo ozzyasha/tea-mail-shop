@@ -37,6 +37,6 @@ struct GridView: View {
     }
 }
 
-//#Preview {
-//    GridView(vm: TeaViewModel())
-//}
+#Preview {
+    GridView(searchViewModel: SearchFieldViewModel(teaVM: TeaViewModel()))
+}

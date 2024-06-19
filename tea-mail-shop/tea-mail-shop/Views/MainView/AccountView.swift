@@ -43,7 +43,7 @@ struct AccountView: View {
                     Divider()
                     
                     Button {
-                        //
+                        // navigate to Tea diary
                     } label: {
                         Text("Tea diary")
                             .foregroundStyle(Color.white)
@@ -53,7 +53,7 @@ struct AccountView: View {
                             .padding(.vertical)
                     }
                     Button {
-                        //
+                        // navigate to orders
                     } label: {
                         Text("Orders")
                             .foregroundStyle(Color.white)
@@ -64,32 +64,6 @@ struct AccountView: View {
                     }
                     Button {
                         showingEditProfileAlert.toggle()
-//                        let alert = UIAlertController(title: "Edit profile", message: "You can edit your username in the field below.\n When it will be ready, press OK to continue.", preferredStyle: .alert)
-//                        alert.addTextField { textField in
-//                            textField.delegate = self
-//                            textField.placeholder = "Enter new username"
-//                        }
-//                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-//                        let okAction = UIAlertAction(title: "OK", style: .default, handler: { action in
-//                            let newUsername = alert.textFields?.first?.text ?? "nil"
-//                            firestore.writeFirestore(username: newUsername)
-//                            
-//                            firestore.readFirestore() { data in
-//                                self.username = data
-//                                self.greetingLabel.text = "Привет,\n" + self.username  + "!"
-//                                
-//                                let greetingLabelText = self.greetingLabel.text ?? "nil"
-//                                let attributedGreetingLabel = NSMutableAttributedString(string: greetingLabelText)
-//                                let usernameRange = (greetingLabelText as NSString).range(of: self.username)
-//                                attributedGreetingLabel.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: self.greetingLabel.font.pointSize), range: usernameRange)
-//                                self.greetingLabel.attributedText = attributedGreetingLabel
-//                            }
-//                        })
-//                        
-//                        alert.addAction(cancelAction)
-//                        alert.addAction(okAction)
-//                        
-//                        self.present(alert, animated: true)
                     } label: {
                         Text("Edit profile")
                             .foregroundStyle(Color.white)
