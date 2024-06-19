@@ -73,6 +73,7 @@
 		7AE01B4D2C1DFD0F00A74D28 /* TeaViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B4A2C1DFD0F00A74D28 /* TeaViewListCell.swift */; };
 		7AE01B502C1DFF1700A74D28 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7AE01B4F2C1DFF1700A74D28 /* RealmSwift */; };
 		7AE7BEB52C207104000655FA /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE7BEB42C207104000655FA /* SearchFieldView.swift */; };
+		7AE7BEB92C22B183000655FA /* SearchFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE7BEB82C22B183000655FA /* SearchFieldViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 		7AE01B492C1DFD0F00A74D28 /* TeaViewImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaViewImageView.swift; sourceTree = "<group>"; };
 		7AE01B4A2C1DFD0F00A74D28 /* TeaViewListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaViewListCell.swift; sourceTree = "<group>"; };
 		7AE7BEB42C207104000655FA /* SearchFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldView.swift; sourceTree = "<group>"; };
+		7AE7BEB82C22B183000655FA /* SearchFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				7A1F45262C14735C008F4B53 /* AuthViewModel.swift */,
+				7AE7BEB82C22B183000655FA /* SearchFieldViewModel.swift */,
 				7AE01B362C1DFA5200A74D28 /* TeaViewModel.swift */,
 				7AE01B3E2C1DFB3000A74D28 /* CachedImageViewModel.swift */,
 			);
@@ -415,6 +418,7 @@
 				7AE01B372C1DFA5200A74D28 /* TeaViewModel.swift in Sources */,
 				7AE01B452C1DFC4100A74D28 /* GridView.swift in Sources */,
 				7A6796C72C161DE00011ED2D /* HomeView.swift in Sources */,
+				7AE7BEB92C22B183000655FA /* SearchFieldViewModel.swift in Sources */,
 				7A1F45252C12463D008F4B53 /* FirestoreService.swift in Sources */,
 				7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */,
 				7AE01B2A2C1DF83400A74D28 /* TeaCatalogueModel.swift in Sources */,

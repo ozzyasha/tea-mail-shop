@@ -9,10 +9,10 @@ import SwiftUI
 
 struct SearchView: View {
     @StateObject
-    var vm = TeaViewModel()
+    private var searchVM = SearchFieldViewModel(teaVM: TeaViewModel())
     
     @State
-    var searchRequest = ""
+    private var searchText = ""
     
     @State
     var isGrid = false
@@ -23,7 +23,7 @@ struct SearchView: View {
             VStack(spacing: 0) {
                 VStack {
                     HStack {
-                        SearchFieldView(searchRequest: $searchRequest)
+                        SearchFieldView(searchRequest: $searchText)
                             .padding(.leading)
                         Spacer()
                         Toggle(isOn: $isGrid) {
@@ -34,10 +34,14 @@ struct SearchView: View {
                         .toggleStyle(.button)
                         .padding(.trailing)
                     }
+                    .onChange(of: searchText) {
+                        searchVM.searchText = searchText
+                    }
+
                     if isGrid {
-                        GridView(vm: vm, searchText: $searchRequest)
+                        GridView(searchViewModel: searchVM)
                     } else {
-                        ListView(vm: vm, searchText: $searchRequest)
+                        ListView(searchViewModel: searchVM)
                     }
                 }
                 .frame(maxHeight: .infinity)

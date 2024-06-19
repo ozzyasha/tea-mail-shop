@@ -8,25 +8,15 @@
 import SwiftUI
 
 struct GridView: View {
-    @ObservedObject
-    var vm: TeaViewModel
     
-    @Binding
-    var searchText: String
+    @ObservedObject
+    var searchViewModel: SearchFieldViewModel
     
     @State
     private var columns: [GridItem] = [
         GridItem(.flexible(minimum: 100, maximum: 500)),
         GridItem(.flexible(minimum: 100, maximum: 500)),
     ]
-    
-    var searchResults: [TeaCatalogueModel] {
-        if searchText.isEmpty {
-            return vm.teaCatalogueModel
-        } else {
-            return vm.teaCatalogueModel.filter { $0.name.contains(searchText) }
-        }
-    }
     
     var body: some View {
         ScrollView {
@@ -35,7 +25,7 @@ struct GridView: View {
                       spacing: 10,
                       pinnedViews: [.sectionHeaders, .sectionFooters]
             ) {
-                ForEach(searchResults, id: \.id) { tea in
+                ForEach(searchViewModel.searchResults, id: \.id) { tea in
                     TeaViewGridCell(tea: tea)
                 }
             }

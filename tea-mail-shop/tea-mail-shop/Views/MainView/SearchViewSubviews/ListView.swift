@@ -10,20 +10,10 @@ import SwiftUI
 struct ListView: View {
     
     @ObservedObject
-    var vm: TeaViewModel
-    @Binding
-    var searchText: String
-    
-    var searchResults: [TeaCatalogueModel] {
-        if searchText.isEmpty {
-            return vm.teaCatalogueModel
-        } else {
-            return vm.teaCatalogueModel.filter { $0.name.contains(searchText) }
-        }
-    }
+    var searchViewModel: SearchFieldViewModel
     
     var body: some View {
-        List(searchResults, id: \.id) { tea in
+        List(searchViewModel.searchResults, id: \.id) { tea in
                 TeaViewListCell(tea: tea)
                 .listRowBackground(Color.clear)
                 .listRowSeparator(.hidden)
@@ -32,7 +22,6 @@ struct ListView: View {
         .listStyle(.plain)
         .background(.additional)
         .buttonStyle(.borderless)
-        .searchable(text: $searchText)
     }
         
 }
