@@ -14,7 +14,7 @@ struct TeaViewImageView: View {
     var body: some View {
         
         CachedImage(imageUrl: imageURL)
-            .frame(width: 150, height: 150)
+            .frame(width: 120, height: 120)
             .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
     }
 }

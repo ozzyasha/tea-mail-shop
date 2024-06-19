@@ -13,8 +13,8 @@ struct GridView: View {
     var searchViewModel: SearchFieldViewModel
     @State
     private var columns: [GridItem] = [
-        GridItem(.flexible(minimum: 100, maximum: 500)),
-        GridItem(.flexible(minimum: 100, maximum: 500)),
+        GridItem(.flexible(minimum: 120, maximum: 180), spacing: 10),
+        GridItem(.flexible(minimum: 120, maximum: 180), spacing: 10),
     ]
     
     var body: some View {
