@@ -19,6 +19,8 @@ struct SearchFieldView: View {
                 .foregroundStyle(.secondAdditional)
             TextField("Search", text: $searchRequest)
                 .padding()
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
         }
         .background(Color.white)
         .frame(height: 35)

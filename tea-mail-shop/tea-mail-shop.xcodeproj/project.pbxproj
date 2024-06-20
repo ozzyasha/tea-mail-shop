@@ -407,6 +407,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		7AE7BEBA2C22EDA7000655FA /* Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);

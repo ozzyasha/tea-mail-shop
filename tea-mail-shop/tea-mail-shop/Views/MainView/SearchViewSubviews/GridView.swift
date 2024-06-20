@@ -28,7 +28,7 @@ struct GridView: View {
                     TeaViewGridCell(tea: tea)
                 }
             }
-            .padding()
+            .padding(.horizontal)
         }
         .listStyle(.plain)
         .background(.additional)

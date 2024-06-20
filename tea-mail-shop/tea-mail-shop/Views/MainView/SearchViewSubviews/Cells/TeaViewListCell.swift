@@ -27,7 +27,7 @@ struct TeaViewListCell: View {
                         .foregroundStyle(Color.black)
                     Spacer()
                 }
-                .padding(.top)
+                .padding(.top, 10)
                 Spacer()
                 Divider()
                 HStack(alignment: .bottom) {
@@ -50,7 +50,7 @@ struct TeaViewListCell: View {
                         .frame(width: 40, height: 40, alignment: .bottomTrailing)
                     }
                 }
-                .padding(.bottom)
+                .padding(.bottom, 10)
                 
             }
         }

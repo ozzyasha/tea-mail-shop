@@ -21,7 +21,7 @@ class SearchFieldViewModel: ObservableObject {
         if searchText.isEmpty {
             return teaVM.teaCatalogueModel
         } else {
-            return teaVM.teaCatalogueModel.filter { $0.name.contains(searchText) }
+            return teaVM.teaCatalogueModel.filter { $0.name.localizedCaseInsensitiveContains(searchText.lowercased()) }
         }
     }
 }
