@@ -12,6 +12,12 @@
 		7A01C5452C10803000642DD7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A01C5442C10803000642DD7 /* Preview Assets.xcassets */; };
 		7A01C54C2C10820000642DD7 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01C54B2C10820000642DD7 /* SplashView.swift */; };
 		7A01C54E2C10860400642DD7 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01C54D2C10860400642DD7 /* ViewCoordinator.swift */; };
+		7A1037862C24474200E4BF5D /* SliderItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037852C24474200E4BF5D /* SliderItemsModel.swift */; };
+		7A1037882C2447F300E4BF5D /* SliderItemsRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037872C2447F300E4BF5D /* SliderItemsRealmModel.swift */; };
+		7A10378A2C244A3700E4BF5D /* SliderItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037892C244A3700E4BF5D /* SliderItemsViewModel.swift */; };
+		7A10378E2C244FC400E4BF5D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10378D2C244FC300E4BF5D /* Endpoint.swift */; };
+		7A1037912C245E6500E4BF5D /* SliderItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037902C245E6500E4BF5D /* SliderItemImageView.swift */; };
+		7A1037932C24656100E4BF5D /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037922C24656100E4BF5D /* SliderView.swift */; };
 		7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F44E22C11C116008F4B53 /* SignInView.swift */; };
 		7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F44E42C11F666008F4B53 /* BackgroundView.swift */; };
 		7A1F44EA2C123EFA008F4B53 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F44E92C123EFA008F4B53 /* FirebaseAnalytics */; };
@@ -83,6 +89,12 @@
 		7A01C5442C10803000642DD7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A01C54B2C10820000642DD7 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		7A01C54D2C10860400642DD7 /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
+		7A1037852C24474200E4BF5D /* SliderItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderItemsModel.swift; sourceTree = "<group>"; };
+		7A1037872C2447F300E4BF5D /* SliderItemsRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderItemsRealmModel.swift; sourceTree = "<group>"; };
+		7A1037892C244A3700E4BF5D /* SliderItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderItemsViewModel.swift; sourceTree = "<group>"; };
+		7A10378D2C244FC300E4BF5D /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		7A1037902C245E6500E4BF5D /* SliderItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderItemImageView.swift; sourceTree = "<group>"; };
+		7A1037922C24656100E4BF5D /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		7A1F44E22C11C116008F4B53 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		7A1F44E42C11F666008F4B53 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		7A1F45242C12463D008F4B53 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
@@ -200,6 +212,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7A10378F2C245E3100E4BF5D /* HomeViewSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				7A1037922C24656100E4BF5D /* SliderView.swift */,
+				7A1037902C245E6500E4BF5D /* SliderItemImageView.swift */,
+			);
+			path = HomeViewSubviews;
+			sourceTree = "<group>";
+		};
 		7A1F44E12C11BF1F008F4B53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +250,7 @@
 				7A1F45262C14735C008F4B53 /* AuthViewModel.swift */,
 				7AE7BEB82C22B183000655FA /* SearchFieldViewModel.swift */,
 				7AE01B362C1DFA5200A74D28 /* TeaViewModel.swift */,
+				7A1037892C244A3700E4BF5D /* SliderItemsViewModel.swift */,
 				7AE01B3E2C1DFB3000A74D28 /* CachedImageViewModel.swift */,
 			);
 			path = ViewModels;
@@ -241,8 +263,11 @@
 				7A6796BC2C15D8350011ED2D /* TeamailUser.swift */,
 				7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */,
 				7AE01B2C2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift */,
+				7A1037852C24474200E4BF5D /* SliderItemsModel.swift */,
+				7A1037872C2447F300E4BF5D /* SliderItemsRealmModel.swift */,
 				7AE01B2B2C1DF87400A74D28 /* CachedImageInfo.swift */,
 				7AE01B2D2C1DF87500A74D28 /* APIError.swift */,
+				7A10378D2C244FC300E4BF5D /* Endpoint.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,6 +277,7 @@
 			children = (
 				7A6796BE2C161A690011ED2D /* MainView.swift */,
 				7A6796C62C161DE00011ED2D /* HomeView.swift */,
+				7A10378F2C245E3100E4BF5D /* HomeViewSubviews */,
 				7A6796C42C161DD60011ED2D /* SearchView.swift */,
 				7AE01B402C1DFBAF00A74D28 /* SearchViewSubviews */,
 				7A6796C22C161D840011ED2D /* FavoritesView.swift */,
@@ -455,11 +481,15 @@
 				7AE01B3F2C1DFB3000A74D28 /* CachedImageViewModel.swift in Sources */,
 				7A01C53E2C10802E00642DD7 /* tea_mail_shopApp.swift in Sources */,
 				7A01C54C2C10820000642DD7 /* SplashView.swift in Sources */,
+				7A10378E2C244FC400E4BF5D /* Endpoint.swift in Sources */,
 				7A01C54E2C10860400642DD7 /* ViewCoordinator.swift in Sources */,
 				7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */,
+				7A1037912C245E6500E4BF5D /* SliderItemImageView.swift in Sources */,
 				7AE01B4B2C1DFD0F00A74D28 /* TeaViewGridCell.swift in Sources */,
 				7AE01B302C1DF87500A74D28 /* APIError.swift in Sources */,
+				7A10378A2C244A3700E4BF5D /* SliderItemsViewModel.swift in Sources */,
 				7A1F452E2C1478B1008F4B53 /* SignUpView.swift in Sources */,
+				7A1037932C24656100E4BF5D /* SliderView.swift in Sources */,
 				7A6796C52C161DD60011ED2D /* SearchView.swift in Sources */,
 				7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */,
 				7A6796BD2C15D8350011ED2D /* TeamailUser.swift in Sources */,
@@ -467,7 +497,9 @@
 				7AE01B4C2C1DFD0F00A74D28 /* TeaViewImageView.swift in Sources */,
 				7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */,
 				7A1F45272C14735C008F4B53 /* AuthViewModel.swift in Sources */,
+				7A1037882C2447F300E4BF5D /* SliderItemsRealmModel.swift in Sources */,
 				7AE01B4D2C1DFD0F00A74D28 /* TeaViewListCell.swift in Sources */,
+				7A1037862C24474200E4BF5D /* SliderItemsModel.swift in Sources */,
 				7AE01B422C1DFC1000A74D28 /* CachedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

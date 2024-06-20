@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject
+    var vm = SliderItemsViewModel()
     var body: some View {
         ZStack(alignment: .center) {
             Color.additional.ignoresSafeArea()
             VStack {
-                Text("Main Screen")
-                    .padding()
+                SliderView(sliderItemsViewModel: vm)
                     .frame(maxHeight: .infinity)
                 Rectangle()
                     .fill(Color.clear)

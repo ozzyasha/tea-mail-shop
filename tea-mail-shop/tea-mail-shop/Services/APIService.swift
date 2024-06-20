@@ -13,9 +13,9 @@ class APIService {
     
     static let shared = APIService()
     
-    func fetchData(completionHandler: (([TeaCatalogueModel]) -> ())? = nil, errorHandler: ((APIError) -> ())? = nil) {
+    func fetchData<T: Decodable>(endpoint: Endpoint, responseType: T.Type, completionHandler: ((T) -> ())? = nil, errorHandler: ((APIError) -> ())? = nil) {
         DispatchQueue.global().async {
-            guard let url = URL(string: "https://raw.githubusercontent.com/ozzyasha/tea-api/main/teaCatalogue.json") else {
+            guard let url = URL(string: endpoint.rawValue) else {
                 errorHandler?(APIError.urlError("URL error"))
                 return
             }
@@ -32,12 +32,12 @@ class APIService {
                     return
                 }
                 
-                guard let teaResponse = try? JSONDecoder().decode(TeaCatalogueResponse.self, from: data) else {
+                guard let decodedResponse = try? JSONDecoder().decode(responseType, from: data) else {
                     errorHandler?(APIError.decodeError(error?.localizedDescription ?? "Decode error"))
                     return
                 }
                 
-                completionHandler?(teaResponse.teaCatalogue)
+                completionHandler?(decodedResponse)
             }
             task.resume()
         }
