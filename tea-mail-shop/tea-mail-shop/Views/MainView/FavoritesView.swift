@@ -14,7 +14,7 @@ struct FavoritesView: View {
                 .ignoresSafeArea()
             
             VStack {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                Text("Favorites Screen")
                     .padding()
                     .frame(maxHeight: .infinity)
                 
