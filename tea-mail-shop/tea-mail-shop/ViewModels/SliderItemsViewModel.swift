@@ -38,8 +38,16 @@ class SliderItemsViewModel: ObservableObject {
         currentIndex = (currentIndex - 1 + sliderItemsModel.count) % sliderItemsModel.count
     }
     
+    func getPreviousIndex() -> Int {
+        return (currentIndex - 1 + sliderItemsModel.count) % sliderItemsModel.count
+    }
+    
     func setupNextIndexAsCurrent() {
         currentIndex = (currentIndex + 1) % sliderItemsModel.count
+    }
+    
+    func getNextIndex() -> Int {
+        return (currentIndex + 1) % sliderItemsModel.count
     }
     
 }

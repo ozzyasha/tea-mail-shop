@@ -18,6 +18,8 @@
 		7A10378E2C244FC400E4BF5D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10378D2C244FC300E4BF5D /* Endpoint.swift */; };
 		7A1037912C245E6500E4BF5D /* SliderItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037902C245E6500E4BF5D /* SliderItemImageView.swift */; };
 		7A1037932C24656100E4BF5D /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037922C24656100E4BF5D /* SliderView.swift */; };
+		7A1037972C26098A00E4BF5D /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037962C26098A00E4BF5D /* ContactsView.swift */; };
+		7A1037992C260F9A00E4BF5D /* DeliveryAndPaymentDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037982C260F9A00E4BF5D /* DeliveryAndPaymentDescriptionView.swift */; };
 		7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F44E22C11C116008F4B53 /* SignInView.swift */; };
 		7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F44E42C11F666008F4B53 /* BackgroundView.swift */; };
 		7A1F44EA2C123EFA008F4B53 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F44E92C123EFA008F4B53 /* FirebaseAnalytics */; };
@@ -82,6 +84,19 @@
 		7AE7BEB92C22B183000655FA /* SearchFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE7BEB82C22B183000655FA /* SearchFieldViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7A1037952C25E96700E4BF5D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7A01C53A2C10802E00642DD7 /* tea-mail-shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tea-mail-shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A01C53D2C10802E00642DD7 /* tea_mail_shopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tea_mail_shopApp.swift; sourceTree = "<group>"; };
@@ -95,6 +110,8 @@
 		7A10378D2C244FC300E4BF5D /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		7A1037902C245E6500E4BF5D /* SliderItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderItemImageView.swift; sourceTree = "<group>"; };
 		7A1037922C24656100E4BF5D /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		7A1037962C26098A00E4BF5D /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		7A1037982C260F9A00E4BF5D /* DeliveryAndPaymentDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAndPaymentDescriptionView.swift; sourceTree = "<group>"; };
 		7A1F44E22C11C116008F4B53 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		7A1F44E42C11F666008F4B53 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		7A1F45242C12463D008F4B53 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
@@ -216,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				7A1037922C24656100E4BF5D /* SliderView.swift */,
+				7A1037962C26098A00E4BF5D /* ContactsView.swift */,
+				7A1037982C260F9A00E4BF5D /* DeliveryAndPaymentDescriptionView.swift */,
 				7A1037902C245E6500E4BF5D /* SliderItemImageView.swift */,
 			);
 			path = HomeViewSubviews;
@@ -336,6 +355,7 @@
 				7A01C5372C10802E00642DD7 /* Frameworks */,
 				7A01C5382C10802E00642DD7 /* Resources */,
 				7AE7BEBA2C22EDA7000655FA /* Crashlytics */,
+				7A1037952C25E96700E4BF5D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -479,12 +499,14 @@
 				7AE01B2F2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift in Sources */,
 				7AE01B3D2C1DFA9F00A74D28 /* URL+Cache.swift in Sources */,
 				7AE01B3F2C1DFB3000A74D28 /* CachedImageViewModel.swift in Sources */,
+				7A1037992C260F9A00E4BF5D /* DeliveryAndPaymentDescriptionView.swift in Sources */,
 				7A01C53E2C10802E00642DD7 /* tea_mail_shopApp.swift in Sources */,
 				7A01C54C2C10820000642DD7 /* SplashView.swift in Sources */,
 				7A10378E2C244FC400E4BF5D /* Endpoint.swift in Sources */,
 				7A01C54E2C10860400642DD7 /* ViewCoordinator.swift in Sources */,
 				7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */,
 				7A1037912C245E6500E4BF5D /* SliderItemImageView.swift in Sources */,
+				7A1037972C26098A00E4BF5D /* ContactsView.swift in Sources */,
 				7AE01B4B2C1DFD0F00A74D28 /* TeaViewGridCell.swift in Sources */,
 				7AE01B302C1DF87500A74D28 /* APIError.swift in Sources */,
 				7A10378A2C244A3700E4BF5D /* SliderItemsViewModel.swift in Sources */,

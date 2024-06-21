@@ -10,4 +10,5 @@ import Foundation
 enum Endpoint: String {
     case teaCatalogue = "https://raw.githubusercontent.com/ozzyasha/tea-api/main/teaCatalogue.json"
     case sliderItems = "https://raw.githubusercontent.com/ozzyasha/tea-api/main/sliderItems.json"
+    case teaNews = "https://tea-mail.by/stati-o-nas/"
 }
