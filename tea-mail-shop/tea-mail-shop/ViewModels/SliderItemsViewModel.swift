@@ -12,6 +12,8 @@ class SliderItemsViewModel: ObservableObject {
     
     @Published
     var sliderItemsModel = [SliderItemsModel]()
+    @Published
+    var currentIndex = 0
     
     init() {
         sliderItemsModel = RealmService.shared.readAllSliderItemsFromDatabase()
@@ -30,8 +32,14 @@ class SliderItemsViewModel: ObservableObject {
             }
             return
         }
-        
     }
     
+    func setupPreviousIndexAsCurrent() {
+        currentIndex = (currentIndex - 1 + sliderItemsModel.count) % sliderItemsModel.count
+    }
+    
+    func setupNextIndexAsCurrent() {
+        currentIndex = (currentIndex + 1) % sliderItemsModel.count
+    }
     
 }

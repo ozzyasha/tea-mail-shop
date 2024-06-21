@@ -11,9 +11,11 @@ struct SliderView: View {
     @ObservedObject
     var sliderItemsViewModel: SliderItemsViewModel
     @State
-    private var currentIndex = 0
-    @State
     private var isDragging = false
+    @State
+    private var draggingValue: CGFloat = 0
+    @State
+    private var timer: Timer?
     
     var body: some View {
         VStack {
@@ -21,26 +23,32 @@ struct SliderView: View {
                 if sliderItemsViewModel.sliderItemsModel.isEmpty {
                     ProgressView()
                 } else {
-                    SliderItemImageView(imageURL: sliderItemsViewModel.sliderItemsModel[currentIndex].img, linkURL: sliderItemsViewModel.sliderItemsModel[currentIndex].url, currentIndex: $currentIndex)
-                        .transition(.opacity)
-                        .gesture(
-                            DragGesture()
-                                .onChanged { value in
-                                    if value.translation.width < 0 {
-                                        isDragging = true
+                    ZStack {
+                        SliderItemImageView(imageURL: sliderItemsViewModel.sliderItemsModel[sliderItemsViewModel.currentIndex].img, linkURL: sliderItemsViewModel.sliderItemsModel[sliderItemsViewModel.currentIndex].url, draggingValue: $draggingValue)
+                            .transition(.opacity)
+                            .gesture(
+                                DragGesture()
+                                    .onChanged { value in
+                                        if value.translation.width < 0 {
+                                            isDragging = true
+                                        }
+                                        if value.translation.width > 0 {
+                                            isDragging = false
+                                        }
+                                        draggingValue = value.translation.width
                                     }
-                                    if value.translation.width > 0 {
-                                        isDragging = false
+                                    .onEnded { value in
+                                        if isDragging {
+                                            sliderItemsViewModel.setupNextIndexAsCurrent()
+                                        } else {
+                                            sliderItemsViewModel.setupPreviousIndexAsCurrent()
+                                        }
+                                        draggingValue = 0
+                                        timer?.invalidate()
+                                        setupTimer()
                                     }
-                                }
-                                .onEnded { value in
-                                    if isDragging {
-                                        currentIndex = (currentIndex + 1) % sliderItemsViewModel.sliderItemsModel.count
-                                    } else {
-                                        currentIndex = (currentIndex - 1 + sliderItemsViewModel.sliderItemsModel.count) % sliderItemsViewModel.sliderItemsModel.count
-                                    }
-                                }
-                        )
+                            )
+                    }
                     
                 }
             }
@@ -48,12 +56,14 @@ struct SliderView: View {
             HStack {
                 ForEach(0..<sliderItemsViewModel.sliderItemsModel.count, id: \.self) { index in
                     Circle()
-                        .fill(self.currentIndex == index ? Color.accentColor : Color.secondAdditional)
+                        .fill(sliderItemsViewModel.currentIndex == index ? Color.accentColor : Color.secondAdditional)
                         .frame(width: 10, height: 10)
                         .onTapGesture {
                             withAnimation(.easeInOut(duration: 1)) {
-                                self.currentIndex = index
+                                sliderItemsViewModel.currentIndex = index
                             }
+                            timer?.invalidate()
+                            setupTimer()
                         }
                     
                 }
@@ -62,16 +72,19 @@ struct SliderView: View {
             
         }
         .onAppear {
-            Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { timer in
-                withAnimation(.easeInOut(duration: 1)) {
-                    if self.currentIndex + 1 == self.sliderItemsViewModel.sliderItemsModel.count {
-                        self.currentIndex = 0
-                    } else {
-                        self.currentIndex += 1
-                    }
+            setupTimer()
+        }
+    }
+    
+    func setupTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 8, repeats: true) { timer in
+            withAnimation(.easeInOut(duration: 1)) {
+                if sliderItemsViewModel.currentIndex + 1 == self.sliderItemsViewModel.sliderItemsModel.count {
+                    sliderItemsViewModel.currentIndex = 0
+                } else {
+                    sliderItemsViewModel.currentIndex += 1
                 }
             }
-            
         }
     }
     
