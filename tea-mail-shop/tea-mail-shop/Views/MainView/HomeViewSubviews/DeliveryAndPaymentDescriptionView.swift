@@ -8,17 +8,39 @@
 import SwiftUI
 
 struct DeliveryAndPaymentDescriptionView: View {
+    
+    @ObservedObject
+    private var vm = DeliveryViewModel()
+
     var body: some View {
         ZStack {
             Color.additional
                 .ignoresSafeArea()
             
             VStack {
-                Text("Favorites Screen")
-                    .padding()
-                    .frame(maxHeight: .infinity)
-                    .font(.title2)
-                    .foregroundStyle(.accent)
+                VStack {
+                    List {
+                        ForEach(vm.deliveryOptions, id: \.id) { option in
+                            DisclosureGroup(
+                                isExpanded: option.isExpanded,
+                                content: {
+                                    Text(option.description)
+                                },
+                                label: {
+                                    Text(option.option)
+                                        .font(.title3)
+                                        .foregroundStyle(.accent)
+                                }
+                            )
+                        }
+                    }
+                    .listStyle(.plain)
+
+                }
+                .background(.white)
+                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
+                .padding()
+                .frame(maxHeight: .infinity)
                 
                 Rectangle()
                     .fill(Color.clear)
@@ -28,7 +50,7 @@ struct DeliveryAndPaymentDescriptionView: View {
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Text("Контакты")
+                Text("Доставка и оплата")
                     .bold()
                     .foregroundStyle(.accent)
             }
