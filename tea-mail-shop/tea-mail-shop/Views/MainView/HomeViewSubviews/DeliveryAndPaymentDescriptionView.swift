@@ -9,7 +9,32 @@ import SwiftUI
 
 struct DeliveryAndPaymentDescriptionView: View {
     var body: some View {
-        Text("Доставка и оплата")
+        ZStack {
+            Color.additional
+                .ignoresSafeArea()
+            
+            VStack {
+                Text("Favorites Screen")
+                    .padding()
+                    .frame(maxHeight: .infinity)
+                    .font(.title2)
+                    .foregroundStyle(.accent)
+                
+                Rectangle()
+                    .fill(Color.clear)
+                    .frame(height: 10)
+                    .background(.accent)
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Контакты")
+                    .bold()
+                    .foregroundStyle(.accent)
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .background(.additional)
     }
 }
 

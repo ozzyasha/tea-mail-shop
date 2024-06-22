@@ -57,6 +57,9 @@ struct HomeView: View {
                 }
             }
         }
+        .accentColor(.accent)
+        .tint(.accent)
+        .foregroundStyle(.accent)
     }
 }
 
