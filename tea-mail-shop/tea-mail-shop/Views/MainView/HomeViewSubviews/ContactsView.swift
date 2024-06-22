@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContactsView: View {
     
@@ -85,9 +86,6 @@ struct ContactsView: View {
                                 .foregroundStyle(.black)
                                 .padding(.horizontal)
                                 .padding(.bottom)
-                            MapView()
-                                .frame(width: 300, height: 300)
-                                .padding(.leading)
                         }
                     }
                     VStack(alignment: .center) {
