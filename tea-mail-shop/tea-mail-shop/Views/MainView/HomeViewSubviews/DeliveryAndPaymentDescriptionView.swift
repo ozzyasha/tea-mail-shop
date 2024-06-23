@@ -10,28 +10,32 @@ import SwiftUI
 struct DeliveryAndPaymentDescriptionView: View {
     
     @ObservedObject
-    private var vm = DeliveryViewModel()
+    private var deliveryViewModel = DeliveryViewModel()
+    @ObservedObject
+    private var paymentViewModel = PaymentViewModel()
 
     var body: some View {
         ZStack {
             Color.additional
                 .ignoresSafeArea()
-            
             VStack {
                 VStack {
                     List {
-                        ForEach(vm.deliveryOptions, id: \.id) { option in
-                            DisclosureGroup(
-                                isExpanded: option.isExpanded,
-                                content: {
-                                    Text(option.description)
-                                },
-                                label: {
-                                    Text(option.option)
-                                        .font(.title3)
-                                        .foregroundStyle(.accent)
-                                }
-                            )
+                        Text("Доставка")
+                            .font(.title2)
+                            .foregroundStyle(.accent)
+                            .bold()
+                            .padding(.top, 20)
+                        ForEach(deliveryViewModel.deliveryOptions, id: \.id) { option in
+                            DeliveryAndPaymentCell(deliveryOption: option)
+                        }
+                        Text("Оплата")
+                            .font(.title2)
+                            .foregroundStyle(.accent)
+                            .bold()
+                            .padding(.top, 20)
+                        ForEach(paymentViewModel.paymentOptions, id: \.id) { option in
+                            DeliveryAndPaymentCell(deliveryOption: option)
                         }
                     }
                     .listStyle(.plain)
