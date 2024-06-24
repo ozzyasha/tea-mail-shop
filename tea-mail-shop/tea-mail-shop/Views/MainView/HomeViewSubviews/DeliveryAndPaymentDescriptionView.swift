@@ -9,9 +9,9 @@ import SwiftUI
 
 struct DeliveryAndPaymentDescriptionView: View {
     
-    @ObservedObject
+    @StateObject
     private var deliveryViewModel = DeliveryViewModel()
-    @ObservedObject
+    @StateObject
     private var paymentViewModel = PaymentViewModel()
 
     var body: some View {
@@ -19,23 +19,32 @@ struct DeliveryAndPaymentDescriptionView: View {
             Color.additional
                 .ignoresSafeArea()
             VStack {
-                VStack {
+                VStack(alignment: .leading) {
                     List {
-                        Text("Доставка")
-                            .font(.title2)
-                            .foregroundStyle(.accent)
-                            .bold()
-                            .padding(.top, 20)
-                        ForEach(deliveryViewModel.deliveryOptions, id: \.id) { option in
-                            DeliveryAndPaymentCell(deliveryOption: option)
+                        HStack {
+                            Text("Доставка")
+                                .font(.title2)
+                                .foregroundStyle(.accent)
+                                .bold()
+                                .padding(.top, 20)
+                            Spacer()
+                            
                         }
-                        Text("Оплата")
-                            .font(.title2)
-                            .foregroundStyle(.accent)
-                            .bold()
-                            .padding(.top, 20)
-                        ForEach(paymentViewModel.paymentOptions, id: \.id) { option in
-                            DeliveryAndPaymentCell(deliveryOption: option)
+                        .padding()
+                        ForEach($deliveryViewModel.deliveryOptions, id: \.id) { $option in
+                            DeliveryAndPaymentCell(deliveryOption: $option)
+                        }
+                        HStack {
+                            Text("Оплата")
+                                .font(.title2)
+                                .foregroundStyle(.accent)
+                                .bold()
+                                .padding(.top, 20)
+                            Spacer()
+                        }
+                        .padding()
+                        ForEach($paymentViewModel.paymentOptions, id: \.id) { $option in
+                            DeliveryAndPaymentCell(deliveryOption: $option)
                         }
                     }
                     .listStyle(.plain)

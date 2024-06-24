@@ -8,22 +8,25 @@
 import SwiftUI
 
 struct DeliveryAndPaymentCell: View {
-    @State
+    @Binding
     var deliveryOption: DeliveryAndPaymentModel
     
     var body: some View {
-        DisclosureGroup() {
+        DisclosureGroup {
             Text(deliveryOption.description)
+                .multilineTextAlignment(.leading)
                 .foregroundStyle(.black)
         } label: {
             Text(deliveryOption.option)
+                .multilineTextAlignment(.leading)
                 .font(.title3)
                 .foregroundStyle(.black)
-                .padding(.leading)
         }
+        .padding(.horizontal)
+        
     }
 }
 
 #Preview {
-    DeliveryAndPaymentCell(deliveryOption: DeliveryAndPaymentModel(option: "Вариант доставки", description: "Описание варианта доставки"))
+    DeliveryAndPaymentCell(deliveryOption: .constant(DeliveryAndPaymentModel(option: "Вариант доставки", description: "Описание варианта доставки")))
 }
