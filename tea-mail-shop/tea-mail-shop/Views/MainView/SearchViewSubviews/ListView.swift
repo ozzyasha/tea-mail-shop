@@ -14,7 +14,7 @@ struct ListView: View {
     
     var body: some View {
         List(searchViewModel.searchResults, id: \.id) { tea in
-                TeaViewListCell(tea: tea)
+            TeaViewListCell(tea: tea)
                 .listRowBackground(Color.clear)
                 .listRowSeparator(.hidden)
         }
@@ -23,7 +23,7 @@ struct ListView: View {
         .background(.additional)
         .buttonStyle(.borderless)
     }
-        
+    
 }
 
 #Preview {

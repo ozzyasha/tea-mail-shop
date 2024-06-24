@@ -62,10 +62,13 @@
 		7A6796BD2C15D8350011ED2D /* TeamailUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796BC2C15D8350011ED2D /* TeamailUser.swift */; };
 		7A6796BF2C161A690011ED2D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796BE2C161A690011ED2D /* MainView.swift */; };
 		7A6796C12C161BEE0011ED2D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C02C161BEE0011ED2D /* AccountView.swift */; };
-		7A6796C32C161D840011ED2D /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C22C161D840011ED2D /* FavoritesView.swift */; };
+		7A6796C32C161D840011ED2D /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C22C161D840011ED2D /* CartView.swift */; };
 		7A6796C52C161DD60011ED2D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C42C161DD60011ED2D /* SearchView.swift */; };
 		7A6796C72C161DE00011ED2D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C62C161DE00011ED2D /* HomeView.swift */; };
 		7A6796CD2C170E010011ED2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A6796CC2C170E010011ED2D /* GoogleService-Info.plist */; };
+		7AA73A692C29F9C10067BD8F /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A682C29F9C10067BD8F /* CartViewModel.swift */; };
+		7AA73A6B2C2A291D0067BD8F /* CartItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A6A2C2A291D0067BD8F /* CartItemsListView.swift */; };
+		7AA73A6F2C2A294F0067BD8F /* CartItemsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A6E2C2A294F0067BD8F /* CartItemsListCell.swift */; };
 		7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */; };
 		7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B242C1C865700A74D28 /* AvatarView.swift */; };
 		7AE01B2A2C1DF83400A74D28 /* TeaCatalogueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */; };
@@ -128,11 +131,14 @@
 		7A6796BC2C15D8350011ED2D /* TeamailUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamailUser.swift; sourceTree = "<group>"; };
 		7A6796BE2C161A690011ED2D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7A6796C02C161BEE0011ED2D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		7A6796C22C161D840011ED2D /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		7A6796C22C161D840011ED2D /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		7A6796C42C161DD60011ED2D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		7A6796C62C161DE00011ED2D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7A6796CB2C170CA80011ED2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7A6796CC2C170E010011ED2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7AA73A682C29F9C10067BD8F /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		7AA73A6A2C2A291D0067BD8F /* CartItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsListView.swift; sourceTree = "<group>"; };
+		7AA73A6E2C2A294F0067BD8F /* CartItemsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsListCell.swift; sourceTree = "<group>"; };
 		7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		7AE01B242C1C865700A74D28 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaCatalogueModel.swift; sourceTree = "<group>"; };
@@ -287,6 +293,7 @@
 				7A1037A02C27845000E4BF5D /* DeliveryViewModel.swift */,
 				7A1037A92C28BE9500E4BF5D /* PaymentViewModel.swift */,
 				7AE7BEB82C22B183000655FA /* SearchFieldViewModel.swift */,
+				7AA73A682C29F9C10067BD8F /* CartViewModel.swift */,
 				7AE01B362C1DFA5200A74D28 /* TeaViewModel.swift */,
 				7A1037892C244A3700E4BF5D /* SliderItemsViewModel.swift */,
 				7AE01B3E2C1DFB3000A74D28 /* CachedImageViewModel.swift */,
@@ -319,11 +326,29 @@
 				7A10378F2C245E3100E4BF5D /* HomeViewSubviews */,
 				7A6796C42C161DD60011ED2D /* SearchView.swift */,
 				7AE01B402C1DFBAF00A74D28 /* SearchViewSubviews */,
-				7A6796C22C161D840011ED2D /* FavoritesView.swift */,
+				7A6796C22C161D840011ED2D /* CartView.swift */,
+				7AA73A6C2C2A292B0067BD8F /* CartViewSubviews */,
 				7A6796C02C161BEE0011ED2D /* AccountView.swift */,
 				7AE01B262C1C866400A74D28 /* AccountViewSubviews */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		7AA73A6C2C2A292B0067BD8F /* CartViewSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				7AA73A6A2C2A291D0067BD8F /* CartItemsListView.swift */,
+				7AA73A6D2C2A29370067BD8F /* Cells */,
+			);
+			path = CartViewSubviews;
+			sourceTree = "<group>";
+		};
+		7AA73A6D2C2A29370067BD8F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7AA73A6E2C2A294F0067BD8F /* CartItemsListCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7AE01B212C1C4D4300A74D28 /* Coordinators */ = {
@@ -505,7 +530,7 @@
 				7A6796C12C161BEE0011ED2D /* AccountView.swift in Sources */,
 				7AE01B2E2C1DF87500A74D28 /* CachedImageInfo.swift in Sources */,
 				7A6796BF2C161A690011ED2D /* MainView.swift in Sources */,
-				7A6796C32C161D840011ED2D /* FavoritesView.swift in Sources */,
+				7A6796C32C161D840011ED2D /* CartView.swift in Sources */,
 				7AE01B3B2C1DFA9F00A74D28 /* APIService.swift in Sources */,
 				7AE7BEB52C207104000655FA /* SearchFieldView.swift in Sources */,
 				7AE01B3C2C1DFA9F00A74D28 /* RealmService.swift in Sources */,
@@ -515,6 +540,7 @@
 				7AE7BEB92C22B183000655FA /* SearchFieldViewModel.swift in Sources */,
 				7A1F45252C12463D008F4B53 /* FirestoreService.swift in Sources */,
 				7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */,
+				7AA73A6B2C2A291D0067BD8F /* CartItemsListView.swift in Sources */,
 				7AE01B2A2C1DF83400A74D28 /* TeaCatalogueModel.swift in Sources */,
 				7AE01B2F2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift in Sources */,
 				7AE01B3D2C1DFA9F00A74D28 /* URL+Cache.swift in Sources */,
@@ -527,6 +553,7 @@
 				7A01C54E2C10860400642DD7 /* ViewCoordinator.swift in Sources */,
 				7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */,
 				7A1037912C245E6500E4BF5D /* SliderItemImageView.swift in Sources */,
+				7AA73A6F2C2A294F0067BD8F /* CartItemsListCell.swift in Sources */,
 				7A1037972C26098A00E4BF5D /* ContactsView.swift in Sources */,
 				7AE01B4B2C1DFD0F00A74D28 /* TeaViewGridCell.swift in Sources */,
 				7AE01B302C1DF87500A74D28 /* APIError.swift in Sources */,
@@ -534,6 +561,7 @@
 				7A1037A12C27845000E4BF5D /* DeliveryViewModel.swift in Sources */,
 				7A1F452E2C1478B1008F4B53 /* SignUpView.swift in Sources */,
 				7A1037AA2C28BE9500E4BF5D /* PaymentViewModel.swift in Sources */,
+				7AA73A692C29F9C10067BD8F /* CartViewModel.swift in Sources */,
 				7A1037932C24656100E4BF5D /* SliderView.swift in Sources */,
 				7A6796C52C161DD60011ED2D /* SearchView.swift in Sources */,
 				7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */,

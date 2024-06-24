@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject
+    var cartViewModel = CartViewModel()
     
     init() {
         UITabBar.appearance().unselectedItemTintColor = UIColor.additional
@@ -24,17 +26,18 @@ struct MainView: View {
                     .tabItem {
                         Label("Search", systemImage: "magnifyingglass.circle.fill")
                     }
-                FavoritesView()
+                CartView()
+                    .badge(cartViewModel.teaCart.count != 0 ? "\(cartViewModel.teaCart.count)" : nil)
                     .tabItem {
-                        Label("Favorites", systemImage: "heart.fill")
+                        Label("Cart", systemImage: "cart.fill")
                     }
                 AccountView()
-                    .badge("+")
                     .tabItem {
                         Label("Account", systemImage: "person.crop.circle.fill")
                     }
             }
             .tint(.white)
+            .environmentObject(cartViewModel)
     }
 }
 
