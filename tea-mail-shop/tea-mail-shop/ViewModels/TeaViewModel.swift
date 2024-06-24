@@ -17,17 +17,17 @@ class TeaViewModel: ObservableObject {
         teaCatalogueModel = RealmService.shared.readAllTeaCatalogueFromDatabase()
         
         guard !teaCatalogueModel.isEmpty else {
-            APIService.shared.fetchData(completionHandler: { teaCatalogue in
+            APIService.shared.fetchData(endpoint: .teaCatalogue, responseType: TeaCatalogueResponse.self) { response in
                 DispatchQueue.main.async {
-                    for tea in teaCatalogue {
+                    for tea in response.teaCatalogue {
                         RealmService.shared.saveOrUpdateTea(teaModel: tea)
                         self.teaCatalogueModel.append(tea)
                     }
                 }
                 
-            }, errorHandler: { error in
+            } errorHandler: { error in
                 print(error) //  алерт
-            })
+            }
             return
         }
         

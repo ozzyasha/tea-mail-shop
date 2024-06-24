@@ -14,6 +14,7 @@ class RealmService {
     private init() { }
     
     var teaCatalogue: [TeaCatalogueModel] = []
+    var sliderItems: [SliderItemsModel] = []
     
     lazy var realm: Realm? = {
         do {
@@ -84,5 +85,30 @@ class RealmService {
             self.teaCatalogue.removeAll()
         }
     }
+    
+    func saveOrUpdateSliderItem(sliderItem: SliderItemsModel) {
+        let sliderItemObject = SliderItemsRealmModel(item: sliderItem)
+        
+        guard let realm else {
+            print("Something went wrong with database") // алерт
+            return
+        }
+        
+        realm.writeAsync {
+            realm.add(sliderItemObject, update: .all)
+        }
+    }
+    
+    func readAllSliderItemsFromDatabase() -> [SliderItemsModel] {
+        guard let realm else {
+            print("Can't get saved values") // алерт
+            return []
+        }
+        realm.objects(SliderItemsRealmModel.self).map { $0 }.forEach({ item in
+            sliderItems.append(SliderItemsModel(id: item._id, img: item.img, url: item.url))
+        })
+        return sliderItems
+    }
+
     
 }
