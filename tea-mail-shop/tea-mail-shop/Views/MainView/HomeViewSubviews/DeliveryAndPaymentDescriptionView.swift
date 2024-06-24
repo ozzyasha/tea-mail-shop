@@ -13,42 +13,43 @@ struct DeliveryAndPaymentDescriptionView: View {
     private var deliveryViewModel = DeliveryViewModel()
     @StateObject
     private var paymentViewModel = PaymentViewModel()
-
+    
     var body: some View {
         ZStack {
             Color.additional
                 .ignoresSafeArea()
-            VStack {
-                VStack(alignment: .leading) {
-                    List {
-                        HStack {
-                            Text("Доставка")
-                                .font(.title2)
-                                .foregroundStyle(.accent)
-                                .bold()
-                                .padding(.top, 20)
-                            Spacer()
-                            
-                        }
-                        .padding()
-                        ForEach($deliveryViewModel.deliveryOptions, id: \.id) { $option in
-                            DeliveryAndPaymentCell(deliveryOption: $option)
-                        }
-                        HStack {
-                            Text("Оплата")
-                                .font(.title2)
-                                .foregroundStyle(.accent)
-                                .bold()
-                                .padding(.top, 20)
-                            Spacer()
-                        }
-                        .padding()
-                        ForEach($paymentViewModel.paymentOptions, id: \.id) { $option in
-                            DeliveryAndPaymentCell(deliveryOption: $option)
-                        }
+            VStack(alignment: .leading) {
+                ScrollView {
+                    HStack {
+                        Text("Доставка")
+                            .font(.title2)
+                            .foregroundStyle(.accent)
+                            .bold()
+                            .padding(.top, 20)
+                        Spacer()
                     }
-                    .listStyle(.plain)
-
+                    .padding()
+                    Divider()
+                        .background(.additional)
+                    ForEach($deliveryViewModel.deliveryOptions, id: \.id) { $option in
+                        DeliveryAndPaymentCell(deliveryOption: $option)
+                        Divider()
+                            .background(.additional)
+                    }
+                    HStack {
+                        Text("Оплата")
+                            .font(.title2)
+                            .foregroundStyle(.accent)
+                            .bold()
+                            .padding(.top, 20)
+                        Spacer()
+                    }
+                    .padding()
+                    ForEach($paymentViewModel.paymentOptions, id: \.id) { $option in
+                        Divider()
+                            .background(.additional)
+                        DeliveryAndPaymentCell(deliveryOption: $option)
+                    }
                 }
                 .background(.white)
                 .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))

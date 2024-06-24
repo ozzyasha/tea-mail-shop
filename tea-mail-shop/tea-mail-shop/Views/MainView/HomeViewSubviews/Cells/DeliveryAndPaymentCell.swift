@@ -16,6 +16,7 @@ struct DeliveryAndPaymentCell: View {
             Text(deliveryOption.description)
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.black)
+                .padding(.vertical)
         } label: {
             Text(deliveryOption.option)
                 .multilineTextAlignment(.leading)
