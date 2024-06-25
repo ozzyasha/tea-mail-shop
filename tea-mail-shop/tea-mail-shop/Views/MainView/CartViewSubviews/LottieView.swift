@@ -10,21 +10,21 @@ import UIKit
 import Lottie
 
 struct LottieView: UIViewRepresentable {
-    let animationView = LottieAnimationView()
+    let animationView = LottieAnimationView(configuration: LottieConfiguration(renderingEngine: .coreAnimation))
     let animationUrl = URL(string: "https://lottie.host/35032767-af98-44ab-922c-ff220b9b01e3/0rZCwG2xrU.json")
     
     func makeUIView(context: Context) -> some UIView {
         let view = UIView(frame: .zero)
     
-        LottieAnimation.loadedFrom(url: animationUrl!,
-                                   closure: { animation in
-            
-            animationView.animation = animation
-            animationView.contentMode = .scaleAspectFit
-            animationView.loopMode = .autoReverse
-            animationView.play()
-            
-        }, animationCache: nil)
+        DispatchQueue.global().async(qos: .userInteractive) {
+            LottieAnimation.loadedFrom(url: animationUrl!, closure: { animation in
+                animationView.animation = animation
+                animationView.contentMode = .scaleAspectFit
+                animationView.loopMode = .autoReverse
+                animationView.play()
+                
+            }, animationCache: nil)
+        }
         
         view.addSubview(animationView)
         

@@ -19,7 +19,7 @@ struct TeaViewListCell: View {
     var body: some View {
         
         HStack {
-            TeaViewImageView(imageURL: tea.img)
+            TeaViewImageView(imageURL: tea.img, sizeOfSide: 120)
                 .padding(.trailing)
             
             VStack {

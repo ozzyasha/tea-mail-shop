@@ -14,50 +14,63 @@ struct CartItemsListCell: View {
     var cartViewModel: CartViewModel
     
     var body: some View {
-        HStack {
-            TeaViewImageView(imageURL: tea.img)
-                .padding(.trailing)
-            
-            VStack {
-                HStack() {
+        VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    TeaViewImageView(imageURL: tea.img, sizeOfSide: 80)
+                        .padding(.trailing)
+                    Spacer()
+                }
+                VStack(alignment: .leading) {
                     Text(tea.name)
-                        .font(.headline)
+                        .font(.system(size: 15, weight: .bold))
                         .foregroundStyle(Color.black)
                     Spacer()
-                    VStack(alignment: .trailing) {
-                        Button(action: {
-                            cartViewModel.removeFromCart(tea: tea)
-                        }) {
-                            Image(systemName: "x.circle.fill")
-                                .foregroundColor(.accent)
-                                .font(.system(size: 30))
-                        }
-                        .frame(width: 40, height: 40, alignment: .bottomTrailing)
-                    }
                 }
-                .padding(.top, 10)
                 Spacer()
-                Divider()
-                HStack(alignment: .bottom) {
-                    VStack(alignment: .leading) {
-                        Text("\(tea.price)")
-                            .font(.system(size: 20, weight: .bold))
-                            .foregroundStyle(.accent)
-                        Text("(\(tea.quantity))")
-                            .font(.system(size: 15))
-                            .italic()
-                            .foregroundStyle(.black)
+                VStack(alignment: .trailing) {
+                    Button(action: {
+                        cartViewModel.removeGroupFromCart(tea: tea)
+                    }) {
+                        Image(systemName: "xmark")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(.accent)
                     }
+                    .frame(width: 20, height: 20, alignment: .topTrailing)
                     Spacer()
-                    
                 }
-                .padding(.bottom, 10)
             }
+            .padding(.top, 10)
+            Divider()
+            HStack(alignment: .bottom) {
+                Text(cartViewModel.getPrice(for: tea))
+                    .font(.system(size: 20, weight: .bold))
+                    .frame(height: 20)
+                    .foregroundStyle(.accent)
+                    .padding()
+                Spacer()
+                Stepper {
+                    Text(cartViewModel.getQuantity(for: tea))
+                        .font(.system(size: 15))
+                        .italic()
+                        .foregroundStyle(.black)
+                } onIncrement: {
+                    cartViewModel.addToCart(tea: tea)
+                } onDecrement: {
+                    cartViewModel.removeOneItemFromCart(tea: tea)
+                }
+                .frame(height: 20)
+                .padding()
+                
+            }
+            .padding(.bottom, 10)
         }
         .padding()
         .background(Color.white)
-        .cornerRadius(10)
+        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
     }
+
 }
 
 #Preview {

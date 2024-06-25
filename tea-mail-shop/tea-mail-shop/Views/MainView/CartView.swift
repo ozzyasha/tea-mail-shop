@@ -19,54 +19,64 @@ struct CartView: View {
                 .ignoresSafeArea()
             VStack {
                 VStack {
+                    if cartViewModel.teaCart.count != 0 {
+                        HStack {
+                            Spacer()
+                            Button {
+                                cartViewModel.removeAllFromCart()
+                            } label: {
+                                Image(systemName: "trash")
+                                    .foregroundStyle(.accent)
+                                    .font(.system(size: 18))
+                                Text("Clear Cart")
+                                    .foregroundStyle(.accent)
+                                    .font(.system(size: 18))
+                            }
+                            .padding(10)
+                            .frame(width: 180)
+                            .background(.white)
+                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
+                        }
+                    }
                     CartItemsListView()
                     if cartViewModel.teaCart.count != 0 {
                         HStack {
                             Spacer()
-                            Text("Number of positions:")
-                                .foregroundStyle(.black)
-                            Text("\(cartViewModel.teaCart.count) items")
-                                .bold()
+                            Text("\(cartViewModel.teaCart.count) items in cart")
+                                .font(.system(size: 15))
                                 .foregroundStyle(.black)
                         }
-                        HStack {
+                        Divider()
+                            .background(.secondAdditional)
+                        HStack(alignment: .bottom) {
                             Spacer()
                             Text("Total price:")
+                                .font(.title2)
+                                .frame(height: 18)
                                 .foregroundStyle(.black)
                             Text("\(cartViewModel.totalPrice) Br")
+                                .font(.title)
+                                .frame(height: 18)
                                 .bold()
                                 .foregroundStyle(.accent)
                         }
-                        HStack {
-                            Button {
-                                cartViewModel.removeAllFromCart()
-                            } label: {
-                                Text("Clean the cart")
-                                    .foregroundStyle(.accent)
-                                    .font(.title2)
-                            }
-                            .padding(10)
-                            .frame(width: 170)
-                            .background(.white)
-                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
-                            
-                            Spacer()
-                            Button {
-                                showingAlert = true
-                            } label: {
-                                Text("Buy")
-                                    .foregroundStyle(.white)
-                                    .font(.title2)
-                                    .bold()
-                            }
-                            .padding(10)
-                            .frame(width: 170)
-                            .background(.accent)
-                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
-                            .alert("🥳 Your order is created successfully!", isPresented: $showingAlert) {
-                                Button("OK", role: .cancel) { }
-                            }
+                        .padding(.vertical)
+                        Button {
+                            showingAlert = true
+                        } label: {
+                            Text("Confirm Order")
+                                .foregroundStyle(.white)
+                                .font(.title2)
+                                .bold()
                         }
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(.accent)
+                        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
+                        .alert("🥳 Your order is created successfully!", isPresented: $showingAlert) {
+                            Button("OK", role: .cancel) { }
+                        }
+                        
                     }
                 }
                 .padding()

@@ -18,7 +18,7 @@ struct TeaViewGridCell: View {
     var body: some View {
         
         VStack {
-            TeaViewImageView(imageURL: tea.img)
+            TeaViewImageView(imageURL: tea.img, sizeOfSide: 120)
             HStack {
                 Text(tea.name)
                     .font(.headline)

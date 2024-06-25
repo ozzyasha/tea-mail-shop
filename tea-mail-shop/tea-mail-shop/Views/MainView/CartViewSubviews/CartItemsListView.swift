@@ -15,10 +15,14 @@ struct CartItemsListView: View {
     
     var body: some View {
         if cartViewModel.teaCart.count != 0 {
-            List(cartViewModel.teaCart, id: \.id) { tea in
-                CartItemsListCell(tea: tea)
-                    .listRowBackground(Color.clear)
-                    .listRowSeparator(.hidden)
+            let groupedTeaCart = Dictionary(grouping: cartViewModel.teaCart, by: { $0.id })
+            
+            List(groupedTeaCart.keys.sorted(), id: \.self) { teaID in
+                if let tea = groupedTeaCart[teaID]?.first {
+                    CartItemsListCell(tea: tea)
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
+                }
             }
             .frame(maxHeight: .infinity)
             .listStyle(.plain)
@@ -28,17 +32,17 @@ struct CartItemsListView: View {
             VStack {
                 LottieView()
                     .frame(width: 250, height: 250)
-                    Text("Your cart is empty")
-                        .multilineTextAlignment(.center)
-                        .font(.title2)
-                        .bold()
-                        .foregroundStyle(.black)
-                        .padding()
-                    Text("Looks like you haven't added anything to your cart yet")
-                        .multilineTextAlignment(.center)
-                        .font(.subheadline)
-                        .foregroundStyle(.gray)
-                        .padding()
+                Text("Your cart is empty")
+                    .multilineTextAlignment(.center)
+                    .font(.title2)
+                    .bold()
+                    .foregroundStyle(.black)
+                    .padding()
+                Text("Looks like you haven't added anything to your cart yet")
+                    .multilineTextAlignment(.center)
+                    .font(.subheadline)
+                    .foregroundStyle(.gray)
+                    .padding()
                 Button {
                     tabViewModel.selectedTab = .search
                 } label: {
