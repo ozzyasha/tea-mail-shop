@@ -69,6 +69,9 @@
 		7AA73A692C29F9C10067BD8F /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A682C29F9C10067BD8F /* CartViewModel.swift */; };
 		7AA73A6B2C2A291D0067BD8F /* CartItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A6A2C2A291D0067BD8F /* CartItemsListView.swift */; };
 		7AA73A6F2C2A294F0067BD8F /* CartItemsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A6E2C2A294F0067BD8F /* CartItemsListCell.swift */; };
+		7AA73A722C2AF3EF0067BD8F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA73A712C2AF3EF0067BD8F /* Lottie */; };
+		7AA73A742C2AF46C0067BD8F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A732C2AF46C0067BD8F /* LottieView.swift */; };
+		7AA73A7B2C2B10040067BD8F /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A7A2C2B10040067BD8F /* TabViewModel.swift */; };
 		7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */; };
 		7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B242C1C865700A74D28 /* AvatarView.swift */; };
 		7AE01B2A2C1DF83400A74D28 /* TeaCatalogueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */; };
@@ -139,6 +142,8 @@
 		7AA73A682C29F9C10067BD8F /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		7AA73A6A2C2A291D0067BD8F /* CartItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsListView.swift; sourceTree = "<group>"; };
 		7AA73A6E2C2A294F0067BD8F /* CartItemsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsListCell.swift; sourceTree = "<group>"; };
+		7AA73A732C2AF46C0067BD8F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		7AA73A7A2C2B10040067BD8F /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
 		7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		7AE01B242C1C865700A74D28 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaCatalogueModel.swift; sourceTree = "<group>"; };
@@ -188,6 +193,7 @@
 				7A1F44F42C123EFA008F4B53 /* FirebaseAppDistribution-Beta in Frameworks */,
 				7A1F44F82C123EFA008F4B53 /* FirebaseAuthCombine-Community in Frameworks */,
 				7A1F45162C123EFA008F4B53 /* FirebasePerformance in Frameworks */,
+				7AA73A722C2AF3EF0067BD8F /* Lottie in Frameworks */,
 				7A1F450E2C123EFA008F4B53 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				7A1F451C2C123EFA008F4B53 /* FirebaseStorage in Frameworks */,
 				7A1F45002C123EFA008F4B53 /* FirebaseDynamicLinks in Frameworks */,
@@ -289,6 +295,7 @@
 		7A6796B82C15CFC60011ED2D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				7AA73A7A2C2B10040067BD8F /* TabViewModel.swift */,
 				7A1F45262C14735C008F4B53 /* AuthViewModel.swift */,
 				7A1037A02C27845000E4BF5D /* DeliveryViewModel.swift */,
 				7A1037A92C28BE9500E4BF5D /* PaymentViewModel.swift */,
@@ -338,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				7AA73A6A2C2A291D0067BD8F /* CartItemsListView.swift */,
+				7AA73A732C2AF46C0067BD8F /* LottieView.swift */,
 				7AA73A6D2C2A29370067BD8F /* Cells */,
 			);
 			path = CartViewSubviews;
@@ -439,6 +447,7 @@
 				7A1F45292C147466008F4B53 /* GoogleSignIn */,
 				7A1F452B2C147466008F4B53 /* GoogleSignInSwift */,
 				7AE01B4F2C1DFF1700A74D28 /* RealmSwift */,
+				7AA73A712C2AF3EF0067BD8F /* Lottie */,
 			);
 			productName = "tea-mail-shop";
 			productReference = 7A01C53A2C10802E00642DD7 /* tea-mail-shop.app */;
@@ -472,6 +481,7 @@
 				7A1F44E82C123EFA008F4B53 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				7A1F45282C147466008F4B53 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				7AE01B4E2C1DFF1700A74D28 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				7AA73A702C2AF3EF0067BD8F /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 7A01C53B2C10802E00642DD7 /* Products */;
 			projectDirPath = "";
@@ -566,10 +576,12 @@
 				7A6796C52C161DD60011ED2D /* SearchView.swift in Sources */,
 				7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */,
 				7A6796BD2C15D8350011ED2D /* TeamailUser.swift in Sources */,
+				7AA73A742C2AF46C0067BD8F /* LottieView.swift in Sources */,
 				7AE01B462C1DFC4100A74D28 /* ListView.swift in Sources */,
 				7A1037A32C27889E00E4BF5D /* DeliveryAndPaymentModel.swift in Sources */,
 				7AE01B4C2C1DFD0F00A74D28 /* TeaViewImageView.swift in Sources */,
 				7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */,
+				7AA73A7B2C2B10040067BD8F /* TabViewModel.swift in Sources */,
 				7A1F45272C14735C008F4B53 /* AuthViewModel.swift in Sources */,
 				7A1037882C2447F300E4BF5D /* SliderItemsRealmModel.swift in Sources */,
 				7AE01B4D2C1DFD0F00A74D28 /* TeaViewListCell.swift in Sources */,
@@ -803,6 +815,14 @@
 				minimumVersion = 7.1.0;
 			};
 		};
+		7AA73A702C2AF3EF0067BD8F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 		7AE01B4E2C1DFF1700A74D28 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -963,6 +983,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7A1F45282C147466008F4B53 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		7AA73A712C2AF3EF0067BD8F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AA73A702C2AF3EF0067BD8F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		7AE01B4F2C1DFF1700A74D28 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;

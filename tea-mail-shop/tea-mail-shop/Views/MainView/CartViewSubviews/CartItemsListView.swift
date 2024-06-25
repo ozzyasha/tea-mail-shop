@@ -10,6 +10,8 @@ import SwiftUI
 struct CartItemsListView: View {
     @EnvironmentObject
     var cartViewModel: CartViewModel
+    @EnvironmentObject
+    var tabViewModel: TabViewModel
     
     var body: some View {
         if cartViewModel.teaCart.count != 0 {
@@ -24,16 +26,32 @@ struct CartItemsListView: View {
             .buttonStyle(.borderless)
         } else {
             VStack {
-                ZStack {
-                    Spacer()
-                    Text("You haven't added anything yet...")
+                LottieView()
+                    .frame(width: 250, height: 250)
+                    Text("Your cart is empty")
+                        .multilineTextAlignment(.center)
+                        .font(.title2)
+                        .bold()
                         .foregroundStyle(.black)
                         .padding()
-                    Spacer()
+                    Text("Looks like you haven't added anything to your cart yet")
+                        .multilineTextAlignment(.center)
+                        .font(.subheadline)
+                        .foregroundStyle(.gray)
+                        .padding()
+                Button {
+                    tabViewModel.selectedTab = .search
+                } label: {
+                    Text("Go to the catalogue")
+                        .multilineTextAlignment(.center)
+                        .font(.title3)
+                        .foregroundStyle(.accent)
+                        .padding()
                 }
-                .background(.white)
-                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
             }
+            .padding()
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
             .frame(maxHeight: .infinity)
         }
         
@@ -43,4 +61,5 @@ struct CartItemsListView: View {
 #Preview {
     CartItemsListView()
         .environmentObject(CartViewModel())
+        .environmentObject(TabViewModel())
 }
