@@ -15,8 +15,7 @@ struct CartItemsListView: View {
     
     var body: some View {
         if cartViewModel.teaCart.count != 0 {
-            let groupedTeaCart = Dictionary(grouping: cartViewModel.teaCart, by: { $0.id })
-            
+            let groupedTeaCart = Dictionary(grouping: cartViewModel.teaCart) { $0.id }
             List(groupedTeaCart.keys.sorted(), id: \.self) { teaID in
                 if let tea = groupedTeaCart[teaID]?.first {
                     CartItemsListCell(tea: tea)

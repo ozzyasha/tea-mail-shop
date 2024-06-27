@@ -12,6 +12,8 @@ struct CartView: View {
     var cartViewModel: CartViewModel
     @State
     private var showingAlert = false
+    @ObservedObject
+    var firestore = FirestoreService()
     
     var body: some View {
         ZStack {
@@ -63,6 +65,7 @@ struct CartView: View {
                         .padding(.vertical)
                         Button {
                             showingAlert = true
+                            firestore.writeFirestore(orders: cartViewModel.teaCart)
                         } label: {
                             Text("Confirm Order")
                                 .foregroundStyle(.white)
@@ -74,7 +77,9 @@ struct CartView: View {
                         .background(.accent)
                         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
                         .alert("🥳 Your order is created successfully!", isPresented: $showingAlert) {
-                            Button("OK", role: .cancel) { }
+                            Button("OK", role: .cancel) {
+                                cartViewModel.removeAllFromCart()
+                            }
                         }
                         
                     }

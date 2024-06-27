@@ -72,6 +72,13 @@
 		7AA73A722C2AF3EF0067BD8F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA73A712C2AF3EF0067BD8F /* Lottie */; };
 		7AA73A742C2AF46C0067BD8F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A732C2AF46C0067BD8F /* LottieView.swift */; };
 		7AA73A7B2C2B10040067BD8F /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A7A2C2B10040067BD8F /* TabViewModel.swift */; };
+		7AA73A7F2C2C622C0067BD8F /* UsersFirebaseFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A7E2C2C622C0067BD8F /* UsersFirebaseFields.swift */; };
+		7AA73A812C2C91D20067BD8F /* OrdersFirebaseFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A802C2C91D20067BD8F /* OrdersFirebaseFields.swift */; };
+		7AA73A832C2CBD820067BD8F /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A822C2CBD820067BD8F /* OrdersView.swift */; };
+		7AA73A852C2CCC150067BD8F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A842C2CCC150067BD8F /* Order.swift */; };
+		7AA73A8A2C2CD94A0067BD8F /* OrdersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A892C2CD94A0067BD8F /* OrdersViewCell.swift */; };
+		7AA73A8C2C2CD9B00067BD8F /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A8B2C2CD9B00067BD8F /* OrdersViewModel.swift */; };
+		7AA73A8E2C2E08DF0067BD8F /* OrderedTea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */; };
 		7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */; };
 		7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B242C1C865700A74D28 /* AvatarView.swift */; };
 		7AE01B2A2C1DF83400A74D28 /* TeaCatalogueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */; };
@@ -144,6 +151,13 @@
 		7AA73A6E2C2A294F0067BD8F /* CartItemsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsListCell.swift; sourceTree = "<group>"; };
 		7AA73A732C2AF46C0067BD8F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		7AA73A7A2C2B10040067BD8F /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
+		7AA73A7E2C2C622C0067BD8F /* UsersFirebaseFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFirebaseFields.swift; sourceTree = "<group>"; };
+		7AA73A802C2C91D20067BD8F /* OrdersFirebaseFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersFirebaseFields.swift; sourceTree = "<group>"; };
+		7AA73A822C2CBD820067BD8F /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
+		7AA73A842C2CCC150067BD8F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		7AA73A892C2CD94A0067BD8F /* OrdersViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewCell.swift; sourceTree = "<group>"; };
+		7AA73A8B2C2CD9B00067BD8F /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
+		7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedTea.swift; sourceTree = "<group>"; };
 		7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		7AE01B242C1C865700A74D28 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaCatalogueModel.swift; sourceTree = "<group>"; };
@@ -301,6 +315,7 @@
 				7A1037A92C28BE9500E4BF5D /* PaymentViewModel.swift */,
 				7AE7BEB82C22B183000655FA /* SearchFieldViewModel.swift */,
 				7AA73A682C29F9C10067BD8F /* CartViewModel.swift */,
+				7AA73A8B2C2CD9B00067BD8F /* OrdersViewModel.swift */,
 				7AE01B362C1DFA5200A74D28 /* TeaViewModel.swift */,
 				7A1037892C244A3700E4BF5D /* SliderItemsViewModel.swift */,
 				7AE01B3E2C1DFB3000A74D28 /* CachedImageViewModel.swift */,
@@ -313,14 +328,18 @@
 			children = (
 				7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */,
 				7A6796BC2C15D8350011ED2D /* TeamailUser.swift */,
-				7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */,
+				7AA73A842C2CCC150067BD8F /* Order.swift */,
+				7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */,
 				7AE01B2C2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift */,
+				7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */,
 				7A1037852C24474200E4BF5D /* SliderItemsModel.swift */,
 				7A1037872C2447F300E4BF5D /* SliderItemsRealmModel.swift */,
 				7AE01B2B2C1DF87400A74D28 /* CachedImageInfo.swift */,
 				7A1037A22C27889E00E4BF5D /* DeliveryAndPaymentModel.swift */,
 				7AE01B2D2C1DF87500A74D28 /* APIError.swift */,
 				7A10378D2C244FC300E4BF5D /* Endpoint.swift */,
+				7AA73A7E2C2C622C0067BD8F /* UsersFirebaseFields.swift */,
+				7AA73A802C2C91D20067BD8F /* OrdersFirebaseFields.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -359,6 +378,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		7AA73A882C2CD93C0067BD8F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7AA73A892C2CD94A0067BD8F /* OrdersViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		7AE01B212C1C4D4300A74D28 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +398,8 @@
 			isa = PBXGroup;
 			children = (
 				7AE01B242C1C865700A74D28 /* AvatarView.swift */,
+				7AA73A822C2CBD820067BD8F /* OrdersView.swift */,
+				7AA73A882C2CD93C0067BD8F /* Cells */,
 			);
 			path = AccountViewSubviews;
 			sourceTree = "<group>";
@@ -555,6 +584,8 @@
 				7AE01B2F2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift in Sources */,
 				7AE01B3D2C1DFA9F00A74D28 /* URL+Cache.swift in Sources */,
 				7AE01B3F2C1DFB3000A74D28 /* CachedImageViewModel.swift in Sources */,
+				7AA73A832C2CBD820067BD8F /* OrdersView.swift in Sources */,
+				7AA73A8C2C2CD9B00067BD8F /* OrdersViewModel.swift in Sources */,
 				7A1037A52C2868B600E4BF5D /* DeliveryAndPaymentCell.swift in Sources */,
 				7A1037992C260F9A00E4BF5D /* DeliveryAndPaymentDescriptionView.swift in Sources */,
 				7A01C53E2C10802E00642DD7 /* tea_mail_shopApp.swift in Sources */,
@@ -564,9 +595,11 @@
 				7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */,
 				7A1037912C245E6500E4BF5D /* SliderItemImageView.swift in Sources */,
 				7AA73A6F2C2A294F0067BD8F /* CartItemsListCell.swift in Sources */,
+				7AA73A852C2CCC150067BD8F /* Order.swift in Sources */,
 				7A1037972C26098A00E4BF5D /* ContactsView.swift in Sources */,
 				7AE01B4B2C1DFD0F00A74D28 /* TeaViewGridCell.swift in Sources */,
 				7AE01B302C1DF87500A74D28 /* APIError.swift in Sources */,
+				7AA73A7F2C2C622C0067BD8F /* UsersFirebaseFields.swift in Sources */,
 				7A10378A2C244A3700E4BF5D /* SliderItemsViewModel.swift in Sources */,
 				7A1037A12C27845000E4BF5D /* DeliveryViewModel.swift in Sources */,
 				7A1F452E2C1478B1008F4B53 /* SignUpView.swift in Sources */,
@@ -580,12 +613,15 @@
 				7AE01B462C1DFC4100A74D28 /* ListView.swift in Sources */,
 				7A1037A32C27889E00E4BF5D /* DeliveryAndPaymentModel.swift in Sources */,
 				7AE01B4C2C1DFD0F00A74D28 /* TeaViewImageView.swift in Sources */,
+				7AA73A812C2C91D20067BD8F /* OrdersFirebaseFields.swift in Sources */,
 				7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */,
 				7AA73A7B2C2B10040067BD8F /* TabViewModel.swift in Sources */,
+				7AA73A8E2C2E08DF0067BD8F /* OrderedTea.swift in Sources */,
 				7A1F45272C14735C008F4B53 /* AuthViewModel.swift in Sources */,
 				7A1037882C2447F300E4BF5D /* SliderItemsRealmModel.swift in Sources */,
 				7AE01B4D2C1DFD0F00A74D28 /* TeaViewListCell.swift in Sources */,
 				7A1037862C24474200E4BF5D /* SliderItemsModel.swift in Sources */,
+				7AA73A8A2C2CD94A0067BD8F /* OrdersViewCell.swift in Sources */,
 				7AE01B422C1DFC1000A74D28 /* CachedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

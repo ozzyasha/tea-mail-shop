@@ -16,85 +16,90 @@ struct AccountView: View {
     private var showingEditProfileAlert = false
     
     var body: some View {
-        ZStack(alignment: .center) {
-            Color.additional.ignoresSafeArea()
-            VStack {
-                VStack() {
-                    HStack(spacing: 20) {
-                        Button {
-                            
-                        } label: {
-                            AvatarView()
-                        }
-                        VStack(alignment: .leading) {
-                            Text(viewModel.currentUsername)
-                                .font(.title)
-                        }
-                        Spacer()
-                    }
-                    .padding(.horizontal)
-                    
-                    Divider()
-                    
-                    Button {
-                        // navigate to Tea diary
-                    } label: {
-                        Text("Tea diary")
-                            .foregroundStyle(Color.white)
-                            .frame(maxWidth: 300, maxHeight: 50)
-                            .background(.secondAdditional)
-                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
-                            .padding(.vertical)
-                    }
-                    Button {
-                        // navigate to orders
-                    } label: {
-                        Text("Orders")
-                            .foregroundStyle(Color.white)
-                            .frame(maxWidth: 300, maxHeight: 50)
-                            .background(.secondAdditional)
-                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
-                            .padding(.vertical)
-                    }
-                    Button {
-                        showingEditProfileAlert.toggle()
-                    } label: {
-                        Text("Edit profile")
-                            .foregroundStyle(Color.white)
-                            .frame(maxWidth: 300, maxHeight: 50)
-                            .background(.secondAdditional)
-                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
-                            .padding(.vertical)
-                    }
-                    .alert("Edit profile", isPresented: $showingEditProfileAlert) {
-                        TextField("Enter your name", text: $viewModel.currentUsername)
-                        Button("OK") {
-                            viewModel.firestore.writeFirestore(username: viewModel.currentUsername)
-                        }
-                        Button("Cancel", role: .cancel) { }
-                            } message: {
-                                Text("You can edit your username in the field below. When it will be ready, press OK to continue.")
+        NavigationStack {
+            ZStack(alignment: .center) {
+                Color.additional.ignoresSafeArea()
+                VStack {
+                    VStack() {
+                        HStack(spacing: 20) {
+                            Button {
+                                // change avatar
+                            } label: {
+                                AvatarView()
                             }
-                    Button {
-                        viewModel.signOut()
-                    } label: {
-                        Text("Sign Out")
-                            .foregroundStyle(Color.white)
-                            .frame(maxWidth: 300, maxHeight: 50)
-                            .background(.accent)
-                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
-                            .padding(.vertical)
+                            VStack(alignment: .leading) {
+                                Text(viewModel.currentUsername)
+                                    .font(.title)
+                            }
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+                        
+                        Divider()
+                        
+                        Button {
+                            // navigate to Tea diary
+                        } label: {
+                            Text("Tea diary")
+                                .foregroundStyle(Color.white)
+                                .frame(maxWidth: 300, maxHeight: 50)
+                                .background(.secondAdditional)
+                                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
+                                .padding(.vertical)
+                        }
+                        NavigationLink {
+                            OrdersView()
+                        } label: {
+                            Text("Orders")
+                                .foregroundStyle(Color.white)
+                                .frame(maxWidth: 300, maxHeight: 50)
+                                .background(.secondAdditional)
+                                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
+                                .padding(.vertical)
+                        }
+                        Button {
+                            showingEditProfileAlert.toggle()
+                        } label: {
+                            Text("Edit profile")
+                                .foregroundStyle(Color.white)
+                                .frame(maxWidth: 300, maxHeight: 50)
+                                .background(.secondAdditional)
+                                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
+                                .padding(.vertical)
+                        }
+                        .alert("Edit profile", isPresented: $showingEditProfileAlert) {
+                            TextField("Enter your name", text: $viewModel.currentUsername)
+                            Button("OK") {
+                                viewModel.firestore.writeFirestore(username: viewModel.currentUsername)
+                            }
+                            Button("Cancel", role: .cancel) { }
+                        } message: {
+                            Text("You can edit your username in the field below. When it will be ready, press OK to continue.")
+                        }
+                        Button {
+                            viewModel.signOut()
+                        } label: {
+                            Text("Sign Out")
+                                .foregroundStyle(Color.white)
+                                .frame(maxWidth: 300, maxHeight: 50)
+                                .background(.accent)
+                                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
+                                .padding(.vertical)
+                        }
                     }
+                    .foregroundStyle(.accent)
+                    .padding()
+                    .frame(maxHeight: .infinity)
+                    Rectangle()
+                        .fill(Color.clear)
+                        .frame(height: 10)
+                        .background(.accent)
                 }
-                .foregroundStyle(.accent)
-                .padding()
-                .frame(maxHeight: .infinity)
-                Rectangle()
-                    .fill(Color.clear)
-                    .frame(height: 10)
-                    .background(.accent)
             }
         }
+        .accentColor(.accent)
+        .tint(.accent)
+        .foregroundStyle(.accent)
     }
 }
 
