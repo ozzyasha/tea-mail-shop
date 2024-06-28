@@ -56,7 +56,7 @@ class FirestoreService: ObservableObject {
                 let ordersRef = usersRef.document(uid).collection(OrdersFirebaseFields.collection.rawValue).document("\(counterValue)")
                 
                 ordersRef.setData([
-                    OrdersFirebaseFields.id.rawValue: ordersRef.documentID
+                    OrdersFirebaseFields.id.rawValue: Int(ordersRef.documentID) ?? "0"
                 ])
                 let teaItemsCollection = ordersRef.collection(TeasFirebaseFields.collection.rawValue)
                 
@@ -149,50 +149,44 @@ class FirestoreService: ObservableObject {
             completion([])
             return
         }
+        
         let ordersRef = store.collection(UsersFirebaseFields.path.rawValue)
             .document(uid)
             .collection(OrdersFirebaseFields.collection.rawValue)
-        ordersRef.getDocuments { snapshot, error in
-            if let error = error {
+        
+        Task {
+            do {
+                let snapshot = try await ordersRef.getDocuments()
+                
+                var orders: [Order] = []
+                
+                for orderDocument in snapshot.documents {
+                    guard let orderId = orderDocument.get(OrdersFirebaseFields.id.rawValue) as? Int else {
+                        errorHandler("Warning: Missing data for order \(orderDocument.documentID)")
+                        continue
+                    }
+                    
+                    let orderedTeaItemsRef = orderDocument.reference.collection(TeasFirebaseFields.collection.rawValue)
+                    let orderedTeas = try await orderedTeaItemsRef.getDocuments()
+                    let teaItems = orderedTeas.documents.compactMap { document -> OrderedTea? in
+                        guard let teaId = document.get(TeasFirebaseFields.id.rawValue) as? Int,
+                              let teaName = document.get(TeasFirebaseFields.name.rawValue) as? String,
+                              let teaPrice = document.get(TeasFirebaseFields.price.rawValue) as? String,
+                              let teaQuantity = document.get(TeasFirebaseFields.quantity.rawValue) as? String else {
+                            errorHandler("Warning: Missing data for ordered tea item \(document.documentID)")
+                            return nil
+                        }
+                        return OrderedTea(id: teaId, name: teaName, price: teaPrice, quantity: teaQuantity)
+                    }
+                    
+                    orders.append(Order(id: orderId, orderedTeasArray: teaItems))
+                }
+                
+                completion(orders.sorted(by: { $0.id > $1.id }))
+                
+            } catch {
                 errorHandler("Failed to fetch orders: \(error)")
                 completion([])
-                return
-            }
-            
-            let orderedTeas: [OrderedTea] = []
-            var orders: [Order] = []
-            
-            for orderDocument in snapshot!.documents {
-                guard let orderId = orderDocument.get(OrdersFirebaseFields.id.rawValue) as? String else {
-                    errorHandler("Warning: Missing data for order \(orderDocument.documentID)")
-                    continue
-                }
-                var order = Order(id: orderId, orderedTeasArray: orderedTeas)
-                
-                let orderedTeaItemsRef = orderDocument.reference.collection(TeasFirebaseFields.collection.rawValue)
-                orderedTeaItemsRef.getDocuments { teaItemsSnapshot, teaItemsError in
-                    if let teaItemsError = teaItemsError {
-                        errorHandler("Error fetching ordered tea items: \(teaItemsError)")
-                        completion([])
-                        return
-                    }
-                    
-                    for teaItemDocument in teaItemsSnapshot!.documents {
-                        guard let teaId = teaItemDocument.get(TeasFirebaseFields.id.rawValue) as? Int,
-                              let teaName = teaItemDocument.get(TeasFirebaseFields.name.rawValue) as? String,
-                              let teaPrice = teaItemDocument.get(TeasFirebaseFields.price.rawValue) as? String,
-                              let teaQuantity = teaItemDocument.get(TeasFirebaseFields.quantity.rawValue) as? String else {
-                            errorHandler("Warning: Missing data for ordered tea item \(teaItemDocument.documentID)")
-                            continue
-                        }
-                        let orderedTea = OrderedTea(id: teaId, name: teaName, price: teaPrice, quantity: teaQuantity)
-                        order.orderedTeasArray.append(orderedTea)
-                    }
-                    
-                    orders.append(order)
-                    
-                    completion(orders.sorted { $0.id > $1.id })
-                }
             }
         }
     }

@@ -8,6 +8,6 @@
 import Foundation
 
 struct Order: Identifiable {
-    let id: String
+    let id: Int
     var orderedTeasArray: [OrderedTea]
 }

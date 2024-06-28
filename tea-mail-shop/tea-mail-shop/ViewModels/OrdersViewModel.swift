@@ -21,8 +21,11 @@ class OrdersViewModel: ObservableObject {
     }
     
     func readAllOrders() {
-        firestore.readFirestore { orders in
-            self.ordersCatalogue = orders
+        self.firestore.readFirestore { orders in
+            DispatchQueue.main.async {
+                self.ordersCatalogue = orders
+            }
+            
         } errorHandler: { error in
             self.firestoreError = error
         }

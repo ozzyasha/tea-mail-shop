@@ -43,5 +43,5 @@ struct OrdersViewCell: View {
 }
 
 #Preview {
-    OrdersViewCell(order: Order(id: "0", orderedTeasArray: [OrderedTea(id: 0, name: "tea", price: "0 Br", quantity: "0 шт."), OrderedTea(id: 1, name: "second", price: "0 Br", quantity: "0 шт.")]))
+    OrdersViewCell(order: Order(id: 0, orderedTeasArray: [OrderedTea(id: 0, name: "tea", price: "0 Br", quantity: "0 шт."), OrderedTea(id: 1, name: "second", price: "0 Br", quantity: "0 шт.")]))
 }
