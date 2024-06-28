@@ -18,10 +18,8 @@ class FirestoreService: ObservableObject {
         fetchUser()
     }
     
-    private let path: String = "users"
-    private let uid: String = "uid"
-    private let username: String = "username"
-    private let email: String = "e-mail"
+    private let ordersPath: String = "orders"
+    
     private let store = Firestore.firestore()
     private var errorMessage = ""
     
@@ -29,24 +27,81 @@ class FirestoreService: ObservableObject {
     var teamailUser: TeamailUser?
     
     func writeFirestore(username: String) {
-        let usersRef = store.collection(path)
+        let usersRef = store.collection(UsersFirebaseFields.path.rawValue)
         
         usersRef.document("\(Auth.auth().currentUser?.uid ?? "undefined")").setData([
-            self.uid: Auth.auth().currentUser?.uid ?? "can't receive an id",
-            self.username: username,
-            self.email: Auth.auth().currentUser?.email ?? "can't receive an email"]) { err in
-                if let err = err {
-                    self.errorMessage = "\(err)"
-                    return
+            UsersFirebaseFields.uid.rawValue: Auth.auth().currentUser?.uid ?? "can't receive an id",
+            UsersFirebaseFields.username.rawValue: username,
+            UsersFirebaseFields.email.rawValue: Auth.auth().currentUser?.email ?? "can't receive an email"
+        ]) { err in
+            if let err = err {
+                self.errorMessage = "\(err)"
+                return
+            }
+        }
+    }
+    
+    func writeFirestore(orders: [TeaCatalogueModel]) {
+        let usersRef = store.collection(UsersFirebaseFields.path.rawValue)
+        let uid = "\(Auth.auth().currentUser?.uid ?? "undefined")"
+        let counterRef = store.collection("orderID").document("orderCounter")
+        
+        counterRef.getDocument { (snapshot, error) in
+            if let error = error {
+                self.errorMessage = "Failed to get order id: \(error)"
+                return
+            }
+            
+            if let snapshot = snapshot, let counterValue = snapshot.get("value") as? Int {
+                let ordersRef = usersRef.document(uid).collection(OrdersFirebaseFields.collection.rawValue).document("\(counterValue)")
+                
+                ordersRef.setData([
+                    OrdersFirebaseFields.id.rawValue: Int(ordersRef.documentID) ?? "0"
+                ])
+                let teaItemsCollection = ordersRef.collection(TeasFirebaseFields.collection.rawValue)
+                
+                for tea in orders {
+                    let teaItemsQuantity = orders.filter({$0.id == tea.id}).count
+                    var teaQuantity = "0 шт."
+                    
+                    if tea.quantity.contains(" г.") {
+                        teaQuantity = "\(teaItemsQuantity * (Int(tea.quantity.trimmingCharacters(in: CharacterSet(charactersIn: " г."))) ?? 0)) г."
+                    } else if tea.quantity.contains(" шт.") {
+                        teaQuantity = "\(teaItemsQuantity * (Int(tea.quantity.trimmingCharacters(in: CharacterSet(charactersIn: " шт."))) ?? 0)) шт."
+                    }
+                    
+                    let teaPrice = "\((Int(tea.price.trimmingCharacters(in: CharacterSet(charactersIn: " Br"))) ?? 0) * teaItemsQuantity) Br"
+                    
+                    teaItemsCollection.document("\(tea.id)").setData([
+                        TeasFirebaseFields.id.rawValue: tea.id,
+                        TeasFirebaseFields.name.rawValue: tea.name,
+                        TeasFirebaseFields.price.rawValue: teaPrice,
+                        TeasFirebaseFields.quantity.rawValue: teaQuantity
+                    ]) { err in
+                        if let err = err {
+                            self.errorMessage = "\(err)"
+                            return
+                        }
+                    }
+                }
+                
+                counterRef.updateData([
+                    "value": counterValue + 1
+                ]) { error in
+                    if let error = error {
+                        self.errorMessage = "Failed to update order value: \(error)"
+                        return
+                    }
                 }
             }
+        }
     }
     
     func fetchUser() {
         guard let uid = Auth.auth().currentUser?.uid else {
             return
         }
-        store.collection(path).document(uid).getDocument { snapshot, error in
+        store.collection(UsersFirebaseFields.path.rawValue).document(uid).getDocument { snapshot, error in
             if let error = error {
                 self.errorMessage = "Failed to fetch current user: \(error)"
                 return
@@ -57,9 +112,9 @@ class FirestoreService: ObservableObject {
                 return
             }
             
-            let uid = data[self.uid] as? String ?? ""
-            let email = data[self.email] as? String ?? ""
-            let username = data[self.username] as? String ?? ""
+            let uid = data[UsersFirebaseFields.uid.rawValue] as? String ?? ""
+            let email = data[UsersFirebaseFields.email.rawValue] as? String ?? ""
+            let username = data[UsersFirebaseFields.username.rawValue] as? String ?? ""
             
             self.teamailUser = TeamailUser(uid: uid, email: email, username: username)
         }
@@ -69,7 +124,7 @@ class FirestoreService: ObservableObject {
         guard let uid = Auth.auth().currentUser?.uid else {
             return
         }
-        store.collection(path).document(uid).getDocument { snapshot, error in
+        store.collection(UsersFirebaseFields.path.rawValue).document(uid).getDocument { snapshot, error in
             if let error = error {
                 self.errorMessage = "Failed to fetch current user: \(error)"
                 return
@@ -81,11 +136,58 @@ class FirestoreService: ObservableObject {
                 return
             }
             
-            let uid = data[self.uid] as? String ?? ""
-            let email = data[self.email] as? String ?? ""
-            let username = data[self.username] as? String ?? ""
+            let uid = data[UsersFirebaseFields.uid.rawValue] as? String ?? ""
+            let email = data[UsersFirebaseFields.email.rawValue] as? String ?? ""
+            let username = data[UsersFirebaseFields.username.rawValue] as? String ?? ""
             
             completion(TeamailUser(uid: uid, email: email, username: username))
+        }
+    }
+    
+    func readFirestore(completion: @escaping ([Order]) -> (), errorHandler: @escaping (String) -> ()) {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            completion([])
+            return
+        }
+        
+        let ordersRef = store.collection(UsersFirebaseFields.path.rawValue)
+            .document(uid)
+            .collection(OrdersFirebaseFields.collection.rawValue)
+        
+        Task {
+            do {
+                let snapshot = try await ordersRef.getDocuments()
+                
+                var orders: [Order] = []
+                
+                for orderDocument in snapshot.documents {
+                    guard let orderId = orderDocument.get(OrdersFirebaseFields.id.rawValue) as? Int else {
+                        errorHandler("Warning: Missing data for order \(orderDocument.documentID)")
+                        continue
+                    }
+                    
+                    let orderedTeaItemsRef = orderDocument.reference.collection(TeasFirebaseFields.collection.rawValue)
+                    let orderedTeas = try await orderedTeaItemsRef.getDocuments()
+                    let teaItems = orderedTeas.documents.compactMap { document -> OrderedTea? in
+                        guard let teaId = document.get(TeasFirebaseFields.id.rawValue) as? Int,
+                              let teaName = document.get(TeasFirebaseFields.name.rawValue) as? String,
+                              let teaPrice = document.get(TeasFirebaseFields.price.rawValue) as? String,
+                              let teaQuantity = document.get(TeasFirebaseFields.quantity.rawValue) as? String else {
+                            errorHandler("Warning: Missing data for ordered tea item \(document.documentID)")
+                            return nil
+                        }
+                        return OrderedTea(id: teaId, name: teaName, price: teaPrice, quantity: teaQuantity)
+                    }
+                    
+                    orders.append(Order(id: orderId, orderedTeasArray: teaItems))
+                }
+                
+                completion(orders.sorted(by: { $0.id > $1.id }))
+                
+            } catch {
+                errorHandler("Failed to fetch orders: \(error)")
+                completion([])
+            }
         }
     }
 }

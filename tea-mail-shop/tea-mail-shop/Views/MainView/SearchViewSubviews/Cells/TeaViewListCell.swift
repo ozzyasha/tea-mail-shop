@@ -12,12 +12,14 @@ struct TeaViewListCell: View {
     @State
     var tea: TeaCatalogueModel
     @State
-    private var isLiked = false
+    private var isAddedToCart = false
+    @EnvironmentObject
+    var cartViewModel: CartViewModel
     
     var body: some View {
         
         HStack {
-            TeaViewImageView(imageURL: tea.img)
+            TeaViewImageView(imageURL: tea.img, sizeOfSide: 120)
                 .padding(.trailing)
             
             VStack {
@@ -34,16 +36,19 @@ struct TeaViewListCell: View {
                     VStack(alignment: .leading) {
                         Text("\(tea.price)")
                             .font(.system(size: 20, weight: .bold))
+                            .foregroundStyle(.accent)
                         Text("(\(tea.quantity))")
                             .font(.system(size: 15))
                             .italic()
+                            .foregroundStyle(.black)
                     }
                     Spacer()
                     VStack(alignment: .trailing) {
                         Button(action: {
-                            isLiked.toggle()
+                            cartViewModel.addToCart(tea: tea)
+                            isAddedToCart.toggle()
                         }) {
-                            Image(systemName: isLiked ? "heart.fill" : "heart")
+                            Image(systemName: isAddedToCart ? "cart.fill" : "cart.badge.plus")
                                 .foregroundColor(.accent)
                                 .font(.system(size: 30))
                         }
@@ -51,7 +56,6 @@ struct TeaViewListCell: View {
                     }
                 }
                 .padding(.bottom, 10)
-                
             }
         }
         .padding()
@@ -61,7 +65,8 @@ struct TeaViewListCell: View {
 }
 
 #Preview {
-    TeaViewListCell(tea: TeaCatalogueModel(id: 0, name: "Some tea tea tea tea tea tea tea tea tea tea teaaaaaaaaa teateatea aaaaa", price: "0 Br", img: "https://tea-mail.by/wa-data/public/shop/products/82/83/8382/images/32944/32944.750.jpg", description: "description", quantity: "1 шт."))
+    TeaViewListCell(tea: TeaCatalogueModel(id: 0, name: "Some tea", price: "0 Br", img: "https://tea-mail.by/wa-data/public/shop/products/82/83/8382/images/32944/32944.750.jpg", description: "description", quantity: "1 шт."))
+        .environmentObject(CartViewModel())
 }
 
 

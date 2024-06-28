@@ -62,10 +62,23 @@
 		7A6796BD2C15D8350011ED2D /* TeamailUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796BC2C15D8350011ED2D /* TeamailUser.swift */; };
 		7A6796BF2C161A690011ED2D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796BE2C161A690011ED2D /* MainView.swift */; };
 		7A6796C12C161BEE0011ED2D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C02C161BEE0011ED2D /* AccountView.swift */; };
-		7A6796C32C161D840011ED2D /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C22C161D840011ED2D /* FavoritesView.swift */; };
+		7A6796C32C161D840011ED2D /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C22C161D840011ED2D /* CartView.swift */; };
 		7A6796C52C161DD60011ED2D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C42C161DD60011ED2D /* SearchView.swift */; };
 		7A6796C72C161DE00011ED2D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C62C161DE00011ED2D /* HomeView.swift */; };
 		7A6796CD2C170E010011ED2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A6796CC2C170E010011ED2D /* GoogleService-Info.plist */; };
+		7AA73A692C29F9C10067BD8F /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A682C29F9C10067BD8F /* CartViewModel.swift */; };
+		7AA73A6B2C2A291D0067BD8F /* CartItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A6A2C2A291D0067BD8F /* CartItemsListView.swift */; };
+		7AA73A6F2C2A294F0067BD8F /* CartItemsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A6E2C2A294F0067BD8F /* CartItemsListCell.swift */; };
+		7AA73A722C2AF3EF0067BD8F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA73A712C2AF3EF0067BD8F /* Lottie */; };
+		7AA73A742C2AF46C0067BD8F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A732C2AF46C0067BD8F /* LottieView.swift */; };
+		7AA73A7B2C2B10040067BD8F /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A7A2C2B10040067BD8F /* TabViewModel.swift */; };
+		7AA73A7F2C2C622C0067BD8F /* UsersFirebaseFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A7E2C2C622C0067BD8F /* UsersFirebaseFields.swift */; };
+		7AA73A812C2C91D20067BD8F /* OrdersFirebaseFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A802C2C91D20067BD8F /* OrdersFirebaseFields.swift */; };
+		7AA73A832C2CBD820067BD8F /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A822C2CBD820067BD8F /* OrdersView.swift */; };
+		7AA73A852C2CCC150067BD8F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A842C2CCC150067BD8F /* Order.swift */; };
+		7AA73A8A2C2CD94A0067BD8F /* OrdersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A892C2CD94A0067BD8F /* OrdersViewCell.swift */; };
+		7AA73A8C2C2CD9B00067BD8F /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A8B2C2CD9B00067BD8F /* OrdersViewModel.swift */; };
+		7AA73A8E2C2E08DF0067BD8F /* OrderedTea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */; };
 		7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */; };
 		7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B242C1C865700A74D28 /* AvatarView.swift */; };
 		7AE01B2A2C1DF83400A74D28 /* TeaCatalogueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */; };
@@ -128,11 +141,23 @@
 		7A6796BC2C15D8350011ED2D /* TeamailUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamailUser.swift; sourceTree = "<group>"; };
 		7A6796BE2C161A690011ED2D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7A6796C02C161BEE0011ED2D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		7A6796C22C161D840011ED2D /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		7A6796C22C161D840011ED2D /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		7A6796C42C161DD60011ED2D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		7A6796C62C161DE00011ED2D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7A6796CB2C170CA80011ED2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7A6796CC2C170E010011ED2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7AA73A682C29F9C10067BD8F /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		7AA73A6A2C2A291D0067BD8F /* CartItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsListView.swift; sourceTree = "<group>"; };
+		7AA73A6E2C2A294F0067BD8F /* CartItemsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsListCell.swift; sourceTree = "<group>"; };
+		7AA73A732C2AF46C0067BD8F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		7AA73A7A2C2B10040067BD8F /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
+		7AA73A7E2C2C622C0067BD8F /* UsersFirebaseFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFirebaseFields.swift; sourceTree = "<group>"; };
+		7AA73A802C2C91D20067BD8F /* OrdersFirebaseFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersFirebaseFields.swift; sourceTree = "<group>"; };
+		7AA73A822C2CBD820067BD8F /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
+		7AA73A842C2CCC150067BD8F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		7AA73A892C2CD94A0067BD8F /* OrdersViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewCell.swift; sourceTree = "<group>"; };
+		7AA73A8B2C2CD9B00067BD8F /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
+		7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedTea.swift; sourceTree = "<group>"; };
 		7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		7AE01B242C1C865700A74D28 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaCatalogueModel.swift; sourceTree = "<group>"; };
@@ -182,6 +207,7 @@
 				7A1F44F42C123EFA008F4B53 /* FirebaseAppDistribution-Beta in Frameworks */,
 				7A1F44F82C123EFA008F4B53 /* FirebaseAuthCombine-Community in Frameworks */,
 				7A1F45162C123EFA008F4B53 /* FirebasePerformance in Frameworks */,
+				7AA73A722C2AF3EF0067BD8F /* Lottie in Frameworks */,
 				7A1F450E2C123EFA008F4B53 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				7A1F451C2C123EFA008F4B53 /* FirebaseStorage in Frameworks */,
 				7A1F45002C123EFA008F4B53 /* FirebaseDynamicLinks in Frameworks */,
@@ -283,10 +309,13 @@
 		7A6796B82C15CFC60011ED2D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				7AA73A7A2C2B10040067BD8F /* TabViewModel.swift */,
 				7A1F45262C14735C008F4B53 /* AuthViewModel.swift */,
 				7A1037A02C27845000E4BF5D /* DeliveryViewModel.swift */,
 				7A1037A92C28BE9500E4BF5D /* PaymentViewModel.swift */,
 				7AE7BEB82C22B183000655FA /* SearchFieldViewModel.swift */,
+				7AA73A682C29F9C10067BD8F /* CartViewModel.swift */,
+				7AA73A8B2C2CD9B00067BD8F /* OrdersViewModel.swift */,
 				7AE01B362C1DFA5200A74D28 /* TeaViewModel.swift */,
 				7A1037892C244A3700E4BF5D /* SliderItemsViewModel.swift */,
 				7AE01B3E2C1DFB3000A74D28 /* CachedImageViewModel.swift */,
@@ -299,14 +328,18 @@
 			children = (
 				7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */,
 				7A6796BC2C15D8350011ED2D /* TeamailUser.swift */,
-				7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */,
+				7AA73A842C2CCC150067BD8F /* Order.swift */,
+				7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */,
 				7AE01B2C2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift */,
+				7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */,
 				7A1037852C24474200E4BF5D /* SliderItemsModel.swift */,
 				7A1037872C2447F300E4BF5D /* SliderItemsRealmModel.swift */,
 				7AE01B2B2C1DF87400A74D28 /* CachedImageInfo.swift */,
 				7A1037A22C27889E00E4BF5D /* DeliveryAndPaymentModel.swift */,
 				7AE01B2D2C1DF87500A74D28 /* APIError.swift */,
 				7A10378D2C244FC300E4BF5D /* Endpoint.swift */,
+				7AA73A7E2C2C622C0067BD8F /* UsersFirebaseFields.swift */,
+				7AA73A802C2C91D20067BD8F /* OrdersFirebaseFields.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,11 +352,38 @@
 				7A10378F2C245E3100E4BF5D /* HomeViewSubviews */,
 				7A6796C42C161DD60011ED2D /* SearchView.swift */,
 				7AE01B402C1DFBAF00A74D28 /* SearchViewSubviews */,
-				7A6796C22C161D840011ED2D /* FavoritesView.swift */,
+				7A6796C22C161D840011ED2D /* CartView.swift */,
+				7AA73A6C2C2A292B0067BD8F /* CartViewSubviews */,
 				7A6796C02C161BEE0011ED2D /* AccountView.swift */,
 				7AE01B262C1C866400A74D28 /* AccountViewSubviews */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		7AA73A6C2C2A292B0067BD8F /* CartViewSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				7AA73A6A2C2A291D0067BD8F /* CartItemsListView.swift */,
+				7AA73A732C2AF46C0067BD8F /* LottieView.swift */,
+				7AA73A6D2C2A29370067BD8F /* Cells */,
+			);
+			path = CartViewSubviews;
+			sourceTree = "<group>";
+		};
+		7AA73A6D2C2A29370067BD8F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7AA73A6E2C2A294F0067BD8F /* CartItemsListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7AA73A882C2CD93C0067BD8F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7AA73A892C2CD94A0067BD8F /* OrdersViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7AE01B212C1C4D4300A74D28 /* Coordinators */ = {
@@ -338,6 +398,8 @@
 			isa = PBXGroup;
 			children = (
 				7AE01B242C1C865700A74D28 /* AvatarView.swift */,
+				7AA73A822C2CBD820067BD8F /* OrdersView.swift */,
+				7AA73A882C2CD93C0067BD8F /* Cells */,
 			);
 			path = AccountViewSubviews;
 			sourceTree = "<group>";
@@ -414,6 +476,7 @@
 				7A1F45292C147466008F4B53 /* GoogleSignIn */,
 				7A1F452B2C147466008F4B53 /* GoogleSignInSwift */,
 				7AE01B4F2C1DFF1700A74D28 /* RealmSwift */,
+				7AA73A712C2AF3EF0067BD8F /* Lottie */,
 			);
 			productName = "tea-mail-shop";
 			productReference = 7A01C53A2C10802E00642DD7 /* tea-mail-shop.app */;
@@ -447,6 +510,7 @@
 				7A1F44E82C123EFA008F4B53 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				7A1F45282C147466008F4B53 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				7AE01B4E2C1DFF1700A74D28 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				7AA73A702C2AF3EF0067BD8F /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 7A01C53B2C10802E00642DD7 /* Products */;
 			projectDirPath = "";
@@ -505,7 +569,7 @@
 				7A6796C12C161BEE0011ED2D /* AccountView.swift in Sources */,
 				7AE01B2E2C1DF87500A74D28 /* CachedImageInfo.swift in Sources */,
 				7A6796BF2C161A690011ED2D /* MainView.swift in Sources */,
-				7A6796C32C161D840011ED2D /* FavoritesView.swift in Sources */,
+				7A6796C32C161D840011ED2D /* CartView.swift in Sources */,
 				7AE01B3B2C1DFA9F00A74D28 /* APIService.swift in Sources */,
 				7AE7BEB52C207104000655FA /* SearchFieldView.swift in Sources */,
 				7AE01B3C2C1DFA9F00A74D28 /* RealmService.swift in Sources */,
@@ -515,10 +579,13 @@
 				7AE7BEB92C22B183000655FA /* SearchFieldViewModel.swift in Sources */,
 				7A1F45252C12463D008F4B53 /* FirestoreService.swift in Sources */,
 				7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */,
+				7AA73A6B2C2A291D0067BD8F /* CartItemsListView.swift in Sources */,
 				7AE01B2A2C1DF83400A74D28 /* TeaCatalogueModel.swift in Sources */,
 				7AE01B2F2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift in Sources */,
 				7AE01B3D2C1DFA9F00A74D28 /* URL+Cache.swift in Sources */,
 				7AE01B3F2C1DFB3000A74D28 /* CachedImageViewModel.swift in Sources */,
+				7AA73A832C2CBD820067BD8F /* OrdersView.swift in Sources */,
+				7AA73A8C2C2CD9B00067BD8F /* OrdersViewModel.swift in Sources */,
 				7A1037A52C2868B600E4BF5D /* DeliveryAndPaymentCell.swift in Sources */,
 				7A1037992C260F9A00E4BF5D /* DeliveryAndPaymentDescriptionView.swift in Sources */,
 				7A01C53E2C10802E00642DD7 /* tea_mail_shopApp.swift in Sources */,
@@ -527,25 +594,34 @@
 				7A01C54E2C10860400642DD7 /* ViewCoordinator.swift in Sources */,
 				7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */,
 				7A1037912C245E6500E4BF5D /* SliderItemImageView.swift in Sources */,
+				7AA73A6F2C2A294F0067BD8F /* CartItemsListCell.swift in Sources */,
+				7AA73A852C2CCC150067BD8F /* Order.swift in Sources */,
 				7A1037972C26098A00E4BF5D /* ContactsView.swift in Sources */,
 				7AE01B4B2C1DFD0F00A74D28 /* TeaViewGridCell.swift in Sources */,
 				7AE01B302C1DF87500A74D28 /* APIError.swift in Sources */,
+				7AA73A7F2C2C622C0067BD8F /* UsersFirebaseFields.swift in Sources */,
 				7A10378A2C244A3700E4BF5D /* SliderItemsViewModel.swift in Sources */,
 				7A1037A12C27845000E4BF5D /* DeliveryViewModel.swift in Sources */,
 				7A1F452E2C1478B1008F4B53 /* SignUpView.swift in Sources */,
 				7A1037AA2C28BE9500E4BF5D /* PaymentViewModel.swift in Sources */,
+				7AA73A692C29F9C10067BD8F /* CartViewModel.swift in Sources */,
 				7A1037932C24656100E4BF5D /* SliderView.swift in Sources */,
 				7A6796C52C161DD60011ED2D /* SearchView.swift in Sources */,
 				7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */,
 				7A6796BD2C15D8350011ED2D /* TeamailUser.swift in Sources */,
+				7AA73A742C2AF46C0067BD8F /* LottieView.swift in Sources */,
 				7AE01B462C1DFC4100A74D28 /* ListView.swift in Sources */,
 				7A1037A32C27889E00E4BF5D /* DeliveryAndPaymentModel.swift in Sources */,
 				7AE01B4C2C1DFD0F00A74D28 /* TeaViewImageView.swift in Sources */,
+				7AA73A812C2C91D20067BD8F /* OrdersFirebaseFields.swift in Sources */,
 				7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */,
+				7AA73A7B2C2B10040067BD8F /* TabViewModel.swift in Sources */,
+				7AA73A8E2C2E08DF0067BD8F /* OrderedTea.swift in Sources */,
 				7A1F45272C14735C008F4B53 /* AuthViewModel.swift in Sources */,
 				7A1037882C2447F300E4BF5D /* SliderItemsRealmModel.swift in Sources */,
 				7AE01B4D2C1DFD0F00A74D28 /* TeaViewListCell.swift in Sources */,
 				7A1037862C24474200E4BF5D /* SliderItemsModel.swift in Sources */,
+				7AA73A8A2C2CD94A0067BD8F /* OrdersViewCell.swift in Sources */,
 				7AE01B422C1DFC1000A74D28 /* CachedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -775,6 +851,14 @@
 				minimumVersion = 7.1.0;
 			};
 		};
+		7AA73A702C2AF3EF0067BD8F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 		7AE01B4E2C1DFF1700A74D28 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -935,6 +1019,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7A1F45282C147466008F4B53 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		7AA73A712C2AF3EF0067BD8F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AA73A702C2AF3EF0067BD8F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		7AE01B4F2C1DFF1700A74D28 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
