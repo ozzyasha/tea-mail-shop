@@ -14,6 +14,8 @@ class SliderItemsViewModel: ObservableObject {
     var sliderItemsModel = [SliderItemsModel]()
     @Published
     var currentIndex = 0
+    @Published
+    var errorMessage = ""
     
     init() {
         sliderItemsModel = RealmService.shared.readAllSliderItemsFromDatabase()
@@ -28,7 +30,7 @@ class SliderItemsViewModel: ObservableObject {
                 }
                 
             } errorHandler: { error in
-                print(error) //  алерт
+                self.errorMessage = "\(error)"
             }
             return
         }

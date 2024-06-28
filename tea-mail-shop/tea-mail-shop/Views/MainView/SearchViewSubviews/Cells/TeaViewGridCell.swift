@@ -10,8 +10,6 @@ import SwiftUI
 struct TeaViewGridCell: View {
     @State
     var tea: TeaCatalogueModel
-    @State
-    private var isAddedToCart = false
     @EnvironmentObject
     var cartViewModel: CartViewModel
     
@@ -40,10 +38,8 @@ struct TeaViewGridCell: View {
                 Spacer()
                 Button(action: {
                     cartViewModel.addToCart(tea: tea)
-                    isAddedToCart.toggle()
-                    @AppStorage("isAddedToCart") var addedToCart: Bool = isAddedToCart
                 }) {
-                    Image(systemName: isAddedToCart ? "cart.fill" : "cart.badge.plus")
+                    Image(systemName: cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? "cart.fill" : "cart")
                         .foregroundColor(.accent)
                         .font(.system(size: 30))
                 }

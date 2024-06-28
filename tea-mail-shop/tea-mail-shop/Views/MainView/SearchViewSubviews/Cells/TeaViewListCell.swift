@@ -11,8 +11,6 @@ struct TeaViewListCell: View {
     
     @State
     var tea: TeaCatalogueModel
-    @State
-    private var isAddedToCart = false
     @EnvironmentObject
     var cartViewModel: CartViewModel
     
@@ -46,9 +44,8 @@ struct TeaViewListCell: View {
                     VStack(alignment: .trailing) {
                         Button(action: {
                             cartViewModel.addToCart(tea: tea)
-                            isAddedToCart.toggle()
                         }) {
-                            Image(systemName: isAddedToCart ? "cart.fill" : "cart.badge.plus")
+                            Image(systemName: cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? "cart.fill" : "cart")
                                 .foregroundColor(.accent)
                                 .font(.system(size: 30))
                         }

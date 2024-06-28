@@ -12,6 +12,8 @@ class TeaViewModel: ObservableObject {
     
     @Published
     var teaCatalogueModel = [TeaCatalogueModel]()
+    @Published
+    var errorMessage = ""
     
     init() {
         teaCatalogueModel = RealmService.shared.readAllTeaCatalogueFromDatabase()
@@ -26,7 +28,7 @@ class TeaViewModel: ObservableObject {
                 }
                 
             } errorHandler: { error in
-                print(error) //  алерт
+                self.errorMessage = "\(error)"
             }
             return
         }

@@ -66,6 +66,9 @@ struct CartView: View {
                         Button {
                             showingAlert = true
                             firestore.writeFirestore(orders: cartViewModel.teaCart)
+                            cartViewModel.teaCart.forEach { tea in
+                                cartViewModel.isAddedToCart["\(tea.id)"] = false
+                            }
                         } label: {
                             Text("Confirm Order")
                                 .foregroundStyle(.white)
