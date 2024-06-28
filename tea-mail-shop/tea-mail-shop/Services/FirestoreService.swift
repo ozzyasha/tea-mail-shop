@@ -44,34 +44,54 @@ class FirestoreService: ObservableObject {
     func writeFirestore(orders: [TeaCatalogueModel]) {
         let usersRef = store.collection(UsersFirebaseFields.path.rawValue)
         let uid = "\(Auth.auth().currentUser?.uid ?? "undefined")"
+        let counterRef = store.collection("orderID").document("orderCounter")
         
-        let ordersRef = usersRef.document(uid).collection(OrdersFirebaseFields.collection.rawValue).document()
-        ordersRef.setData([
-            OrdersFirebaseFields.id.rawValue: ordersRef.documentID
-        ])
-        let teaItemsCollection = ordersRef.collection(TeasFirebaseFields.collection.rawValue)
-        
-        for tea in orders {
-            let teaItemsQuantity = orders.filter({$0.id == tea.id}).count
-            var teaQuantity = "0 шт."
-            
-            if tea.quantity.contains(" г.") {
-                teaQuantity = "\(teaItemsQuantity * (Int(tea.quantity.trimmingCharacters(in: CharacterSet(charactersIn: " г."))) ?? 0)) г."
-            } else if tea.quantity.contains(" шт.") {
-                teaQuantity = "\(teaItemsQuantity * (Int(tea.quantity.trimmingCharacters(in: CharacterSet(charactersIn: " шт."))) ?? 0)) шт."
+        counterRef.getDocument { (snapshot, error) in
+            if let error = error {
+                self.errorMessage = "Failed to get order id: \(error)"
+                return
             }
             
-            let teaPrice = "\((Int(tea.price.trimmingCharacters(in: CharacterSet(charactersIn: " Br"))) ?? 0) * teaItemsQuantity) Br"
-            
-            teaItemsCollection.document("\(tea.id)").setData([
-                TeasFirebaseFields.id.rawValue: tea.id,
-                TeasFirebaseFields.name.rawValue: tea.name,
-                TeasFirebaseFields.price.rawValue: teaPrice,
-                TeasFirebaseFields.quantity.rawValue: teaQuantity
-            ]) { err in
-                if let err = err {
-                    self.errorMessage = "\(err)"
-                    return
+            if let snapshot = snapshot, let counterValue = snapshot.get("value") as? Int {
+                let ordersRef = usersRef.document(uid).collection(OrdersFirebaseFields.collection.rawValue).document("\(counterValue)")
+                
+                ordersRef.setData([
+                    OrdersFirebaseFields.id.rawValue: ordersRef.documentID
+                ])
+                let teaItemsCollection = ordersRef.collection(TeasFirebaseFields.collection.rawValue)
+                
+                for tea in orders {
+                    let teaItemsQuantity = orders.filter({$0.id == tea.id}).count
+                    var teaQuantity = "0 шт."
+                    
+                    if tea.quantity.contains(" г.") {
+                        teaQuantity = "\(teaItemsQuantity * (Int(tea.quantity.trimmingCharacters(in: CharacterSet(charactersIn: " г."))) ?? 0)) г."
+                    } else if tea.quantity.contains(" шт.") {
+                        teaQuantity = "\(teaItemsQuantity * (Int(tea.quantity.trimmingCharacters(in: CharacterSet(charactersIn: " шт."))) ?? 0)) шт."
+                    }
+                    
+                    let teaPrice = "\((Int(tea.price.trimmingCharacters(in: CharacterSet(charactersIn: " Br"))) ?? 0) * teaItemsQuantity) Br"
+                    
+                    teaItemsCollection.document("\(tea.id)").setData([
+                        TeasFirebaseFields.id.rawValue: tea.id,
+                        TeasFirebaseFields.name.rawValue: tea.name,
+                        TeasFirebaseFields.price.rawValue: teaPrice,
+                        TeasFirebaseFields.quantity.rawValue: teaQuantity
+                    ]) { err in
+                        if let err = err {
+                            self.errorMessage = "\(err)"
+                            return
+                        }
+                    }
+                }
+                
+                counterRef.updateData([
+                    "value": counterValue + 1
+                ]) { error in
+                    if let error = error {
+                        self.errorMessage = "Failed to update order value: \(error)"
+                        return
+                    }
                 }
             }
         }
