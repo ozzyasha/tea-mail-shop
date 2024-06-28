@@ -191,7 +191,7 @@ class FirestoreService: ObservableObject {
                     
                     orders.append(order)
                     
-                    completion(orders)
+                    completion(orders.sorted { $0.id > $1.id })
                 }
             }
         }

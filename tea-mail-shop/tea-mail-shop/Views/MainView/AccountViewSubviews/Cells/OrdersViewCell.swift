@@ -20,7 +20,8 @@ struct OrdersViewCell: View {
                 .bold()
                 .foregroundStyle(.black)
                 .padding(.bottom)
-            ForEach(order.orderedTeasArray, id: \.id) { orderedTea in
+            ForEach(order.orderedTeasArray.indices, id: \.self) { index in
+                let orderedTea = order.orderedTeasArray[index]
                 Divider()
                 HStack {
                     Text(orderedTea.name)

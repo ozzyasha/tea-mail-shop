@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Order {
+struct Order: Identifiable {
     let id: String
     var orderedTeasArray: [OrderedTea]
 }

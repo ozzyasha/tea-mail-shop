@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OrderedTea {
+struct OrderedTea: Identifiable {
     let id: Int
     let name, price, quantity: String
 }

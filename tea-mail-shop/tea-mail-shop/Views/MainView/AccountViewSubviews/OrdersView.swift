@@ -20,7 +20,8 @@ struct OrdersView: View {
                 ScrollView {
                     VStack {
                         if !ordersViewModel.ordersCatalogue.isEmpty {
-                            ForEach(ordersViewModel.ordersCatalogue, id: \.id) { order in
+                            ForEach(ordersViewModel.ordersCatalogue.indices, id: \.self) { index in
+                                let order = ordersViewModel.ordersCatalogue[index]
                                 OrdersViewCell(order: order)
                             }
                         } else {
