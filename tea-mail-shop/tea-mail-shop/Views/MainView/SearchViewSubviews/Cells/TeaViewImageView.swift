@@ -12,6 +12,8 @@ struct TeaViewImageView: View {
     var imageURL: String
     @State
     var sizeOfSide: CGFloat
+    @State
+    var isDetailsPresented = false
     
     var body: some View {
         CachedImage(imageUrl: imageURL)

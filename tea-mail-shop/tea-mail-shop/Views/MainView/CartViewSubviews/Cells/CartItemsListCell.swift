@@ -74,6 +74,6 @@ struct CartItemsListCell: View {
 }
 
 #Preview {
-    CartItemsListCell(tea: TeaCatalogueModel(id: 0, name: "Some tea", price: "0 Br", img: "https://tea-mail.by/wa-data/public/shop/products/82/83/8382/images/32944/32944.750.jpg", description: "description", quantity: "1 шт."))
+    CartItemsListCell(tea: TeaCatalogueModel(id: 0, name: "Some tea", price: "0 Br", img: "https://tea-mail.by/wa-data/public/shop/products/82/83/8382/images/32944/32944.750.jpg", teaDescription: "description", quantity: "1 шт."))
         .environmentObject(CartViewModel())
 }
