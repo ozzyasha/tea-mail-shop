@@ -24,6 +24,14 @@
 		7A1037A32C27889E00E4BF5D /* DeliveryAndPaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037A22C27889E00E4BF5D /* DeliveryAndPaymentModel.swift */; };
 		7A1037A52C2868B600E4BF5D /* DeliveryAndPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037A42C2868B600E4BF5D /* DeliveryAndPaymentCell.swift */; };
 		7A1037AA2C28BE9500E4BF5D /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037A92C28BE9500E4BF5D /* PaymentViewModel.swift */; };
+		7A1829A72C3053F400E6132D /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1829A62C3053F400E6132D /* ReviewsView.swift */; };
+		7A1829AA2C30983A00E6132D /* ReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1829A92C30983A00E6132D /* ReviewsViewModel.swift */; };
+		7A1829AC2C30A11400E6132D /* ReviewLeavingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1829AB2C30A11400E6132D /* ReviewLeavingView.swift */; };
+		7A1829AE2C30ADC400E6132D /* ReviewsFirebaseFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1829AD2C30ADC400E6132D /* ReviewsFirebaseFields.swift */; };
+		7A1829B02C30B81500E6132D /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1829AF2C30B81500E6132D /* Review.swift */; };
+		7A1829B22C30BD5300E6132D /* ReviewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1829B12C30BD5300E6132D /* ReviewsViewCell.swift */; };
+		7A1829B52C30CBC900E6132D /* DetailReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1829B42C30CBC900E6132D /* DetailReviewsView.swift */; };
+		7A1829B72C30CC2C00E6132D /* DetailReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1829B62C30CC2C00E6132D /* DetailReviewsViewModel.swift */; };
 		7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F44E22C11C116008F4B53 /* SignInView.swift */; };
 		7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F44E42C11F666008F4B53 /* BackgroundView.swift */; };
 		7A1F44EA2C123EFA008F4B53 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F44E92C123EFA008F4B53 /* FirebaseAnalytics */; };
@@ -134,6 +142,14 @@
 		7A1037A22C27889E00E4BF5D /* DeliveryAndPaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAndPaymentModel.swift; sourceTree = "<group>"; };
 		7A1037A42C2868B600E4BF5D /* DeliveryAndPaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAndPaymentCell.swift; sourceTree = "<group>"; };
 		7A1037A92C28BE9500E4BF5D /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		7A1829A62C3053F400E6132D /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
+		7A1829A92C30983A00E6132D /* ReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewModel.swift; sourceTree = "<group>"; };
+		7A1829AB2C30A11400E6132D /* ReviewLeavingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewLeavingView.swift; sourceTree = "<group>"; };
+		7A1829AD2C30ADC400E6132D /* ReviewsFirebaseFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsFirebaseFields.swift; sourceTree = "<group>"; };
+		7A1829AF2C30B81500E6132D /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		7A1829B12C30BD5300E6132D /* ReviewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewCell.swift; sourceTree = "<group>"; };
+		7A1829B42C30CBC900E6132D /* DetailReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReviewsView.swift; sourceTree = "<group>"; };
+		7A1829B62C30CC2C00E6132D /* DetailReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReviewsViewModel.swift; sourceTree = "<group>"; };
 		7A1F44E22C11C116008F4B53 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		7A1F44E42C11F666008F4B53 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		7A1F45242C12463D008F4B53 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
@@ -285,6 +301,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		7A1829B32C30CB7600E6132D /* DetailsViewSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				7A1829AB2C30A11400E6132D /* ReviewLeavingView.swift */,
+				7A1829B42C30CBC900E6132D /* DetailReviewsView.swift */,
+			);
+			path = DetailsViewSubviews;
+			sourceTree = "<group>";
+		};
 		7A1F44E12C11BF1F008F4B53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,7 +337,9 @@
 			isa = PBXGroup;
 			children = (
 				7AA73A7A2C2B10040067BD8F /* TabViewModel.swift */,
+				7A1829A92C30983A00E6132D /* ReviewsViewModel.swift */,
 				7A1F45262C14735C008F4B53 /* AuthViewModel.swift */,
+				7A1829B62C30CC2C00E6132D /* DetailReviewsViewModel.swift */,
 				7A1037A02C27845000E4BF5D /* DeliveryViewModel.swift */,
 				7A1037A92C28BE9500E4BF5D /* PaymentViewModel.swift */,
 				7AE7BEB82C22B183000655FA /* SearchFieldViewModel.swift */,
@@ -332,6 +359,7 @@
 				7A6796BC2C15D8350011ED2D /* TeamailUser.swift */,
 				7AA73A842C2CCC150067BD8F /* Order.swift */,
 				7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */,
+				7A1829AF2C30B81500E6132D /* Review.swift */,
 				7AE01B2C2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift */,
 				7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */,
 				7A1037852C24474200E4BF5D /* SliderItemsModel.swift */,
@@ -342,6 +370,7 @@
 				7A10378D2C244FC300E4BF5D /* Endpoint.swift */,
 				7AA73A7E2C2C622C0067BD8F /* UsersFirebaseFields.swift */,
 				7AA73A802C2C91D20067BD8F /* OrdersFirebaseFields.swift */,
+				7A1829AD2C30ADC400E6132D /* ReviewsFirebaseFields.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -384,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				7AA73A892C2CD94A0067BD8F /* OrdersViewCell.swift */,
+				7A1829B12C30BD5300E6132D /* ReviewsViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -401,6 +431,7 @@
 			children = (
 				7AE01B242C1C865700A74D28 /* AvatarView.swift */,
 				7AA73A822C2CBD820067BD8F /* OrdersView.swift */,
+				7A1829A62C3053F400E6132D /* ReviewsView.swift */,
 				7AA73A882C2CD93C0067BD8F /* Cells */,
 			);
 			path = AccountViewSubviews;
@@ -414,6 +445,7 @@
 				7AE01B442C1DFC4100A74D28 /* ListView.swift */,
 				7AE7BEB42C207104000655FA /* SearchFieldView.swift */,
 				7ADACFDA2C3002D900467B60 /* DetailsView.swift */,
+				7A1829B32C30CB7600E6132D /* DetailsViewSubviews */,
 				7AE01B472C1DFD0F00A74D28 /* Cells */,
 			);
 			path = SearchViewSubviews;
@@ -571,6 +603,8 @@
 			files = (
 				7A6796C12C161BEE0011ED2D /* AccountView.swift in Sources */,
 				7AE01B2E2C1DF87500A74D28 /* CachedImageInfo.swift in Sources */,
+				7A1829B02C30B81500E6132D /* Review.swift in Sources */,
+				7A1829AA2C30983A00E6132D /* ReviewsViewModel.swift in Sources */,
 				7A6796BF2C161A690011ED2D /* MainView.swift in Sources */,
 				7ADACFDB2C3002D900467B60 /* DetailsView.swift in Sources */,
 				7A6796C32C161D840011ED2D /* CartView.swift in Sources */,
@@ -583,14 +617,17 @@
 				7AE7BEB92C22B183000655FA /* SearchFieldViewModel.swift in Sources */,
 				7A1F45252C12463D008F4B53 /* FirestoreService.swift in Sources */,
 				7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */,
+				7A1829AE2C30ADC400E6132D /* ReviewsFirebaseFields.swift in Sources */,
 				7AA73A6B2C2A291D0067BD8F /* CartItemsListView.swift in Sources */,
 				7AE01B2A2C1DF83400A74D28 /* TeaCatalogueModel.swift in Sources */,
+				7A1829B52C30CBC900E6132D /* DetailReviewsView.swift in Sources */,
 				7AE01B2F2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift in Sources */,
 				7AE01B3D2C1DFA9F00A74D28 /* URL+Cache.swift in Sources */,
 				7AE01B3F2C1DFB3000A74D28 /* CachedImageViewModel.swift in Sources */,
 				7AA73A832C2CBD820067BD8F /* OrdersView.swift in Sources */,
 				7AA73A8C2C2CD9B00067BD8F /* OrdersViewModel.swift in Sources */,
 				7A1037A52C2868B600E4BF5D /* DeliveryAndPaymentCell.swift in Sources */,
+				7A1829AC2C30A11400E6132D /* ReviewLeavingView.swift in Sources */,
 				7A1037992C260F9A00E4BF5D /* DeliveryAndPaymentDescriptionView.swift in Sources */,
 				7A01C53E2C10802E00642DD7 /* tea_mail_shopApp.swift in Sources */,
 				7A01C54C2C10820000642DD7 /* SplashView.swift in Sources */,
@@ -609,10 +646,12 @@
 				7A1F452E2C1478B1008F4B53 /* SignUpView.swift in Sources */,
 				7A1037AA2C28BE9500E4BF5D /* PaymentViewModel.swift in Sources */,
 				7AA73A692C29F9C10067BD8F /* CartViewModel.swift in Sources */,
+				7A1829B72C30CC2C00E6132D /* DetailReviewsViewModel.swift in Sources */,
 				7A1037932C24656100E4BF5D /* SliderView.swift in Sources */,
 				7A6796C52C161DD60011ED2D /* SearchView.swift in Sources */,
 				7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */,
 				7A6796BD2C15D8350011ED2D /* TeamailUser.swift in Sources */,
+				7A1829B22C30BD5300E6132D /* ReviewsViewCell.swift in Sources */,
 				7AA73A742C2AF46C0067BD8F /* LottieView.swift in Sources */,
 				7AE01B462C1DFC4100A74D28 /* ListView.swift in Sources */,
 				7A1037A32C27889E00E4BF5D /* DeliveryAndPaymentModel.swift in Sources */,
@@ -627,6 +666,7 @@
 				7A1037862C24474200E4BF5D /* SliderItemsModel.swift in Sources */,
 				7AA73A8A2C2CD94A0067BD8F /* OrdersViewCell.swift in Sources */,
 				7AE01B422C1DFC1000A74D28 /* CachedImage.swift in Sources */,
+				7A1829A72C3053F400E6132D /* ReviewsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

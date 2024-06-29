@@ -97,6 +97,31 @@ class FirestoreService: ObservableObject {
         }
     }
     
+    func writeFirestore(review: String, for tea: TeaCatalogueModel) {
+        let usersRef = store.collection(UsersFirebaseFields.path.rawValue)
+        let uid = "\(Auth.auth().currentUser?.uid ?? "undefined")"
+        let reviewRef = usersRef.document(uid).collection(ReviewsFirebaseFields.reviewsCollection.rawValue).document()
+        
+        let timestamp = Date().timeIntervalSince1970
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy HH:mm"
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        let dateString = dateFormatter.string(from: Date(timeIntervalSince1970: timestamp))
+        
+        reviewRef.setData([
+            ReviewsFirebaseFields.reviewId.rawValue: reviewRef.documentID,
+            ReviewsFirebaseFields.teaId.rawValue: tea.id,
+            ReviewsFirebaseFields.teaName.rawValue: tea.name,
+            ReviewsFirebaseFields.reviewDate.rawValue: dateString,
+            ReviewsFirebaseFields.review.rawValue: review
+        ]) { err in
+            if let err = err {
+                self.errorMessage = "\(err)"
+                return
+            }
+        }
+    }
+    
     func fetchUser() {
         guard let uid = Auth.auth().currentUser?.uid else {
             return
@@ -183,6 +208,77 @@ class FirestoreService: ObservableObject {
                 }
                 
                 completion(orders.sorted(by: { $0.id > $1.id }))
+                
+            } catch {
+                errorHandler("Failed to fetch orders: \(error)")
+                completion([])
+            }
+        }
+    }
+    
+    func readFirestore(completion: @escaping ([Review]) -> (), errorHandler: @escaping (String) -> ()) {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            completion([])
+            return
+        }
+        
+        let usersRef = store.collection(UsersFirebaseFields.path.rawValue)
+        let reviewRef = usersRef.document(uid).collection(ReviewsFirebaseFields.reviewsCollection.rawValue)
+        
+        Task {
+            do {
+                let snapshot = try await reviewRef.getDocuments()
+                var reviews: [Review] = []
+                
+                for reviewDocument in snapshot.documents {
+                    guard let reviewId = reviewDocument.get(ReviewsFirebaseFields.reviewId.rawValue) as? String,
+                          let review = reviewDocument.get(ReviewsFirebaseFields.review.rawValue) as? String,
+                          let reviewDate = reviewDocument.get(ReviewsFirebaseFields.reviewDate.rawValue) as? String,
+                          let teaName = reviewDocument.get(ReviewsFirebaseFields.teaName.rawValue) as? String,
+                          let teaId = reviewDocument.get(ReviewsFirebaseFields.teaId.rawValue) as? Int else {
+                        errorHandler("Warning: Missing data for review \(reviewDocument.documentID)")
+                        continue
+                    }
+                    
+                    reviews.append(Review(id: reviewId, review: review, reviewDate: reviewDate, teaName: teaName, teaId: teaId))
+                }
+                completion(reviews)
+                
+            } catch {
+                errorHandler("Failed to fetch orders: \(error)")
+                completion([])
+            }
+        }
+    }
+    
+    func readFirestoreForAllUsers(completion: @escaping ([Review]) -> (), errorHandler: @escaping (String) -> ()) {
+        
+        let usersRef = store.collection(UsersFirebaseFields.path.rawValue)
+        
+        Task {
+            do {
+                let usersSnapshot = try await usersRef.getDocuments()
+                var reviews: [Review] = []
+                
+                for user in usersSnapshot.documents {
+                    let reviewRef = user.reference.collection(ReviewsFirebaseFields.reviewsCollection.rawValue)
+                    let reviewsSnapshot = try await reviewRef.getDocuments()
+                    
+                    for reviewDocument in reviewsSnapshot.documents {
+                        guard let reviewId = reviewDocument.get(ReviewsFirebaseFields.reviewId.rawValue) as? String,
+                              let review = reviewDocument.get(ReviewsFirebaseFields.review.rawValue) as? String,
+                              let reviewDate = reviewDocument.get(ReviewsFirebaseFields.reviewDate.rawValue) as? String,
+                              let teaName = reviewDocument.get(ReviewsFirebaseFields.teaName.rawValue) as? String,
+                              let teaId = reviewDocument.get(ReviewsFirebaseFields.teaId.rawValue) as? Int else {
+                            errorHandler("Warning: Missing data for review \(reviewDocument.documentID)")
+                            continue
+                        }
+                        
+                        reviews.append(Review(id: reviewId, review: review, reviewDate: reviewDate, teaName: teaName, teaId: teaId))
+                    }
+                    
+                }
+                completion(reviews)
                 
             } catch {
                 errorHandler("Failed to fetch orders: \(error)")

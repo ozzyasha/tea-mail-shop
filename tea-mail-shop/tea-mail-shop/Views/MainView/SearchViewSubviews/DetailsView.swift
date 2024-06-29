@@ -14,6 +14,10 @@ struct DetailsView: View {
     var cartViewModel: CartViewModel
     @Environment(\.presentationMode)
     var presentationMode
+    @ObservedObject
+    var reviewsViewModel: ReviewsViewModel
+    @State
+    private var reviewsDetent = PresentationDetent.medium
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -24,7 +28,9 @@ struct DetailsView: View {
                         presentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: "chevron.backward")
+                            .foregroundStyle(.accent)
                         Text("Back")
+                            .foregroundStyle(.accent)
                     }
                     Spacer()
                 }
@@ -57,7 +63,7 @@ struct DetailsView: View {
                     .padding(EdgeInsets(top: 10, leading: 30, bottom: 0, trailing: 30))
                     HStack {
                         Button(action: {
-                            cartViewModel.addToCart(tea: tea)
+                            reviewsViewModel.isReviewsViewPresented = true
                         }) {
                             HStack {
                                 Image(systemName: "leaf")
@@ -70,6 +76,13 @@ struct DetailsView: View {
                             }
                             .padding(EdgeInsets(top: 10, leading: 25, bottom: 10, trailing: 25))
                             .frame(maxWidth: 150)
+                        }
+                        .sheet(isPresented: $reviewsViewModel.isReviewsViewPresented) {
+                            ReviewLeavingView(reviewsViewModel: reviewsViewModel, tea: $tea)
+                                .presentationDetents(
+                                    [.medium, .large],
+                                    selection: $reviewsDetent
+                                )
                         }
                         .background(.white)
                         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
@@ -112,6 +125,8 @@ struct DetailsView: View {
                         Spacer()
                     }
                     .padding()
+                    Divider()
+                    DetailReviewsView(tea: tea)
                 }
                 
                 .frame(maxHeight: .infinity)
@@ -127,6 +142,6 @@ struct DetailsView: View {
 }
 
 #Preview {
-    DetailsView(tea: TeaCatalogueModel(id: 0, name: "Some tea", price: "0 Br", img: "https://tea-mail.by/wa-data/public/shop/products/82/83/8382/images/32944/32944.750.jpg", teaDescription: "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription", quantity: "1 шт."))
+    DetailsView(tea: TeaCatalogueModel(id: 0, name: "Some tea", price: "0 Br", img: "https://tea-mail.by/wa-data/public/shop/products/82/83/8382/images/32944/32944.750.jpg", teaDescription: "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription", quantity: "1 шт."), reviewsViewModel: ReviewsViewModel())
         .environmentObject(CartViewModel())
 }

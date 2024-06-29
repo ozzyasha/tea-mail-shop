@@ -14,6 +14,8 @@ struct TeaViewGridCell: View {
     var cartViewModel: CartViewModel
     @State
     var isDetailsPresented = false
+    @ObservedObject
+    var reviewsViewModel = ReviewsViewModel()
     
     var body: some View {
         
@@ -55,7 +57,7 @@ struct TeaViewGridCell: View {
             isDetailsPresented = true
         }
         .fullScreenCover(isPresented: $isDetailsPresented, content: {
-            DetailsView(tea: tea)
+            DetailsView(tea: tea, reviewsViewModel: reviewsViewModel)
         })
     }
 }

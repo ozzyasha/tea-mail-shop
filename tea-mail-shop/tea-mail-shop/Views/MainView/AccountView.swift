@@ -32,11 +32,10 @@ struct AccountView: View {
                             Spacer()
                         }
                         .padding(.horizontal)
-                        
+                        .padding(.bottom)
                         Divider()
-                        
-                        Button {
-                            // navigate to Tea diary
+                        NavigationLink {
+                            ReviewsView()
                         } label: {
                             Text("Tea diary")
                                 .foregroundStyle(Color.white)
