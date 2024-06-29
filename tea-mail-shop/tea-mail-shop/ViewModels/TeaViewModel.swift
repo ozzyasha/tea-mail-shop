@@ -20,7 +20,7 @@ class TeaViewModel: ObservableObject {
         
         guard !teaCatalogueModel.isEmpty else {
             APIService.shared.fetchData(endpoint: .teaCatalogue, responseType: TeaCatalogueResponse.self) { response in
-                DispatchQueue.main.async {
+                DispatchQueue.main.sync {
                     for tea in response.teaCatalogue {
                         RealmService.shared.saveOrUpdateTea(teaModel: tea)
                         self.teaCatalogueModel.append(tea)
@@ -32,8 +32,6 @@ class TeaViewModel: ObservableObject {
             }
             return
         }
-        
     }
-    
     
 }

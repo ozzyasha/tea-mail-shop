@@ -79,6 +79,7 @@
 		7AA73A8A2C2CD94A0067BD8F /* OrdersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A892C2CD94A0067BD8F /* OrdersViewCell.swift */; };
 		7AA73A8C2C2CD9B00067BD8F /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A8B2C2CD9B00067BD8F /* OrdersViewModel.swift */; };
 		7AA73A8E2C2E08DF0067BD8F /* OrderedTea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */; };
+		7ADACFDB2C3002D900467B60 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADACFDA2C3002D900467B60 /* DetailsView.swift */; };
 		7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */; };
 		7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B242C1C865700A74D28 /* AvatarView.swift */; };
 		7AE01B2A2C1DF83400A74D28 /* TeaCatalogueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */; };
@@ -158,6 +159,7 @@
 		7AA73A892C2CD94A0067BD8F /* OrdersViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewCell.swift; sourceTree = "<group>"; };
 		7AA73A8B2C2CD9B00067BD8F /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
 		7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedTea.swift; sourceTree = "<group>"; };
+		7ADACFDA2C3002D900467B60 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		7AE01B242C1C865700A74D28 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		7AE01B292C1DF83400A74D28 /* TeaCatalogueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaCatalogueModel.swift; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 				7AE01B432C1DFC4000A74D28 /* GridView.swift */,
 				7AE01B442C1DFC4100A74D28 /* ListView.swift */,
 				7AE7BEB42C207104000655FA /* SearchFieldView.swift */,
+				7ADACFDA2C3002D900467B60 /* DetailsView.swift */,
 				7AE01B472C1DFD0F00A74D28 /* Cells */,
 			);
 			path = SearchViewSubviews;
@@ -569,6 +572,7 @@
 				7A6796C12C161BEE0011ED2D /* AccountView.swift in Sources */,
 				7AE01B2E2C1DF87500A74D28 /* CachedImageInfo.swift in Sources */,
 				7A6796BF2C161A690011ED2D /* MainView.swift in Sources */,
+				7ADACFDB2C3002D900467B60 /* DetailsView.swift in Sources */,
 				7A6796C32C161D840011ED2D /* CartView.swift in Sources */,
 				7AE01B3B2C1DFA9F00A74D28 /* APIService.swift in Sources */,
 				7AE7BEB52C207104000655FA /* SearchFieldView.swift in Sources */,

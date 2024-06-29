@@ -29,7 +29,7 @@ struct ContactsView: View {
                 .ignoresSafeArea()
             
             VStack {
-                VStack() {
+                VStack {
                     ScrollView {
                         VStack(alignment: .leading) {
                             Button {
