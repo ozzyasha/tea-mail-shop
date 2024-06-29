@@ -15,13 +15,14 @@ class RealmService {
     
     var teaCatalogue: [TeaCatalogueModel] = []
     var sliderItems: [SliderItemsModel] = []
+    var errorMessage: String = ""
     
     lazy var realm: Realm? = {
         do {
             let _realm = try Realm()
             return _realm
         } catch {
-            print(error.localizedDescription) // алерт
+            self.errorMessage = "\(error.localizedDescription)"
             return nil
         }
     }()
@@ -32,7 +33,7 @@ class RealmService {
         imageInfo.url = url
         
         guard let realm else {
-            print("Something went wrong with database") // алерт
+            self.errorMessage = "Error: Realm database creation failed"
             return
         }
         realm.writeAsync {
@@ -45,7 +46,7 @@ class RealmService {
     
     func getCachedImage(for url: String) -> CachedImageInfo? {
         guard let realm else {
-            print("Can't get saved values") // алерт
+            self.errorMessage = "Can't get saved values from database"
             return nil
         }
         return realm.objects(CachedImageInfo.self).filter{ $0.url == url }.last
@@ -55,7 +56,7 @@ class RealmService {
         let teaObject = TeaCatalogueRealmModel(tea: teaModel)
         
         guard let realm else {
-            print("Something went wrong with database") // алерт
+            self.errorMessage = "Error: Realm database creation failed"
             return
         }
         
@@ -66,7 +67,7 @@ class RealmService {
     
     func readAllTeaCatalogueFromDatabase() -> [TeaCatalogueModel] {
         guard let realm else {
-            print("Can't get saved values") // алерт
+            self.errorMessage = "Can't get saved values from database"
             return []
         }
         realm.objects(TeaCatalogueRealmModel.self).map { $0 }.forEach({ tea in
@@ -77,7 +78,7 @@ class RealmService {
     
     func deleteAllTeaCatalogueFromDatabase() {
         guard let realm else {
-            print("Can't get saved values") // алерт
+            self.errorMessage = "Error: Realm database creation failed"
             return
         }
         realm.writeAsync {
@@ -90,7 +91,7 @@ class RealmService {
         let sliderItemObject = SliderItemsRealmModel(item: sliderItem)
         
         guard let realm else {
-            print("Something went wrong with database") // алерт
+            self.errorMessage = "Error: Realm database creation failed"
             return
         }
         
@@ -101,7 +102,7 @@ class RealmService {
     
     func readAllSliderItemsFromDatabase() -> [SliderItemsModel] {
         guard let realm else {
-            print("Can't get saved values") // алерт
+            self.errorMessage = "Error: Realm database creation failed"
             return []
         }
         realm.objects(SliderItemsRealmModel.self).map { $0 }.forEach({ item in

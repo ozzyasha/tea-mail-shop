@@ -12,15 +12,20 @@ class CartViewModel: ObservableObject {
     var teaCart = [TeaCatalogueModel]()
     @Published
     var totalPrice: Int = 0
+    @Published var isAddedToCart: [String: Bool] = [:]
     
     func addToCart(tea: TeaCatalogueModel) {
         teaCart.append(tea)
+        isAddedToCart["\(tea.id)"] = true
         totalPrice += Int(tea.price.trimmingCharacters(in: CharacterSet(charactersIn: " Br"))) ?? 0
     }
     
     func removeOneItemFromCart(tea: TeaCatalogueModel) {
         if let index = teaCart.firstIndex(where: { $0.id == tea.id }) {
             teaCart.remove(at: index)
+            if !teaCart.contains(where: { $0.id == tea.id }) {
+                isAddedToCart["\(tea.id)"] = false
+            }
             totalPrice -= Int(tea.price.trimmingCharacters(in: CharacterSet(charactersIn: " Br"))) ?? 0
         }
     }
@@ -29,12 +34,14 @@ class CartViewModel: ObservableObject {
         let indicesToRemove = teaCart.indices.filter { teaCart[$0].id == tea.id }
         for index in indicesToRemove.reversed() {
             teaCart.remove(at: index)
+            isAddedToCart["\(tea.id)"] = false
             totalPrice -= Int(tea.price.trimmingCharacters(in: CharacterSet(charactersIn: " Br"))) ?? 0
         }
     }
     
     func removeAllFromCart() {
         teaCart.removeAll()
+        isAddedToCart = [:]
         totalPrice = 0
     }
     
