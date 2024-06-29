@@ -19,6 +19,7 @@ struct SearchFieldView: View {
                 .foregroundStyle(.secondAdditional)
             TextField("Search", text: $searchRequest)
                 .padding()
+                .environment(\.colorScheme, .light)
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(.never)
         }

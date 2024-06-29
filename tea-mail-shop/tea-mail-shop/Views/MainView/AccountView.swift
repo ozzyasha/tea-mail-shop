@@ -14,6 +14,8 @@ struct AccountView: View {
     var firestore = FirestoreService()
     @State
     private var showingEditProfileAlert = false
+    @State
+    private var newUsername = ""
     
     var body: some View {
         NavigationStack {
@@ -22,11 +24,7 @@ struct AccountView: View {
                 VStack {
                     VStack() {
                         HStack(spacing: 20) {
-                            Button {
-                                // change avatar
-                            } label: {
-                                AvatarView()
-                            }
+                            AvatarView()
                             VStack(alignment: .leading) {
                                 Text(viewModel.currentUsername)
                                     .font(.title)
@@ -68,13 +66,27 @@ struct AccountView: View {
                                 .padding(.vertical)
                         }
                         .alert("Edit profile", isPresented: $showingEditProfileAlert) {
-                            TextField("Enter your name", text: $viewModel.currentUsername)
+                            TextField("Enter your name", text: $newUsername) {
+                                if newUsername.count > 20 {
+                                    newUsername = String(newUsername.prefix(20))
+                                }
+                            }
+                            .onChange(of: newUsername) {
+                                if newUsername.count > 20 {
+                                    newUsername = String(newUsername.prefix(20))
+                                }
+                            }
+                            .environment(\.colorScheme, .light)
+                            .autocorrectionDisabled()
+                            .textInputAutocapitalization(.never)
+                            
                             Button("OK") {
+                                viewModel.currentUsername = newUsername
                                 viewModel.firestore.writeFirestore(username: viewModel.currentUsername)
                             }
                             Button("Cancel", role: .cancel) { }
                         } message: {
-                            Text("You can edit your username in the field below. When it will be ready, press OK to continue.")
+                            Text("You can edit your username in the field below (no more than 20 symbols). When it will be ready, press OK to continue.")
                         }
                         Button {
                             viewModel.signOut()
