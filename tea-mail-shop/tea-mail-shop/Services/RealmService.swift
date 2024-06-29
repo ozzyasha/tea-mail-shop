@@ -71,7 +71,7 @@ class RealmService {
             return []
         }
         realm.objects(TeaCatalogueRealmModel.self).map { $0 }.forEach({ tea in
-            teaCatalogue.append(TeaCatalogueModel(id: tea._id, name: tea.name, price: tea.price, img: tea.img, description: tea.description, quantity: tea.quantity))
+            teaCatalogue.append(TeaCatalogueModel(id: tea._id, name: tea.name, price: tea.price, img: tea.img, teaDescription: tea.teaDescription, quantity: tea.quantity))
         })
         return teaCatalogue
     }

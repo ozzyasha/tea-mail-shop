@@ -23,7 +23,7 @@ class TeaCatalogueRealmModel: Object {
         self.name = tea.name
         self.price = tea.price
         self.img = tea.img
-        self.teaDescription = tea.description
+        self.teaDescription = tea.teaDescription
         self.quantity = tea.quantity
     }
     

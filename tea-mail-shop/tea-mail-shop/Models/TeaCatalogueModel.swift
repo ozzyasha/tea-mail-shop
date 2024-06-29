@@ -12,7 +12,7 @@ struct TeaCatalogueModel: Codable, Identifiable {
     let name: String
     let price: String
     let img: String
-    let description: String
+    let teaDescription: String
     let quantity: String
     
     enum TeaCatalogue: String, CodingKey {
@@ -20,7 +20,7 @@ struct TeaCatalogueModel: Codable, Identifiable {
         case name
         case price
         case img
-        case description
+        case teaDescription
         case quantity
     }
 }
