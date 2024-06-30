@@ -102,22 +102,40 @@ class FirestoreService: ObservableObject {
         let uid = "\(Auth.auth().currentUser?.uid ?? "undefined")"
         let reviewRef = usersRef.document(uid).collection(ReviewsFirebaseFields.reviewsCollection.rawValue).document()
         
-        let timestamp = Date().timeIntervalSince1970
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMMM yyyy HH:mm"
-        dateFormatter.locale = Locale(identifier: "ru_RU")
-        let dateString = dateFormatter.string(from: Date(timeIntervalSince1970: timestamp))
-        
-        reviewRef.setData([
-            ReviewsFirebaseFields.reviewId.rawValue: reviewRef.documentID,
-            ReviewsFirebaseFields.teaId.rawValue: tea.id,
-            ReviewsFirebaseFields.teaName.rawValue: tea.name,
-            ReviewsFirebaseFields.reviewDate.rawValue: dateString,
-            ReviewsFirebaseFields.review.rawValue: review
-        ]) { err in
-            if let err = err {
-                self.errorMessage = "\(err)"
+        usersRef.document(uid).getDocument { snapshot, error in
+            if let error = error {
+                self.errorMessage = "Failed to fetch current user: \(error)"
                 return
+            }
+            
+            guard let data = snapshot?.data() else {
+                self.errorMessage = "No data found"
+                return
+            }
+            
+            let username = data[UsersFirebaseFields.username.rawValue] as? String ?? ""
+            
+            let avatar = "\(Auth.auth().currentUser?.photoURL ?? URL(fileURLWithPath: ""))"
+            
+            let timestamp = Date().timeIntervalSince1970
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd MMMM yyyy HH:mm"
+            dateFormatter.locale = Locale(identifier: "ru_RU")
+            let dateString = dateFormatter.string(from: Date(timeIntervalSince1970: timestamp))
+            
+            reviewRef.setData([
+                ReviewsFirebaseFields.reviewId.rawValue: reviewRef.documentID,
+                ReviewsFirebaseFields.teaId.rawValue: tea.id,
+                ReviewsFirebaseFields.teaName.rawValue: tea.name,
+                ReviewsFirebaseFields.reviewDate.rawValue: dateString,
+                ReviewsFirebaseFields.review.rawValue: review,
+                ReviewsFirebaseFields.username.rawValue: username,
+                ReviewsFirebaseFields.avatar.rawValue: avatar,
+            ]) { err in
+                if let err = err {
+                    self.errorMessage = "\(err)"
+                    return
+                }
             }
         }
     }
@@ -235,12 +253,14 @@ class FirestoreService: ObservableObject {
                           let review = reviewDocument.get(ReviewsFirebaseFields.review.rawValue) as? String,
                           let reviewDate = reviewDocument.get(ReviewsFirebaseFields.reviewDate.rawValue) as? String,
                           let teaName = reviewDocument.get(ReviewsFirebaseFields.teaName.rawValue) as? String,
+                          let username = reviewDocument.get(ReviewsFirebaseFields.username.rawValue) as? String,
+                          let avatar = reviewDocument.get(ReviewsFirebaseFields.avatar.rawValue) as? String,
                           let teaId = reviewDocument.get(ReviewsFirebaseFields.teaId.rawValue) as? Int else {
                         errorHandler("Warning: Missing data for review \(reviewDocument.documentID)")
                         continue
                     }
                     
-                    reviews.append(Review(id: reviewId, review: review, reviewDate: reviewDate, teaName: teaName, teaId: teaId))
+                    reviews.append(Review(id: reviewId, review: review, reviewDate: reviewDate, teaName: teaName, username: username, avatar: avatar, teaId: teaId))
                 }
                 completion(reviews)
                 
@@ -269,12 +289,14 @@ class FirestoreService: ObservableObject {
                               let review = reviewDocument.get(ReviewsFirebaseFields.review.rawValue) as? String,
                               let reviewDate = reviewDocument.get(ReviewsFirebaseFields.reviewDate.rawValue) as? String,
                               let teaName = reviewDocument.get(ReviewsFirebaseFields.teaName.rawValue) as? String,
+                              let username = reviewDocument.get(ReviewsFirebaseFields.username.rawValue) as? String,
+                              let avatar = reviewDocument.get(ReviewsFirebaseFields.avatar.rawValue) as? String,
                               let teaId = reviewDocument.get(ReviewsFirebaseFields.teaId.rawValue) as? Int else {
                             errorHandler("Warning: Missing data for review \(reviewDocument.documentID)")
                             continue
                         }
                         
-                        reviews.append(Review(id: reviewId, review: review, reviewDate: reviewDate, teaName: teaName, teaId: teaId))
+                        reviews.append(Review(id: reviewId, review: review, reviewDate: reviewDate, teaName: teaName, username: username, avatar: avatar, teaId: teaId))
                     }
                     
                 }

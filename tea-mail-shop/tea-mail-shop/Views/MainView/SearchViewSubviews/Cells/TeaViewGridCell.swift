@@ -56,9 +56,9 @@ struct TeaViewGridCell: View {
         .onTapGesture {
             isDetailsPresented = true
         }
-        .fullScreenCover(isPresented: $isDetailsPresented, content: {
+        .fullScreenCover(isPresented: $isDetailsPresented) {
             DetailsView(tea: tea, reviewsViewModel: reviewsViewModel)
-        })
+        }
     }
 }
 

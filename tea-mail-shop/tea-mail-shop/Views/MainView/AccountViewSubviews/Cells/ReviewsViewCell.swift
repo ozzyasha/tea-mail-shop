@@ -10,6 +10,12 @@ import SwiftUI
 struct ReviewsViewCell: View {
     @State
     var review: Review
+    @State
+    var isTeaDetailsOpened = false
+    @ObservedObject
+    var reviewsViewModel = ReviewsViewModel()
+    @ObservedObject
+    var teaVM = TeaViewModel()
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -22,10 +28,20 @@ struct ReviewsViewCell: View {
                     .padding(.bottom)
             }
             HStack {
-                Text(review.teaName)
-                    .font(.system(size: 18))
-                    .bold()
-                    .foregroundStyle(.accent)
+                Button {
+                    isTeaDetailsOpened = true
+                } label: {
+                    Text(review.teaName)
+                        .multilineTextAlignment(.leading)
+                        .font(.system(size: 18))
+                        .bold()
+                        .foregroundStyle(.accent)
+                }
+                .fullScreenCover(isPresented: $isTeaDetailsOpened) {
+                    if let tea = teaVM.teaCatalogueModel.first(where: {$0.id == review.teaId}) {
+                        DetailsView(tea: tea, reviewsViewModel: reviewsViewModel)
+                    }
+                }
                 Spacer()
             }
             Divider()
@@ -46,5 +62,5 @@ struct ReviewsViewCell: View {
 }
 
 #Preview {
-    ReviewsViewCell(review: Review(id: "0", review: "Some review", reviewDate: "31 марта 2024 15:48", teaName: "Tea name", teaId: 0))
+    ReviewsViewCell(review: Review(id: "0", review: "Some review", reviewDate: "31 марта 2024 15:48", teaName: "Tea name", username: "Username", avatar: "", teaId: 0))
 }

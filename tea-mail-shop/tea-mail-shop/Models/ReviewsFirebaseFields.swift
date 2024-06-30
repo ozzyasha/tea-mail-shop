@@ -14,4 +14,6 @@ enum ReviewsFirebaseFields: String {
     case teaName = "teaName"
     case reviewDate = "reviewDate"
     case review = "review"
+    case username = "username"
+    case avatar = "avatar"
 }

@@ -22,7 +22,7 @@ struct DetailReviewsView: View {
                     ForEach(detailReviewsViewModel.reviewsCatalogue.indices, id: \.self) { index in
                         let review = detailReviewsViewModel.reviewsCatalogue[index]
                         if review.teaId == tea.id {
-                            ReviewsViewCell(review: review)
+                            DetailReviewsViewCell(review: review)
                         }
                     }
                 } else {

@@ -32,6 +32,7 @@
 		7A1829B22C30BD5300E6132D /* ReviewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1829B12C30BD5300E6132D /* ReviewsViewCell.swift */; };
 		7A1829B52C30CBC900E6132D /* DetailReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1829B42C30CBC900E6132D /* DetailReviewsView.swift */; };
 		7A1829B72C30CC2C00E6132D /* DetailReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1829B62C30CC2C00E6132D /* DetailReviewsViewModel.swift */; };
+		7A1829BA2C3186B400E6132D /* DetailReviewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1829B92C3186B400E6132D /* DetailReviewsViewCell.swift */; };
 		7A1F44E32C11C116008F4B53 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F44E22C11C116008F4B53 /* SignInView.swift */; };
 		7A1F44E52C11F666008F4B53 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F44E42C11F666008F4B53 /* BackgroundView.swift */; };
 		7A1F44EA2C123EFA008F4B53 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F44E92C123EFA008F4B53 /* FirebaseAnalytics */; };
@@ -150,6 +151,7 @@
 		7A1829B12C30BD5300E6132D /* ReviewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewCell.swift; sourceTree = "<group>"; };
 		7A1829B42C30CBC900E6132D /* DetailReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReviewsView.swift; sourceTree = "<group>"; };
 		7A1829B62C30CC2C00E6132D /* DetailReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReviewsViewModel.swift; sourceTree = "<group>"; };
+		7A1829B92C3186B400E6132D /* DetailReviewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReviewsViewCell.swift; sourceTree = "<group>"; };
 		7A1F44E22C11C116008F4B53 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		7A1F44E42C11F666008F4B53 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		7A1F45242C12463D008F4B53 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
@@ -306,8 +308,17 @@
 			children = (
 				7A1829AB2C30A11400E6132D /* ReviewLeavingView.swift */,
 				7A1829B42C30CBC900E6132D /* DetailReviewsView.swift */,
+				7A1829B82C31869900E6132D /* Cells */,
 			);
 			path = DetailsViewSubviews;
+			sourceTree = "<group>";
+		};
+		7A1829B82C31869900E6132D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7A1829B92C3186B400E6132D /* DetailReviewsViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7A1F44E12C11BF1F008F4B53 /* Views */ = {
@@ -623,6 +634,7 @@
 				7A1829B52C30CBC900E6132D /* DetailReviewsView.swift in Sources */,
 				7AE01B2F2C1DF87500A74D28 /* TeaCatalogueRealmModel.swift in Sources */,
 				7AE01B3D2C1DFA9F00A74D28 /* URL+Cache.swift in Sources */,
+				7A1829BA2C3186B400E6132D /* DetailReviewsViewCell.swift in Sources */,
 				7AE01B3F2C1DFB3000A74D28 /* CachedImageViewModel.swift in Sources */,
 				7AA73A832C2CBD820067BD8F /* OrdersView.swift in Sources */,
 				7AA73A8C2C2CD9B00067BD8F /* OrdersViewModel.swift in Sources */,
