@@ -38,7 +38,7 @@ struct OrdersView: View {
                     .background(.accent)
             }
         }
-        .alert("Error: \(ordersViewModel.firestoreError)", isPresented: $isFirestoreErrorExists) {
+        .alert(String(localized: "Error: ") + "\(ordersViewModel.firestoreError)", isPresented: $isFirestoreErrorExists) {
             Button("OK", role: .cancel) { }
         }
     }

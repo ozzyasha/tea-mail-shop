@@ -1,0 +1,1918 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "“Оплати” — это мобильная система оплаты электронными деньгами. Платежи проводятся с помощью QR-кода. Для оплаты достаточно только смартфон! Скачать приложение «Оплати» можно в App Store, Google Play, AppGallery:  https://getapp.o-plati.by Пополнение “виртуального кошелька” с карточек любых банков без комиссии, через ЕРИП, банковским переводом или переводом с другого кошелька «Оплати», подробнее на сайте сервиса https://www.o-plati.by Для оплаты приложением «Оплати» необходимо выбрать способ оплаты «Оплати» или указать в комментариях желаемый способ оплаты и оформить заказ. На указанный в заказе e-mail или другой удобный мессенджер придет ссылка для оплаты заказа. Перейдя по ссылке с мобильного устройства откроется приложение «Оплати» с детализацией платежа. Для оплаты необходимо нажать «Далее» и подтвердить платеж. Если ссылка открывается с ПК, то на экране появится QR-код. Отсканировать QR-код приложением «Оплати» или камерой смартфона, подтвердить оплату. Электронный чек оплаты смотреть в выписке платежей приложения «Оплати»." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introducing \"Oplati\" - your seamless mobile payment solution! Effortlessly pay with your smartphone using our QR code technology. Download the \"Oplati\" app today from the App Store, Google Play, or AppGallery: https://getapp.o-plati.by  Top up your \"virtual wallet\" conveniently with no fees using cards from any bank, via ERIP, bank transfer, or transfer from another \"Oplati\" wallet. Explore more options on our website: https://www.o-plati.by To pay with the \"Oplati\" app, simply choose \"Oplati\" as your payment method or indicate your preferred payment method in the comments when placing your order. A secure payment link will be sent to your provided email address or preferred messaging app. Clicking the link from your mobile device will open the \"Oplati\" app displaying your payment details. Confirm your payment by tapping \"Next\". If the link is opened on a PC, a QR code will appear on the screen. Scan the QR code with the \"Oplati\" app or your smartphone's camera and confirm your payment. Your electronic payment receipt can be found in your \"Oplati\" app's payment history. Enjoy a smooth and convenient payment experience with \"Oplati\"!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“Оплати” — это мобильная система оплаты электронными деньгами. Платежи проводятся с помощью QR-кода. Для оплаты достаточно только смартфон! Скачать приложение «Оплати» можно в App Store, Google Play, AppGallery:  https://getapp.o-plati.by Пополнение “виртуального кошелька” с карточек любых банков без комиссии, через ЕРИП, банковским переводом или переводом с другого кошелька «Оплати», подробнее на сайте сервиса https://www.o-plati.by Для оплаты приложением «Оплати» необходимо выбрать способ оплаты «Оплати» или указать в комментариях желаемый способ оплаты и оформить заказ. На указанный в заказе e-mail или другой удобный мессенджер придет ссылка для оплаты заказа. Перейдя по ссылке с мобильного устройства откроется приложение «Оплати» с детализацией платежа. Для оплаты необходимо нажать «Далее» и подтвердить платеж. Если ссылка открывается с ПК, то на экране появится QR-код. Отсканировать QR-код приложением «Оплати» или камерой смартфона, подтвердить оплату. Электронный чек оплаты смотреть в выписке платежей приложения «Оплати»."
+          }
+        }
+      }
+    },
+    "(%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%@)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%@)"
+          }
+        }
+      }
+    },
+    "(price for %@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(price for %@)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(цена за %@)"
+          }
+        }
+      }
+    },
+    "%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
+    },
+    "%lld Br" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Br"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Br"
+          }
+        }
+      }
+    },
+    "%lld items in cart" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld item in cart"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld items in cart"
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld товара в корзине"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld товаров в корзине"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld товар в корзине"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld товаров в корзине"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld г." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld g."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld г."
+          }
+        }
+      }
+    },
+    "%lld шт." : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld item"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld items"
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld шт."
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld шт."
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld шт."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld шт."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "+375 (29) 849 50 51" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+375 (29) 849 50 51"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+375 (29) 849 50 51"
+          }
+        }
+      }
+    },
+    "+375 (29) 854 34 60" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+375 (29) 854 34 60"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+375 (29) 854 34 60"
+          }
+        }
+      }
+    },
+    "+375 (29) 861 05 80" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+375 (29) 861 05 80"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+375 (29) 861 05 80"
+          }
+        }
+      }
+    },
+    "🥳 Your order is created successfully!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🥳 Your order is created successfully!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🥳 Ваш заказ успешно создан!"
+          }
+        }
+      }
+    },
+    "Account" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Аккаунт"
+          }
+        }
+      }
+    },
+    "Add to Cart" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add to Cart"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В корзину"
+          }
+        }
+      }
+    },
+    "All fields are required to be filled" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All fields are required to be filled"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все поля должны быть заполнены"
+          }
+        }
+      }
+    },
+    "Already have an account?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Already have an account?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уже есть аккаунт?"
+          }
+        }
+      }
+    },
+    "Back" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назад"
+          }
+        }
+      }
+    },
+    "Can't get saved values from database" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Can't get saved values from database"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Невозможно получить сохранённые значения из базы данных"
+          }
+        }
+      }
+    },
+    "can't receive an email" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "can't receive an email"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "невозможно получить e-mail"
+          }
+        }
+      }
+    },
+    "can't receive an id" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "can't receive an id"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "невозможно получить id"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть"
+          }
+        }
+      }
+    },
+    "Cart" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cart"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Корзина"
+          }
+        }
+      }
+    },
+    "Clear Cart" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear Cart"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очистить Корзину"
+          }
+        }
+      }
+    },
+    "Confirm Order" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm Order"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подтвердить заказ"
+          }
+        }
+      }
+    },
+    "Decode error" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Decode error"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка декодирования"
+          }
+        }
+      }
+    },
+    "Don't have an account?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Don't have an account?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет аккаунта?"
+          }
+        }
+      }
+    },
+    "e-mail" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "e-mail"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "e-mail"
+          }
+        }
+      }
+    },
+    "E-mail field is required to be filled" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-mail field is required to be filled"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поле \"e-mail\" должно быть заполнено"
+          }
+        }
+      }
+    },
+    "Edit profile" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit profile"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Редактировать профиль"
+          }
+        }
+      }
+    },
+    "Enter your name" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter your name"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите своё имя"
+          }
+        }
+      }
+    },
+    "Error: " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error: "
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка: "
+          }
+        }
+      }
+    },
+    "Error: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка: %@"
+          }
+        }
+      }
+    },
+    "Error: Realm database creation failed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error: Realm database creation failed"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка создания базы данных Realm"
+          }
+        }
+      }
+    },
+    "Failed to fetch current user:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to fetch current user:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Невозможно получить текущего пользователя"
+          }
+        }
+      }
+    },
+    "Failed to fetch current user: " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to fetch current user: "
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Невозможно получить текущего пользователя"
+          }
+        }
+      }
+    },
+    "Failed to fetch orders: " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to fetch orders: "
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Невозможно получить заказы"
+          }
+        }
+      }
+    },
+    "Failed to get order id: " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to get order id: "
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Невозможно получить id заказов"
+          }
+        }
+      }
+    },
+    "Failed to update order value: " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to update order value: "
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Невозможно обновить заказ"
+          }
+        }
+      }
+    },
+    "Go to the catalogue" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go to the catalogue"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перейти в каталог"
+          }
+        }
+      }
+    },
+    "Home" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Главная"
+          }
+        }
+      }
+    },
+    "In Cart" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Cart"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В корзине"
+          }
+        }
+      }
+    },
+    "Leave a review" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leave a review"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оставить отзыв"
+          }
+        }
+      }
+    },
+    "Looks like you haven't added anything to your cart yet" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Looks like you haven't added anything to your cart yet"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Похоже, вы ещё не добавили ничего в корзину."
+          }
+        }
+      }
+    },
+    "No data found" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No data found"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Данные не найдены"
+          }
+        }
+      }
+    },
+    "No reviews yet" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No reviews yet"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет отзывов"
+          }
+        }
+      }
+    },
+    "Not available" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not available"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет в наличии"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ОК"
+          }
+        }
+      }
+    },
+    "or sign in with" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "or sign in with"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "или войти с помощью"
+          }
+        }
+      }
+    },
+    "Order #%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Order #%lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заказ №%lld"
+          }
+        }
+      }
+    },
+    "Orders" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orders"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заказы"
+          }
+        }
+      }
+    },
+    "password" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "password"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "пароль"
+          }
+        }
+      }
+    },
+    "Password field is required to be filled" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password field is required to be filled"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пароль должен быть заполнен"
+          }
+        }
+      }
+    },
+    "Rate the tea" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate the tea"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оценить чай"
+          }
+        }
+      }
+    },
+    "Request error" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request error"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка запроса"
+          }
+        }
+      }
+    },
+    "Response error" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Response error"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка ответа"
+          }
+        }
+      }
+    },
+    "Reviews" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reviews"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отзывы"
+          }
+        }
+      }
+    },
+    "Search" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск"
+          }
+        }
+      }
+    },
+    "Sign In" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign In"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войти"
+          }
+        }
+      }
+    },
+    "Sign Out" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign Out"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выйти"
+          }
+        }
+      }
+    },
+    "Sign Up" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign Up"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Регистрация"
+          }
+        }
+      }
+    },
+    "Submit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Submit"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подтвердить"
+          }
+        }
+      }
+    },
+    "Tea diary" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tea diary"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чайный дневник"
+          }
+        }
+      }
+    },
+    "Thank you for your review!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thank you for your review!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спасибо за ваш отзыв!"
+          }
+        }
+      }
+    },
+    "Total price:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total price:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Итого:"
+          }
+        }
+      }
+    },
+    "URL error" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL error"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка URL"
+          }
+        }
+      }
+    },
+    "username" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "username"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "имя пользователя"
+          }
+        }
+      }
+    },
+    "Warning: Missing data for order " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warning: Missing data for order "
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предупреждение: Данные заказа потеряны"
+          }
+        }
+      }
+    },
+    "Warning: Missing data for ordered tea item " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warning: Missing data for ordered tea item "
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предупреждение: Данные заказанного чая потеряны"
+          }
+        }
+      }
+    },
+    "Warning: Missing data for review " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warning: Missing data for review "
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предупреждение: Данные отзыва потеряны"
+          }
+        }
+      }
+    },
+    "You can edit your username in the field below (no more than 20 symbols). When it will be ready, press OK to continue." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can edit your username in the field below (no more than 20 symbols). When it will be ready, press OK to continue."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы можете редактировать имя профиля, введя его в поле ниже (не более 20 символов). Когда всё будет готово, нажмите \"ОК\"."
+          }
+        }
+      }
+    },
+    "You don't have orders yet" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You don't have orders yet"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "У вас ещё нет заказов"
+          }
+        }
+      }
+    },
+    "You don't have reviews yet" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You don't have reviews yet"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "У вас ещё нет отзывов"
+          }
+        }
+      }
+    },
+    "Your cart is empty" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your cart is empty"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваша корзина пуста"
+          }
+        }
+      }
+    },
+    "Адрес чайной и магазина" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tea shop address"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адрес чайной и магазина"
+          }
+        }
+      }
+    },
+    "Бесплатная доставка" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Free delivery"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бесплатная доставка"
+          }
+        }
+      }
+    },
+    "Бронирование мест / чайная консультация с 12:00 до 22:00" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Book a place / tea consultation from 12:00 to 22:00"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бронирование мест / чайная консультация с 12:00 до 22:00"
+          }
+        }
+      }
+    },
+    "В вашем интернет-банкинге проходите по ветке: ЕРИП - Интернет-магазины - Латинский домен - Буква Т - tea-mail.by. В появившемся окне необходимо ввести вручную счёт (он совпадает с номером заказа) и сумму из пришедшего после сбора вашего заказа SMS. Если вы осуществляете платеж в кассе банка, пожалуйста, сообщите кассиру о необходимости проведения платежа через систему ”Расчет“ (ЕРИП). Оплатить товары вы можете через систему «Расчет» (ЕРИП), в любом удобном для вас месте, в удобное для вас время, в удобном для вас пункте банковского обслуживания – интернет-банке, с помощью мобильного банкинга, инфокиоске, кассе банков, банкомате и т. д. Совершить оплату можно с использованием наличных денежных средств, электронных денег и банковских платежных карточек в пунктах банковского обслуживания банков, которые оказывают услуги по приему платежей, а также посредством инструментов дистанционного банковского обслуживания. Для оплаты заказа введите номер счета из присланного нами SMS, введите сумму платежа, совершите платеж." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Through your online banking: Navigate to: ERIP - Online Stores - Latin Domain - Letter T - tea-mail.by. In the window that appears, manually enter your order number (which is your account number) and the amount shown in the SMS you received after your order was assembled. At a bank branch: Inform the cashier that you wish to make a payment through the \"Raschet\" system (ERIP). With the \"Raschet\" system (ERIP), you have numerous convenient options:\n• Online banking: Pay from the comfort of your home.\n• Mobile banking: Pay on the go.\n• Info kiosks: Pay quickly and easily at various locations.\n• Bank branches: Pay using cash, electronic money, or your bank card.\n• ATM: Pay through your ATM account.\nTo make your payment:\n1. Enter the account number provided in the SMS.\n2. Enter the payment amount.\n3. Complete your payment.\nEnjoy convenient and flexible payment options for your order!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В вашем интернет-банкинге проходите по ветке: ЕРИП - Интернет-магазины - Латинский домен - Буква Т - tea-mail.by. В появившемся окне необходимо ввести вручную счёт (он совпадает с номером заказа) и сумму из пришедшего после сбора вашего заказа SMS. Если вы осуществляете платеж в кассе банка, пожалуйста, сообщите кассиру о необходимости проведения платежа через систему ”Расчет“ (ЕРИП). Оплатить товары вы можете через систему «Расчет» (ЕРИП), в любом удобном для вас месте, в удобное для вас время, в удобном для вас пункте банковского обслуживания – интернет-банке, с помощью мобильного банкинга, инфокиоске, кассе банков, банкомате и т. д. Совершить оплату можно с использованием наличных денежных средств, электронных денег и банковских платежных карточек в пунктах банковского обслуживания банков, которые оказывают услуги по приему платежей, а также посредством инструментов дистанционного банковского обслуживания. Для оплаты заказа введите номер счета из присланного нами SMS, введите сумму платежа, совершите платеж."
+          }
+        }
+      }
+    },
+    "В отделении Белпочты" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "At a Belposhta office "
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В отделении Белпочты"
+          }
+        }
+      }
+    },
+    "Возможна доставка с помощью маршрутки, если есть прямое сообщение с Минском. Стоимость такого способа доставки 15 р. (за курьерские услуги по Минску и оплату маршрутки). Такие заказы отправляются только по предоплате удобным способом - картой онлайн или ЕРИП. Все заказы от 150 BYN доставляются таким способом бесплатно." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We offer delivery via minibus if a direct route to Minsk is available. The cost for this service is 15 BYN (covering courier services within Minsk and minibus fare). Such orders require prepayment via card online or ERIP. All orders over 150 BYN will receive free delivery via this method."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Возможна доставка с помощью маршрутки, если есть прямое сообщение с Минском. Стоимость такого способа доставки 15 р. (за курьерские услуги по Минску и оплату маршрутки). Такие заказы отправляются только по предоплате удобным способом - картой онлайн или ЕРИП. Все заказы от 150 BYN доставляются таким способом бесплатно."
+          }
+        }
+      }
+    },
+    "Вопросы по заказам/склад с 12:00 до 18:00" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questions about orders/warehouse from 12:00 to 18:00"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вопросы по заказам/склад с 12:00 до 18:00"
+          }
+        }
+      }
+    },
+    "г. Минск, пр. Независимости 44-3Н\nВход со двора здания «Вечерний Минск», ст.м. Площадь Победы" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minsk, Nezavisimosti Ave. 44-3N\nEntrance from the courtyard of the “Evening Minsk” building, metro station \"Ploshcha Pabedy\""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "г. Минск, пр. Независимости 44-3Н\nВход со двора здания «Вечерний Минск», ст.м. Площадь Победы"
+          }
+        }
+      }
+    },
+    "Доставка" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delivery"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доставка"
+          }
+        }
+      }
+    },
+    "Доставка Белпочтой" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belposhta delivery"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доставка Белпочтой"
+          }
+        }
+      }
+    },
+    "Доставка в другие страны производится с помощью EMS службы, стоимость предварительно согласовывается с получателем. Для уточнения стоимости напишите нам запрос на почту dostavka.teamail@gmail.com или телеграм https://t.me/tea_mail (c 12 до 19). Вам срочно нужен чай? Мы найдем способ его вам доставить! Есть опыт доставок на Кипр, Израиль, Польшу, Канаду, США, Индонезию, Португалию и другие страны." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We offer international delivery via EMS. The cost will be confirmed with the recipient prior to shipment. For a shipping quote, please contact us via email: dostavka.teamail@gmail.com or Telegram: https://t.me/tea_mail (available from 12:00 to 19:00). Need your tea urgently? We'll find a way to deliver it to you! We have experience shipping to Cyprus, Israel, Poland, Canada, the USA, Indonesia, Portugal, and other countries."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доставка в другие страны производится с помощью EMS службы, стоимость предварительно согласовывается с получателем. Для уточнения стоимости напишите нам запрос на почту dostavka.teamail@gmail.com или телеграм https://t.me/tea_mail (c 12 до 19). Вам срочно нужен чай? Мы найдем способ его вам доставить! Есть опыт доставок на Кипр, Израиль, Польшу, Канаду, США, Индонезию, Португалию и другие страны."
+          }
+        }
+      }
+    },
+    "Доставка до вашей двери или отделения СДЭКа в вашем городе - стоимость 600 RUB. Бесплатно доставляем заказы от 6000 RUB СДЭКом до отделения СДЭКа в вашем городе, а заказы от 8000 RUB - курьерской службой СДЭК до вашей двери." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Delivery to your door or to a CDEK pickup point in your city: 600 RUB. Orders over 6,000 RUB: Delivered free of charge via CDEK to a CDEK pickup point in your city. Orders over 8,000 RUB: Delivered free of charge via CDEK courier service directly to your door."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доставка до вашей двери или отделения СДЭКа в вашем городе - стоимость 600 RUB. Бесплатно доставляем заказы от 6000 RUB СДЭКом до отделения СДЭКа в вашем городе, а заказы от 8000 RUB - курьерской службой СДЭК до вашей двери."
+          }
+        }
+      }
+    },
+    "Доставка и оплата" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delivery and payment"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доставка и оплата"
+          }
+        }
+      }
+    },
+    "Доставка по всему миру" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Worldwide delivery"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доставка по всему миру"
+          }
+        }
+      }
+    },
+    "Доставка по Минску в пределах МКАД возможна как в день заказа, так и в любой удобный вам день. Стоимость курьерской доставки для заказов до 85 р. - 7 р. Заказы на сумму от 85 р. доставляются бесплатно с 12.00 до 22.00. В комментарии пожалуйста укажите желаемое время заказа. Курьером за пределы МКАД в близлежащие районы: заказы на 150 BYN и более в районы Минской области, граничащие с МКАД доставим бесплатно. До 150 BYN - за 15 BYN. Оплата наличными или картой курьеру или предоплата по ЕРИП или карте." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Within the MKA (Minsk Ring Road): Delivery is available on the same day you place your order or on any other day that is convenient for you. Orders under 85 BYN: Courier delivery fee is 7 BYN. Orders 85 BYN and above: Free delivery between 12:00 and 22:00. Please indicate your preferred delivery time in the order comments. Beyond the MKA (Minsk Ring Road): Orders 150 BYN and above: Free delivery to nearby Minsk Oblast districts bordering the MKA. Orders under 150 BYN: Delivery fee of 15 BYN. Payment Options: You can pay in cash or by card to the courier or make prepayment via ERIP or card."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доставка по Минску в пределах МКАД возможна как в день заказа, так и в любой удобный вам день. Стоимость курьерской доставки для заказов до 85 р. - 7 р. Заказы на сумму от 85 р. доставляются бесплатно с 12.00 до 22.00. В комментарии пожалуйста укажите желаемое время заказа. Курьером за пределы МКАД в близлежащие районы: заказы на 150 BYN и более в районы Минской области, граничащие с МКАД доставим бесплатно. До 150 BYN - за 15 BYN. Оплата наличными или картой курьеру или предоплата по ЕРИП или карте."
+          }
+        }
+      }
+    },
+    "Доставка СДЭКом" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CDEK delivery"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доставка СДЭКом"
+          }
+        }
+      }
+    },
+    "Заказ можно оплатить на почте при получении. БелПочта возьмет 3% за перевод денег на наш расчетный счет. Оплатить можно наличными или картой. Не забудьте паспорт!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can pay for your order at the post office when you pick it up. Belposhta (Belarusian Post) will charge a 3% fee for transferring the money to our account. You can pay in cash or with a card. Don't forget your passport!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заказ можно оплатить на почте при получении. БелПочта возьмет 3% за перевод денег на наш расчетный счет. Оплатить можно наличными или картой. Не забудьте паспорт!"
+          }
+        }
+      }
+    },
+    "Заказы собираются в порядке очереди с учётом загруженности склада. Время сборки - от трёх часов до суток в предпраздничные и акционные дни. Заказ хранится семь дней, после чего автоматически расформировывается, если срок хранения не был продлен по просьбе покупателя. В случае невостребованности заказа, последующие собираются по предварительной оплате. Каждая стадия сопровождается смс-уведомлением: «Принят в обработку»-«Собран»-«Передан на кассу». Перед визитом обязательно дождитесь смс-уведомления о готовности Вашего заказа. Забрать его можно в нашей чайной по адресу: пр-т Независимости 44-3Н, во дворе здания «Вечерний Минск». Это 2 минуты пешком от ст. метро «Площадь Победы». Вход через арку с вывеской «Чайная Почта», слева от арки пристройка с росписью в китайском стиле. Оплатить можно наличными/картой при самовывозе, либо предварительно ЕРИП или онлайн." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orders are processed in the order they are received, taking into account warehouse workload. Assembly time is 3 to 24 hours during pre-holiday and promotional periods. Orders are stored for seven days and then automatically cancelled unless the storage period is extended at the customer's request. If an order is not collected, subsequent orders will be processed with advance payment. Each stage is accompanied by an SMS notification: \"Order received for processing\" - \"Order assembled\" - \"Order transferred to the cashier\". Before your visit, please wait for an SMS notification that your order is ready. You can pick it up at our tea shop located at: 44-3N Nezavisimosti Avenue, in the courtyard of the \"Vechernіy Minsk\" building. This is a 2-minute walk from \"Ploshchad Pobedy\" metro station. Enter through the archway with the \"Tea Mail\" sign, to the left of the archway there is an extension with Chinese-style painting. Payment can be made by cash/card upon pickup, or in advance via ERIP or online."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заказы собираются в порядке очереди с учётом загруженности склада. Время сборки - от трёх часов до суток в предпраздничные и акционные дни. Заказ хранится семь дней, после чего автоматически расформировывается, если срок хранения не был продлен по просьбе покупателя. В случае невостребованности заказа, последующие собираются по предварительной оплате. Каждая стадия сопровождается смс-уведомлением: «Принят в обработку»-«Собран»-«Передан на кассу». Перед визитом обязательно дождитесь смс-уведомления о готовности Вашего заказа. Забрать его можно в нашей чайной по адресу: пр-т Независимости 44-3Н, во дворе здания «Вечерний Минск». Это 2 минуты пешком от ст. метро «Площадь Победы». Вход через арку с вывеской «Чайная Почта», слева от арки пристройка с росписью в китайском стиле. Оплатить можно наличными/картой при самовывозе, либо предварительно ЕРИП или онлайн."
+          }
+        }
+      }
+    },
+    "Картой курьеру" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "By card to the courier"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Картой курьеру"
+          }
+        }
+      }
+    },
+    "Количество неизвестно" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quantity undefined"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Количество неизвестно"
+          }
+        }
+      }
+    },
+    "Контакты" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contacts"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Контакты"
+          }
+        }
+      }
+    },
+    "Курьерская доставка" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Courier delivery"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Курьерская доставка"
+          }
+        }
+      }
+    },
+    "Любые заказы от 85 BYN с доставкой по Минску курьером или почтой по Беларуси. Доставка с помощью EMS-службы бесплатна от 150 BYN. Заказы от 6000 RUB СДЭКом до отделения СДЭКа в вашем городе. Заказы от 8000 RUB - курьерской службой СДЭК до вашей двери." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All orders over 85 BYN qualify for free courier delivery within Minsk or postal delivery throughout Belarus. Orders over 150 BYN enjoy free EMS delivery. Orders over 6,000 RUB are delivered free of charge via CDEK to a CDEK pickup point in your city. Orders over 8,000 RUB are delivered free of charge via CDEK courier service directly to your door."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Любые заказы от 85 BYN с доставкой по Минску курьером или почтой по Беларуси. Доставка с помощью EMS-службы бесплатна от 150 BYN. Заказы от 6000 RUB СДЭКом до отделения СДЭКа в вашем городе. Заказы от 8000 RUB - курьерской службой СДЭК до вашей двери."
+          }
+        }
+      }
+    },
+    "Маршруткой по РБ" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minibus delivery within Belarus"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Маршруткой по РБ"
+          }
+        }
+      }
+    },
+    "Наличными или картой в чайной" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cash or card payment at the tea shop"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Наличными или картой в чайной"
+          }
+        }
+      }
+    },
+    "Наличными курьеру" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cash payment to the courier"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Наличными курьеру"
+          }
+        }
+      }
+    },
+    "Нет в наличии" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not available"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет в наличии"
+          }
+        }
+      }
+    },
+    "Оплата" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Payment"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оплата"
+          }
+        }
+      }
+    },
+    "Оплата картой при получении заказа у курьера. В комментарии к заказу пожалуйста напишите желаемое время доставки." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Card payment to the courier upon delivery. Please specify your preferred delivery time in the order comments."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оплата картой при получении заказа у курьера. В комментарии к заказу пожалуйста напишите желаемое время доставки."
+          }
+        }
+      }
+    },
+    "Оплата наличными или картой в магазине Чайная Почта на проспекте Независимости 44 - 3н." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cash or card payment at the Tea Mail store located at 44-3N Nezavisimosti Avenue."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оплата наличными или картой в магазине Чайная Почта на проспекте Независимости 44 - 3н."
+          }
+        }
+      }
+    },
+    "Оплата наличными при получении заказа у курьера. В комментарии к заказу пожалуйста напишите с какой суммы приготовить сдачу и выберите желаемое время доставки." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cash payment to the courier upon delivery. Please specify the amount of change you need in the order comments and select your preferred delivery time."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оплата наличными при получении заказа у курьера. В комментарии к заказу пожалуйста напишите с какой суммы приготовить сдачу и выберите желаемое время доставки."
+          }
+        }
+      }
+    },
+    "Оплата онлайн картами через bePaid" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Online payment by card via bePaid"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оплата онлайн картами через bePaid"
+          }
+        }
+      }
+    },
+    "Оплата по счету на р/с (для юр. лиц)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Payment by invoice to bank account (for legal entities)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оплата по счету на р/с (для юр. лиц)"
+          }
+        }
+      }
+    },
+    "Оплата через ЕРИП" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Payment via ERIP"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оплата через ЕРИП"
+          }
+        }
+      }
+    },
+    "Оптовый заказ чая с 10:00 до 18:00 (пн-пт)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wholesale tea order from 10:00 to 18:00 (Mon-Fri)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оптовый заказ чая с 10:00 до 18:00 (пн-пт)"
+          }
+        }
+      }
+    },
+    "Отправляем заказ в тот же день, либо на следующий день после оформления на сайте. Стоимость почтовой доставки заказов на сумму до 85 р. по Беларуси — 7 р. Свыше - бесплатно. Обычно посылка к примеру до Гродно или Витебска идет 2–3 дня. После отправки мы высылаем на указанный при регистрации e-mail трек-номер для отслеживания посылки на сайте Белпочты. Оплата может быть как заранее, так и на почте при получении. Не забудьте паспорт. Будьте внимательны, 3% от итоговой суммы возьмёт Белпочта за перевод денег на наш расчетный счет в банке. Чтобы не платить эту комиссию, вы можете воспользоваться системой денежных переводов ЕРИП, а нам будет выгоднее отправить посылку без наложенного платежа. Во время формирования заказа в графе «Оплата» укажите способ оплаты: ЕРИП, и мы отправим вам номер счета для оплаты в виде SMS на указанный номер телефона. После получения оплаты от вас отправим заказ. Также доступна оплата онлайн по картам Visa и MasterCard." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We ship your order on the same day or the next day after you place it online. Postal delivery within Belarus costs 7 BYN for orders under 85 BYN. Orders over 85 BYN ship for free. Typically, a package to Grodno or Vitebsk takes 2-3 days. Once your order is shipped, we'll send you a tracking number to your registered email address so you can track it on the Belposhta website. You can pay in advance or at the post office upon delivery. Don't forget your passport! Please note that Belposhta charges a 3% fee for transferring money to our bank account. To avoid this commission, you can use the ERIP money transfer system, and we'll be able to send your package without a cash-on-delivery option. When placing your order, select \"ERIP\" as the payment method in the \"Payment\" field, and we'll send you the account number via SMS to the phone number you provided. We'll ship your order after we receive your payment. Online payment via Visa and MasterCard is also available."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отправляем заказ в тот же день, либо на следующий день после оформления на сайте. Стоимость почтовой доставки заказов на сумму до 85 р. по Беларуси — 7 р. Свыше - бесплатно. Обычно посылка к примеру до Гродно или Витебска идет 2–3 дня. После отправки мы высылаем на указанный при регистрации e-mail трек-номер для отслеживания посылки на сайте Белпочты. Оплата может быть как заранее, так и на почте при получении. Не забудьте паспорт. Будьте внимательны, 3% от итоговой суммы возьмёт Белпочта за перевод денег на наш расчетный счет в банке. Чтобы не платить эту комиссию, вы можете воспользоваться системой денежных переводов ЕРИП, а нам будет выгоднее отправить посылку без наложенного платежа. Во время формирования заказа в графе «Оплата» укажите способ оплаты: ЕРИП, и мы отправим вам номер счета для оплаты в виде SMS на указанный номер телефона. После получения оплаты от вас отправим заказ. Также доступна оплата онлайн по картам Visa и MasterCard."
+          }
+        }
+      }
+    },
+    "После нажатия кнопки «Купить» вы перейдете на специальную защищенную платежную страницу процессинговой системы bePaid (https://bepaid.by/). На платежной странице будет указан номер заказа и сумма платежа. Для оплаты вам необходимо ввести свои карточные данные и подтвердить платеж, нажав кнопку «Оплатить». Если ваша карта поддерживает технологию 3-D Secure, системой ваш будет предложено пройти стандартную одноминутную процедуру проверки владельца карты на странице вашего банка (банка, который выдал вашу карту). После оплаты наш менеджер свяжется с вами для уточнения деталей по доставке. Обращаем ваше внимание, что после проведения платежа на указанный вами электронный адрес придет подтверждение оплаты. Просим вас сохранять данные оплат. Мы принимаем платежи по следующим банковским картам: Visa, Visa Electron, MasterCard, Maestro, Белкарт. Платежи по банковским картам осуществляются через систему электронных платежей bePaid. Платежная страница системы bePaid отвечает всем требованиям безопасности передачи данных (PCI DSS Level 1). Все конфиденциальные данные хранятся в зашифрованном виде и максимально устойчивы к взлому. Доступ к авторизационным страницам осуществляется с использованием протокола, обеспечивающего безопасную передачу данных в Интернетe (SSL/TLS). Возврат денежных средств осуществляется на карту, с которой ранее была произведена оплата. Срок поступления денежных средств на карту от 1 до 30 дней с момента осуществления возврата Продавцом. Причины отказа в авторизации могут быть следующими: на карте недостаточно средств для оплаты заказа; банк, выпустивший карточку покупателя, установил запрет на оплату в интернете; истекло время ожидания ввода данных банковской карты; введённые данные не были подтверждены вами на платежной странице, ошибка формата данных и т.д. В зависимости от причины отказа в авторизации для решения вопроса вы можете: обратиться за разъяснениями в банк, выпустивший карточку покупателя; в случае невозможности решения проблемы банком — повторить попытку оплаты, воспользовавшись картой, выпущенной другим банком." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After clicking \"Confirm Order\", you'll be redirected to a secure payment page provided by bePaid (https://bepaid.by/). You'll see your order number and total amount on the payment page. To pay, enter your card details and confirm payment by clicking \"Pay\". If your card supports 3-D Secure, you'll be asked to complete a standard one-minute cardholder verification process on your bank's website (the bank that issued your card). After payment, our manager will contact you to discuss delivery details. You'll receive a payment confirmation to the email address you provided. Please keep your payment records. We accept payments from the following bank cards: Visa, Visa Electron, MasterCard, Maestro, Belcard. Bank card payments are processed through the bePaid electronic payment system. The bePaid payment page meets all data security requirements (PCI DSS Level 1). All confidential data is stored in encrypted form and is highly resistant to hacking. Access to authorization pages is secured using a protocol that ensures secure data transmission over the Internet (SSL/TLS). Refunds will be processed to the card used for the original purchase. The funds may take 1 to 30 days to appear in your account after the Seller initiates the refund. Possible reasons for authorization failure include: insufficient funds on the card; the bank that issued the card has blocked online payments; the waiting time for entering bank card details has expired; the entered data was not confirmed on the payment page; an error in the data format; etc. Depending on the reason for authorization failure, you can: contact your bank for clarification; if the bank cannot resolve the issue, try paying again using a card issued by a different bank."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "После нажатия кнопки «Купить» вы перейдете на специальную защищенную платежную страницу процессинговой системы bePaid (https://bepaid.by/). На платежной странице будет указан номер заказа и сумма платежа. Для оплаты вам необходимо ввести свои карточные данные и подтвердить платеж, нажав кнопку «Оплатить». Если ваша карта поддерживает технологию 3-D Secure, системой ваш будет предложено пройти стандартную одноминутную процедуру проверки владельца карты на странице вашего банка (банка, который выдал вашу карту). После оплаты наш менеджер свяжется с вами для уточнения деталей по доставке. Обращаем ваше внимание, что после проведения платежа на указанный вами электронный адрес придет подтверждение оплаты. Просим вас сохранять данные оплат. Мы принимаем платежи по следующим банковским картам: Visa, Visa Electron, MasterCard, Maestro, Белкарт. Платежи по банковским картам осуществляются через систему электронных платежей bePaid. Платежная страница системы bePaid отвечает всем требованиям безопасности передачи данных (PCI DSS Level 1). Все конфиденциальные данные хранятся в зашифрованном виде и максимально устойчивы к взлому. Доступ к авторизационным страницам осуществляется с использованием протокола, обеспечивающего безопасную передачу данных в Интернетe (SSL/TLS). Возврат денежных средств осуществляется на карту, с которой ранее была произведена оплата. Срок поступления денежных средств на карту от 1 до 30 дней с момента осуществления возврата Продавцом. Причины отказа в авторизации могут быть следующими: на карте недостаточно средств для оплаты заказа; банк, выпустивший карточку покупателя, установил запрет на оплату в интернете; истекло время ожидания ввода данных банковской карты; введённые данные не были подтверждены вами на платежной странице, ошибка формата данных и т.д. В зависимости от причины отказа в авторизации для решения вопроса вы можете: обратиться за разъяснениями в банк, выпустивший карточку покупателя; в случае невозможности решения проблемы банком — повторить попытку оплаты, воспользовавшись картой, выпущенной другим банком."
+          }
+        }
+      }
+    },
+    "После согласования стоимости и наличия мы выставляем вам счет на указанные в комментарии к заказу реквизиты. Составим договор, выпишем накладную и выдадим все необходимые декларации соответствия. Для получения условия работы, а так же составление договора напишите нам dostavka.teamail@gmail.com. Рабочее время оптового отдела с 10 до 18 по будням." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Once we confirm pricing and availability, we'll issue you an invoice to the details you provided in the order comments. We'll also draft a contract, issue an invoice, and provide all necessary declarations of conformity. For wholesale inquiries, contract details, and to discuss terms of service, please email us at dostavka.teamail@gmail.com. Our wholesale department is open from 10:00 to 18:00, Monday through Friday."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "После согласования стоимости и наличия мы выставляем вам счет на указанные в комментарии к заказу реквизиты. Составим договор, выпишем накладную и выдадим все необходимые декларации соответствия. Для получения условия работы, а так же составление договора напишите нам dostavka.teamail@gmail.com. Рабочее время оптового отдела с 10 до 18 по будням."
+          }
+        }
+      }
+    },
+    "Самовывоз" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pickup"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Самовывоз"
+          }
+        }
+      }
+    },
+    "Сервис Оплати" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"Oplati\" service"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сервис Оплати"
+          }
+        }
+      }
+    },
+    "Статьи о чае" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tea articles"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Статьи о чае"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -91,6 +91,7 @@
 		7AA73A8C2C2CD9B00067BD8F /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A8B2C2CD9B00067BD8F /* OrdersViewModel.swift */; };
 		7AA73A8E2C2E08DF0067BD8F /* OrderedTea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */; };
 		7AABD9382C3218B200DED319 /* CartViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AABD9372C3218B200DED319 /* CartViewModelTests.swift */; };
+		7AD171112C32C60E00985E5D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7AD171102C32C60E00985E5D /* Localizable.xcstrings */; };
 		7ADACFDB2C3002D900467B60 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADACFDA2C3002D900467B60 /* DetailsView.swift */; };
 		7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */; };
 		7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B242C1C865700A74D28 /* AvatarView.swift */; };
@@ -194,6 +195,7 @@
 		7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedTea.swift; sourceTree = "<group>"; };
 		7AABD92A2C31F37E00DED319 /* tea-mail-shopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tea-mail-shopTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AABD9372C3218B200DED319 /* CartViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModelTests.swift; sourceTree = "<group>"; };
+		7AD171102C32C60E00985E5D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7ADACFDA2C3002D900467B60 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		7AE01B242C1C865700A74D28 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				7AE01B212C1C4D4300A74D28 /* Coordinators */,
 				7A1F45232C1245F3008F4B53 /* Services */,
 				7A01C5412C10803000642DD7 /* Assets.xcassets */,
+				7AD171102C32C60E00985E5D /* Localizable.xcstrings */,
 				7A6796CC2C170E010011ED2D /* GoogleService-Info.plist */,
 				7A01C5432C10803000642DD7 /* Preview Content */,
 			);
@@ -608,6 +611,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 7A01C5312C10802E00642DD7;
 			packageReferences = (
@@ -633,6 +637,7 @@
 			files = (
 				7A01C5452C10803000642DD7 /* Preview Assets.xcassets in Resources */,
 				7A01C5422C10803000642DD7 /* Assets.xcassets in Resources */,
+				7AD171112C32C60E00985E5D /* Localizable.xcstrings in Resources */,
 				7A6796CD2C170E010011ED2D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

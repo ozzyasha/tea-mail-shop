@@ -89,17 +89,17 @@ struct SignUpView: View {
                                 if email.isEmpty && !password.isEmpty {
                                     isEmailTextFieldValid = false
                                     isPasswordTextFieldValid = true
-                                    self.errorText = "E-mail field is required to be filled"
+                                    self.errorText = String(localized: "E-mail field is required to be filled")
                                     return
                                 } else if password.isEmpty && !email.isEmpty {
                                     isEmailTextFieldValid = true
                                     isPasswordTextFieldValid = false
-                                    self.errorText = "Password field is required to be filled"
+                                    self.errorText = String(localized: "Password field is required to be filled")
                                     return
                                 } else if password.isEmpty && email.isEmpty {
                                     isEmailTextFieldValid = false
                                     isPasswordTextFieldValid = false
-                                    self.errorText = "All fields are required to be filled"
+                                    self.errorText = String(localized: "All fields are required to be filled")
                                     return
                                 }
                                 return
