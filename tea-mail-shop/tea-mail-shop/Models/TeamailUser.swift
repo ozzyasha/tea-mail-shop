@@ -6,5 +6,7 @@
 //
 
 struct TeamailUser {
-    let uid, email, username: String
+    let uid: String
+    let email: String
+    let username: String
 }

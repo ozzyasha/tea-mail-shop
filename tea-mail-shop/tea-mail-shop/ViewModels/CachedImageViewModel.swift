@@ -12,7 +12,7 @@ class CachedImageViewModel: ObservableObject {
     @Published
     var isCached = false
     @Published
-    var cachedFilename = ""
+    var cachedFilename = String()
     @Published
     var imageUrl: String
     

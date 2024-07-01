@@ -8,6 +8,11 @@
 import Foundation
 
 struct Review: Identifiable {
-    let id, review, reviewDate, teaName, username, avatar: String
+    let id: String
+    let review: String
+    let reviewDate: String
+    let teaName: String
+    let username: String
+    let avatar: String
     let teaId: Int
 }

@@ -15,7 +15,7 @@ class RealmService {
     
     var teaCatalogue: [TeaCatalogueModel] = []
     var sliderItems: [SliderItemsModel] = []
-    var errorMessage: String = ""
+    var errorMessage = String()
     
     lazy var realm: Realm? = {
         do {
