@@ -10,8 +10,6 @@ import SwiftUI
 struct AccountView: View {
     @ObservedObject
     var viewModel = AuthViewModel()
-    @ObservedObject
-    var firestore = FirestoreService()
     @State
     private var showingEditProfileAlert = false
     @State
@@ -80,8 +78,8 @@ struct AccountView: View {
                             .textInputAutocapitalization(.never)
                             
                             Button("OK") {
-                                viewModel.currentUsername = newUsername
-                                viewModel.firestore.writeFirestore(username: viewModel.currentUsername)
+                                viewModel.updateUsername(newUsername: newUsername)
+                                showingEditProfileAlert = false
                             }
                             Button("Cancel", role: .cancel) { }
                         } message: {

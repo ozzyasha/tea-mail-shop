@@ -18,6 +18,10 @@ struct TeaViewListCell: View {
     @ObservedObject
     var reviewsViewModel = ReviewsViewModel()
     
+    var isCartButtonEnabled: Bool {
+        tea.quantity != "Нет в наличии"
+    }
+    
     var body: some View {
         
         HStack {
@@ -47,13 +51,16 @@ struct TeaViewListCell: View {
                     Spacer()
                     VStack(alignment: .trailing) {
                         Button(action: {
-                            cartViewModel.addToCart(tea: tea)
+                            if isCartButtonEnabled {
+                                cartViewModel.addToCart(tea: tea)
+                            }
                         }) {
                             Image(systemName: cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? "cart.fill" : "cart")
-                                .foregroundColor(.accent)
+                                .foregroundColor(isCartButtonEnabled ? .accent : .gray)
                                 .font(.system(size: 30))
                         }
                         .frame(width: 40, height: 40, alignment: .bottomTrailing)
+                        .disabled(!isCartButtonEnabled)
                     }
                 }
                 .padding(.bottom, 10)

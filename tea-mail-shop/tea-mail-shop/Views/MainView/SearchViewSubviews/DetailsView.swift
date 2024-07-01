@@ -18,6 +18,9 @@ struct DetailsView: View {
     var reviewsViewModel: ReviewsViewModel
     @State
     private var reviewsDetent = PresentationDetent.medium
+    var isCartButtonEnabled: Bool {
+        tea.quantity != "Нет в наличии"
+    }
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -90,24 +93,28 @@ struct DetailsView: View {
                         .shadow(radius: 3, x: 3, y: 3)
                         Spacer()
                         Button(action: {
-                            cartViewModel.addToCart(tea: tea)
+                            if isCartButtonEnabled {
+                                cartViewModel.addToCart(tea: tea)
+                            }
                         }) {
                             HStack {
                                 Image(systemName: cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? "cart.fill" : "cart")
                                     .foregroundColor(cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? .accent : .white)
                                     .font(.system(size: 20))
                                 Spacer()
-                                Text(cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? "In Cart" : "Add to Cart")
+                                let cartText = isCartButtonEnabled ? "Add to Cart" : "Not available"
+                                Text(cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? "In Cart" : cartText)
                                     .foregroundColor(cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? .accent : .white)
                                     .font(.system(size: 15))
                             }
                             .padding(EdgeInsets(top: 10, leading: 25, bottom: 10, trailing: 25))
                             .frame(maxWidth: 150)
                         }
-                        .background(cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? .white : .accent)
+                        .background(cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? .white : isCartButtonEnabled ? .accent : .gray)
                         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
                         .padding()
                         .shadow(radius: 3, x: 3, y: 3)
+                        .disabled(isCartButtonEnabled)
                     }
                     Text(tea.teaDescription)
                         .lineLimit(100)

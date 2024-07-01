@@ -68,6 +68,8 @@
 		7A1F452A2C147466008F4B53 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F45292C147466008F4B53 /* GoogleSignIn */; };
 		7A1F452C2C147466008F4B53 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1F452B2C147466008F4B53 /* GoogleSignInSwift */; };
 		7A1F452E2C1478B1008F4B53 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F452D2C1478B1008F4B53 /* SignUpView.swift */; };
+		7A4DFB552C328B16005EC28E /* ReviewsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4DFB542C328B16005EC28E /* ReviewsViewModelTests.swift */; };
+		7A4DFB592C32B970005EC28E /* SearchFieldViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4DFB582C32B970005EC28E /* SearchFieldViewModelTests.swift */; };
 		7A6796BD2C15D8350011ED2D /* TeamailUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796BC2C15D8350011ED2D /* TeamailUser.swift */; };
 		7A6796BF2C161A690011ED2D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796BE2C161A690011ED2D /* MainView.swift */; };
 		7A6796C12C161BEE0011ED2D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6796C02C161BEE0011ED2D /* AccountView.swift */; };
@@ -88,6 +90,7 @@
 		7AA73A8A2C2CD94A0067BD8F /* OrdersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A892C2CD94A0067BD8F /* OrdersViewCell.swift */; };
 		7AA73A8C2C2CD9B00067BD8F /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A8B2C2CD9B00067BD8F /* OrdersViewModel.swift */; };
 		7AA73A8E2C2E08DF0067BD8F /* OrderedTea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */; };
+		7AABD9382C3218B200DED319 /* CartViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AABD9372C3218B200DED319 /* CartViewModelTests.swift */; };
 		7ADACFDB2C3002D900467B60 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADACFDA2C3002D900467B60 /* DetailsView.swift */; };
 		7AE01B202C1C4CB200A74D28 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */; };
 		7AE01B252C1C865700A74D28 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01B242C1C865700A74D28 /* AvatarView.swift */; };
@@ -110,6 +113,16 @@
 		7AE7BEB52C207104000655FA /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE7BEB42C207104000655FA /* SearchFieldView.swift */; };
 		7AE7BEB92C22B183000655FA /* SearchFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE7BEB82C22B183000655FA /* SearchFieldViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7AABD92E2C31F37E00DED319 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A01C5322C10802E00642DD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A01C5392C10802E00642DD7;
+			remoteInfo = "tea-mail-shop";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7A1037952C25E96700E4BF5D /* Embed Frameworks */ = {
@@ -157,6 +170,8 @@
 		7A1F45242C12463D008F4B53 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		7A1F45262C14735C008F4B53 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthViewModel.swift; path = ../Services/AuthViewModel.swift; sourceTree = "<group>"; };
 		7A1F452D2C1478B1008F4B53 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		7A4DFB542C328B16005EC28E /* ReviewsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewModelTests.swift; sourceTree = "<group>"; };
+		7A4DFB582C32B970005EC28E /* SearchFieldViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldViewModelTests.swift; sourceTree = "<group>"; };
 		7A6796BC2C15D8350011ED2D /* TeamailUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamailUser.swift; sourceTree = "<group>"; };
 		7A6796BE2C161A690011ED2D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7A6796C02C161BEE0011ED2D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
@@ -177,6 +192,8 @@
 		7AA73A892C2CD94A0067BD8F /* OrdersViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewCell.swift; sourceTree = "<group>"; };
 		7AA73A8B2C2CD9B00067BD8F /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
 		7AA73A8D2C2E08DF0067BD8F /* OrderedTea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedTea.swift; sourceTree = "<group>"; };
+		7AABD92A2C31F37E00DED319 /* tea-mail-shopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tea-mail-shopTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AABD9372C3218B200DED319 /* CartViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModelTests.swift; sourceTree = "<group>"; };
 		7ADACFDA2C3002D900467B60 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		7AE01B1F2C1C4CB200A74D28 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		7AE01B242C1C865700A74D28 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
@@ -239,6 +256,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7AABD9272C31F37E00DED319 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -246,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				7A01C53C2C10802E00642DD7 /* tea-mail-shop */,
+				7AABD92B2C31F37E00DED319 /* tea-mail-shopTests */,
 				7A01C53B2C10802E00642DD7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -254,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				7A01C53A2C10802E00642DD7 /* tea-mail-shop.app */,
+				7AABD92A2C31F37E00DED319 /* tea-mail-shopTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -429,6 +455,16 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		7AABD92B2C31F37E00DED319 /* tea-mail-shopTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A4DFB542C328B16005EC28E /* ReviewsViewModelTests.swift */,
+				7AABD9372C3218B200DED319 /* CartViewModelTests.swift */,
+				7A4DFB582C32B970005EC28E /* SearchFieldViewModelTests.swift */,
+			);
+			path = "tea-mail-shopTests";
+			sourceTree = "<group>";
+		};
 		7AE01B212C1C4D4300A74D28 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +564,24 @@
 			productReference = 7A01C53A2C10802E00642DD7 /* tea-mail-shop.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7AABD9292C31F37E00DED319 /* tea-mail-shopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AABD9322C31F37F00DED319 /* Build configuration list for PBXNativeTarget "tea-mail-shopTests" */;
+			buildPhases = (
+				7AABD9262C31F37E00DED319 /* Sources */,
+				7AABD9272C31F37E00DED319 /* Frameworks */,
+				7AABD9282C31F37E00DED319 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AABD92F2C31F37E00DED319 /* PBXTargetDependency */,
+			);
+			name = "tea-mail-shopTests";
+			productName = "tea-mail-shopTests";
+			productReference = 7AABD92A2C31F37E00DED319 /* tea-mail-shopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -540,6 +594,10 @@
 				TargetAttributes = {
 					7A01C5392C10802E00642DD7 = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					7AABD9292C31F37E00DED319 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 7A01C5392C10802E00642DD7;
 					};
 				};
 			};
@@ -563,6 +621,7 @@
 			projectRoot = "";
 			targets = (
 				7A01C5392C10802E00642DD7 /* tea-mail-shop */,
+				7AABD9292C31F37E00DED319 /* tea-mail-shopTests */,
 			);
 		};
 /* End PBXProject section */
@@ -575,6 +634,13 @@
 				7A01C5452C10803000642DD7 /* Preview Assets.xcassets in Resources */,
 				7A01C5422C10803000642DD7 /* Assets.xcassets in Resources */,
 				7A6796CD2C170E010011ED2D /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AABD9282C31F37E00DED319 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,7 +748,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7AABD9262C31F37E00DED319 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AABD9382C3218B200DED319 /* CartViewModelTests.swift in Sources */,
+				7A4DFB592C32B970005EC28E /* SearchFieldViewModelTests.swift in Sources */,
+				7A4DFB552C328B16005EC28E /* ReviewsViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7AABD92F2C31F37E00DED319 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A01C5392C10802E00642DD7 /* tea-mail-shop */;
+			targetProxy = 7AABD92E2C31F37E00DED319 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7A01C5462C10803000642DD7 /* Debug */ = {
@@ -867,6 +951,43 @@
 			};
 			name = Release;
 		};
+		7AABD9302C31F37F00DED319 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BLSN95DCGL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.tea-mail-shopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tea-mail-shop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/tea-mail-shop";
+			};
+			name = Debug;
+		};
+		7AABD9312C31F37F00DED319 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BLSN95DCGL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.tea-mail-shopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tea-mail-shop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/tea-mail-shop";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -884,6 +1005,15 @@
 			buildConfigurations = (
 				7A01C5492C10803000642DD7 /* Debug */,
 				7A01C54A2C10803000642DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AABD9322C31F37F00DED319 /* Build configuration list for PBXNativeTarget "tea-mail-shopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AABD9302C31F37F00DED319 /* Debug */,
+				7AABD9312C31F37F00DED319 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

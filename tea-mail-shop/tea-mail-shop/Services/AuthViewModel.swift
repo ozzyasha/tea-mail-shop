@@ -38,9 +38,8 @@ class AuthViewModel: ObservableObject {
         }
         
         firestore.$teamailUser.sink { [weak self] user in
-            if let user = user {
-                self?.currentUsername = user.username
-            }
+            guard let user = user else { return }
+            self?.currentUsername = user.username
         }.store(in: &cancellables)
     }
     
@@ -108,6 +107,11 @@ class AuthViewModel: ObservableObject {
     
     func getCurrentUser() -> User? {
         return Auth.auth().currentUser
+    }
+    
+    func updateUsername(newUsername: String) {
+        currentUsername = newUsername
+        firestore.writeFirestore(username: currentUsername)
     }
     
     func getCurrentUsername() -> String {
