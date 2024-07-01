@@ -75,7 +75,7 @@ struct DetailsView: View {
                                 Spacer()
                                 Text("Rate the tea")
                                     .foregroundColor(.accent)
-                                    .font(.system(size: 15))
+                                    .font(.system(size: 14))
                             }
                             .padding(EdgeInsets(top: 10, leading: 25, bottom: 10, trailing: 25))
                             .frame(maxWidth: 150)
@@ -102,10 +102,10 @@ struct DetailsView: View {
                                     .foregroundColor(cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? .accent : .white)
                                     .font(.system(size: 20))
                                 Spacer()
-                                let cartText = isCartButtonEnabled ? "Add to Cart" : "Not available"
-                                Text(cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? "In Cart" : cartText)
+                                let cartText = isCartButtonEnabled ? String(localized: "Add to Cart") : String(localized: "Not available")
+                                Text(cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? String(localized: "In Cart") : cartText)
                                     .foregroundColor(cartViewModel.isAddedToCart["\(tea.id)"] ?? false ? .accent : .white)
-                                    .font(.system(size: 15))
+                                    .font(.system(size: 14))
                             }
                             .padding(EdgeInsets(top: 10, leading: 25, bottom: 10, trailing: 25))
                             .frame(maxWidth: 150)
@@ -114,7 +114,7 @@ struct DetailsView: View {
                         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
                         .padding()
                         .shadow(radius: 3, x: 3, y: 3)
-                        .disabled(isCartButtonEnabled)
+                        .disabled(!isCartButtonEnabled)
                     }
                     Text(tea.teaDescription)
                         .lineLimit(100)
