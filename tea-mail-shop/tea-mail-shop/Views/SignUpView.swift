@@ -12,13 +12,13 @@ struct SignUpView: View {
     @Binding
     var isActive: Bool
     @State
-    private var username: String = ""
+    private var username = String()
     @State
-    private var email: String = ""
+    private var email = String()
     @State
-    private var password: String = ""
+    private var password = String()
     @State
-    private var errorText: String = ""
+    private var errorText = String()
     @State
     private var isUsernameTextFieldValid = true
     @State

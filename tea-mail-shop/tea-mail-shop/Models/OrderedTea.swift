@@ -9,5 +9,7 @@ import Foundation
 
 struct OrderedTea: Identifiable {
     let id: Int
-    let name, price, quantity: String
+    let name: String
+    let price: String
+    let quantity: String
 }

@@ -22,7 +22,7 @@ class AuthViewModel: ObservableObject {
     @Published 
     var errorMessage: String?
     @Published 
-    var currentUsername: String = ""
+    var currentUsername = String()
     @ObservedObject
     var firestore = FirestoreService()
     

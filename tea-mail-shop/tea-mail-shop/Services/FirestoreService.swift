@@ -18,8 +18,6 @@ class FirestoreService: ObservableObject {
         fetchUser()
     }
     
-    private let ordersPath: String = "orders"
-    
     private let store = Firestore.firestore()
     private var errorMessage = ""
     
