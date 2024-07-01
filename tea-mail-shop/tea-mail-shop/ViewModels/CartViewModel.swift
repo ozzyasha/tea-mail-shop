@@ -57,8 +57,10 @@ class CartViewModel: ObservableObject {
         } else if tea.quantity.contains(" г.") {
             let teaQuantity = Int(tea.quantity.trimmingCharacters(in: CharacterSet(charactersIn: " г."))) ?? 0
             return "\(teaCart.filter { $0.id == tea.id }.count * teaQuantity) г."
+        } else if tea.quantity.contains("Нет в наличии") {
+            return "Нет в наличии"
         } else {
-            return "0 шт."
+            return "Количество неизвестно"
         }
     }
 }
