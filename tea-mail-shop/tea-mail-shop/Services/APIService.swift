@@ -16,24 +16,24 @@ class APIService {
     func fetchData<T: Decodable>(endpoint: Endpoint, responseType: T.Type, completionHandler: ((T) -> ())? = nil, errorHandler: ((APIError) -> ())? = nil) {
         DispatchQueue.global().async {
             guard let url = URL(string: endpoint.rawValue) else {
-                errorHandler?(APIError.urlError("URL error"))
+                errorHandler?(APIError.urlError(String(localized: "URL error")))
                 return
             }
             
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 
                 guard error == nil else {
-                    errorHandler?(APIError.requestError(error?.localizedDescription ?? "Request error"))
+                    errorHandler?(APIError.requestError(error?.localizedDescription ?? String(localized: "Request error")))
                     return
                 }
                 
                 guard let data = data else {
-                    errorHandler?(APIError.responseError(error?.localizedDescription ?? "Response error"))
+                    errorHandler?(APIError.responseError(error?.localizedDescription ?? String(localized: "Response error")))
                     return
                 }
                 
                 guard let decodedResponse = try? JSONDecoder().decode(responseType, from: data) else {
-                    errorHandler?(APIError.decodeError(error?.localizedDescription ?? "Decode error"))
+                    errorHandler?(APIError.decodeError(error?.localizedDescription ?? String(localized: "Decode error")))
                     return
                 }
                 

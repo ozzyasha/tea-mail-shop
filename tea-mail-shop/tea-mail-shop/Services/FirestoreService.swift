@@ -30,9 +30,9 @@ class FirestoreService: ObservableObject {
         let usersRef = store.collection(UsersFirebaseFields.path.rawValue)
         
         usersRef.document("\(Auth.auth().currentUser?.uid ?? "undefined")").setData([
-            UsersFirebaseFields.uid.rawValue: Auth.auth().currentUser?.uid ?? "can't receive an id",
+            UsersFirebaseFields.uid.rawValue: Auth.auth().currentUser?.uid ?? String(localized: "can't receive an id"),
             UsersFirebaseFields.username.rawValue: username,
-            UsersFirebaseFields.email.rawValue: Auth.auth().currentUser?.email ?? "can't receive an email"
+            UsersFirebaseFields.email.rawValue: Auth.auth().currentUser?.email ?? String(localized: "can't receive an email")
         ]) { err in
             if let err = err {
                 self.errorMessage = "\(err)"
@@ -48,7 +48,7 @@ class FirestoreService: ObservableObject {
         
         counterRef.getDocument { (snapshot, error) in
             if let error = error {
-                self.errorMessage = "Failed to get order id: \(error)"
+                self.errorMessage = String(localized: "Failed to get order id: ") + "\(error)"
                 return
             }
             
@@ -89,7 +89,7 @@ class FirestoreService: ObservableObject {
                     "value": counterValue + 1
                 ]) { error in
                     if let error = error {
-                        self.errorMessage = "Failed to update order value: \(error)"
+                        self.errorMessage = String(localized: "Failed to update order value: ") + "\(error)"
                         return
                     }
                 }
@@ -104,12 +104,12 @@ class FirestoreService: ObservableObject {
         
         usersRef.document(uid).getDocument { snapshot, error in
             if let error = error {
-                self.errorMessage = "Failed to fetch current user: \(error)"
+                self.errorMessage = String(localized: "Failed to fetch current user: ") + "\(error)"
                 return
             }
             
             guard let data = snapshot?.data() else {
-                self.errorMessage = "No data found"
+                    self.errorMessage = String(localized: "No data found")
                 return
             }
             
@@ -146,12 +146,12 @@ class FirestoreService: ObservableObject {
         }
         store.collection(UsersFirebaseFields.path.rawValue).document(uid).getDocument { snapshot, error in
             if let error = error {
-                self.errorMessage = "Failed to fetch current user: \(error)"
+                self.errorMessage = String(localized: "Failed to fetch current user:") + "\(error)"
                 return
             }
             
             guard let data = snapshot?.data() else {
-                self.errorMessage = "No data found"
+                self.errorMessage = String(localized: "No data found")
                 return
             }
             
@@ -169,13 +169,13 @@ class FirestoreService: ObservableObject {
         }
         store.collection(UsersFirebaseFields.path.rawValue).document(uid).getDocument { snapshot, error in
             if let error = error {
-                self.errorMessage = "Failed to fetch current user: \(error)"
+                self.errorMessage = String(localized: "Failed to fetch current user:") + "\(error)"
                 return
             }
             
             guard let data = snapshot?.data() else {
                 completion(nil)
-                self.errorMessage = "No data found"
+                self.errorMessage = String(localized: "No data found")
                 return
             }
             
@@ -205,7 +205,7 @@ class FirestoreService: ObservableObject {
                 
                 for orderDocument in snapshot.documents {
                     guard let orderId = orderDocument.get(OrdersFirebaseFields.id.rawValue) as? Int else {
-                        errorHandler("Warning: Missing data for order \(orderDocument.documentID)")
+                        errorHandler(String(localized: "Warning: Missing data for order ") + "\(orderDocument.documentID)")
                         continue
                     }
                     
@@ -216,7 +216,7 @@ class FirestoreService: ObservableObject {
                               let teaName = document.get(TeasFirebaseFields.name.rawValue) as? String,
                               let teaPrice = document.get(TeasFirebaseFields.price.rawValue) as? String,
                               let teaQuantity = document.get(TeasFirebaseFields.quantity.rawValue) as? String else {
-                            errorHandler("Warning: Missing data for ordered tea item \(document.documentID)")
+                            errorHandler(String(localized: "Warning: Missing data for ordered tea item ") + "\(document.documentID)")
                             return nil
                         }
                         return OrderedTea(id: teaId, name: teaName, price: teaPrice, quantity: teaQuantity)
@@ -228,7 +228,7 @@ class FirestoreService: ObservableObject {
                 completion(orders.sorted(by: { $0.id > $1.id }))
                 
             } catch {
-                errorHandler("Failed to fetch orders: \(error)")
+                errorHandler(String(localized:"Failed to fetch orders: ") + "\(error)")
                 completion([])
             }
         }
@@ -256,7 +256,7 @@ class FirestoreService: ObservableObject {
                           let username = reviewDocument.get(ReviewsFirebaseFields.username.rawValue) as? String,
                           let avatar = reviewDocument.get(ReviewsFirebaseFields.avatar.rawValue) as? String,
                           let teaId = reviewDocument.get(ReviewsFirebaseFields.teaId.rawValue) as? Int else {
-                        errorHandler("Warning: Missing data for review \(reviewDocument.documentID)")
+                        errorHandler(String(localized: "Warning: Missing data for review ") + "\(reviewDocument.documentID)")
                         continue
                     }
                     
@@ -265,7 +265,7 @@ class FirestoreService: ObservableObject {
                 completion(reviews)
                 
             } catch {
-                errorHandler("Failed to fetch orders: \(error)")
+                errorHandler(String(localized: "Failed to fetch orders: ") + "\(error)")
                 completion([])
             }
         }
@@ -292,7 +292,7 @@ class FirestoreService: ObservableObject {
                               let username = reviewDocument.get(ReviewsFirebaseFields.username.rawValue) as? String,
                               let avatar = reviewDocument.get(ReviewsFirebaseFields.avatar.rawValue) as? String,
                               let teaId = reviewDocument.get(ReviewsFirebaseFields.teaId.rawValue) as? Int else {
-                            errorHandler("Warning: Missing data for review \(reviewDocument.documentID)")
+                            errorHandler(String(localized: "Warning: Missing data for review ") + "\(reviewDocument.documentID)")
                             continue
                         }
                         
@@ -303,7 +303,7 @@ class FirestoreService: ObservableObject {
                 completion(reviews)
                 
             } catch {
-                errorHandler("Failed to fetch orders: \(error)")
+                errorHandler(String(localized: "Failed to fetch orders: ") + "\(error)")
                 completion([])
             }
         }
