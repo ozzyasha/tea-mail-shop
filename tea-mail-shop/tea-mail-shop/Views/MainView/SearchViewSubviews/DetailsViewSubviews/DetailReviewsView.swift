@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailReviewsView: View {
-    @StateObject
+    @ObservedObject
     var detailReviewsViewModel = DetailReviewsViewModel()
     @State
     private var isFirestoreErrorExists = false
@@ -29,10 +29,12 @@ struct DetailReviewsView: View {
                     Text("No reviews yet")
                         .foregroundStyle(.black)
                 }
-                Divider()
             }
         }
         .padding()
+        .onAppear {
+            detailReviewsViewModel.readAllReviews()
+        }
         .alert("Error: \(detailReviewsViewModel.firestoreError)", isPresented: $isFirestoreErrorExists) {
             Button("OK", role: .cancel) { }
         }

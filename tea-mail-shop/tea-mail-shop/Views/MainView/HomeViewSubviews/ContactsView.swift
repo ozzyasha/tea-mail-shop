@@ -10,6 +10,10 @@ import MapKit
 
 struct ContactsView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject
+    private var tabViewModel: TabViewModel
+    
     let phoneNumbers = [
         "clientsPhoneNumber":"+375298543460",
         "warehousePhoneNumber":"+375298495051",
@@ -130,9 +134,16 @@ struct ContactsView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .background(.additional)
+        .onChange(of: tabViewModel.selectedTab) {
+            if tabViewModel.selectedTab == .home {
+                self.presentationMode.wrappedValue.dismiss()
+            }
+        }
     }
+        
 }
 
 #Preview {
     ContactsView()
+        .environmentObject(TabViewModel())
 }

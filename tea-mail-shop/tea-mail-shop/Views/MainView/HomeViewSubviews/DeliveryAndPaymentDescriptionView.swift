@@ -9,6 +9,10 @@ import SwiftUI
 
 struct DeliveryAndPaymentDescriptionView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject
+    private var tabViewModel: TabViewModel
+    
     @StateObject
     private var deliveryViewModel = DeliveryViewModel()
     @StateObject
@@ -71,9 +75,15 @@ struct DeliveryAndPaymentDescriptionView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .background(.additional)
+        .onChange(of: tabViewModel.selectedTab) {
+            if tabViewModel.selectedTab == .home {
+                self.presentationMode.wrappedValue.dismiss()
+            }
+        }
     }
 }
 
 #Preview {
     DeliveryAndPaymentDescriptionView()
+        .environmentObject(TabViewModel())
 }
