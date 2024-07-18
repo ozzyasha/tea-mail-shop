@@ -665,6 +665,9 @@
         }
       }
     },
+    "Failed to fetch reviews: " : {
+
+    },
     "Failed to get order id: " : {
       "localizations" : {
         "en" : {

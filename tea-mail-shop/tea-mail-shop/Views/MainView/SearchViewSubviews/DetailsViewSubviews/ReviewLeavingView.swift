@@ -26,6 +26,7 @@ struct ReviewLeavingView: View {
                 .padding(.vertical)
             TextEditor(text: $reviewsViewModel.reviewText)
                 .foregroundStyle(.black)
+                .environment(\.colorScheme, .light)
                 .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
                 .contentMargins(5)
                 .padding(.vertical)

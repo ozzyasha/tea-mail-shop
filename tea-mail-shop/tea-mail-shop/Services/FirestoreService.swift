@@ -260,10 +260,21 @@ class FirestoreService: ObservableObject {
                     
                     reviews.append(Review(id: reviewId, review: review, reviewDate: reviewDate, teaName: teaName, username: username, avatar: avatar, teaId: teaId))
                 }
-                completion(reviews)
+                let dateFormatter = DateFormatter()
+                dateFormatter.locale = Locale(identifier: "ru_RU")
+                dateFormatter.dateFormat = "dd MMMM yyyy HH:mm"
+                
+                let sortedReviews = reviews.sorted {
+                    guard let date1 = dateFormatter.date(from: $0.reviewDate) else { return false }
+                    print(date1)
+                    guard let date2 = dateFormatter.date(from: $1.reviewDate) else { return true }
+                    print(date2)
+                    return date1 > date2
+                }
+                completion(sortedReviews)
                 
             } catch {
-                errorHandler(String(localized: "Failed to fetch orders: ") + "\(error)")
+                errorHandler(String(localized: "Failed to fetch reviews: ") + "\(error)")
                 completion([])
             }
         }
@@ -298,10 +309,21 @@ class FirestoreService: ObservableObject {
                     }
                     
                 }
-                completion(reviews)
+                let dateFormatter = DateFormatter()
+                dateFormatter.locale = Locale(identifier: "ru_RU")
+                dateFormatter.dateFormat = "dd MMMM yyyy HH:mm"
+                
+                let sortedReviews = reviews.sorted {
+                    guard let date1 = dateFormatter.date(from: $0.reviewDate) else { return false }
+                    print(date1)
+                    guard let date2 = dateFormatter.date(from: $1.reviewDate) else { return true }
+                    print(date2)
+                    return date1 > date2
+                }
+                completion(sortedReviews)
                 
             } catch {
-                errorHandler(String(localized: "Failed to fetch orders: ") + "\(error)")
+                errorHandler(String(localized: "Failed to fetch reviews: ") + "\(error)")
                 completion([])
             }
         }

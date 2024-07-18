@@ -12,6 +12,8 @@
 		7A01C5452C10803000642DD7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A01C5442C10803000642DD7 /* Preview Assets.xcassets */; };
 		7A01C54C2C10820000642DD7 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01C54B2C10820000642DD7 /* SplashView.swift */; };
 		7A01C54E2C10860400642DD7 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01C54D2C10860400642DD7 /* ViewCoordinator.swift */; };
+		7A0EE8A22C47C01B00FDF299 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A0EE8A12C47C01B00FDF299 /* RealmSwift */; };
+		7A0EE8A32C47C03B00FDF299 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 7AE01B4F2C1DFF1700A74D28 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7A1037862C24474200E4BF5D /* SliderItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037852C24474200E4BF5D /* SliderItemsModel.swift */; };
 		7A1037882C2447F300E4BF5D /* SliderItemsRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037872C2447F300E4BF5D /* SliderItemsRealmModel.swift */; };
 		7A10378A2C244A3700E4BF5D /* SliderItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1037892C244A3700E4BF5D /* SliderItemsViewModel.swift */; };
@@ -132,6 +134,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7A0EE8A32C47C03B00FDF299 /* RealmSwift in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A0EE8A22C47C01B00FDF299 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,8 +525,8 @@
 				7A01C5362C10802E00642DD7 /* Sources */,
 				7A01C5372C10802E00642DD7 /* Frameworks */,
 				7A01C5382C10802E00642DD7 /* Resources */,
-				7AE7BEBA2C22EDA7000655FA /* Crashlytics */,
 				7A1037952C25E96700E4BF5D /* Embed Frameworks */,
+				7AE7BEBA2C22EDA7000655FA /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -581,6 +585,9 @@
 				7AABD92F2C31F37E00DED319 /* PBXTargetDependency */,
 			);
 			name = "tea-mail-shopTests";
+			packageProductDependencies = (
+				7A0EE8A12C47C01B00FDF299 /* RealmSwift */,
+			);
 			productName = "tea-mail-shopTests";
 			productReference = 7AABD92A2C31F37E00DED319 /* tea-mail-shopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1061,6 +1068,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7A0EE8A12C47C01B00FDF299 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AE01B4E2C1DFF1700A74D28 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		7A1F44E92C123EFA008F4B53 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7A1F44E82C123EFA008F4B53 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -16,9 +16,9 @@ class DetailReviewsViewModel: ObservableObject {
     var firestoreError = ""
     
     init() {
-        DispatchQueue.main.async {
-            self.readAllReviews()
-        }
+//        DispatchQueue.main.async {
+            readAllReviews()
+//        }
     }
     
     func readAllReviews() {
@@ -27,7 +27,9 @@ class DetailReviewsViewModel: ObservableObject {
                 self.reviewsCatalogue = reviews
             }
         } errorHandler: { error in
-            self.firestoreError = error
+            DispatchQueue.main.async {
+                self.firestoreError = error
+            }
         }
     }
 }

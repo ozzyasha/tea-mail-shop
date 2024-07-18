@@ -12,6 +12,9 @@ struct ReviewsView: View {
     var reviewsViewModel = ReviewsViewModel()
     @State
     private var isFirestoreErrorExists = false
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject
+    private var tabViewModel: TabViewModel
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -41,9 +44,15 @@ struct ReviewsView: View {
         .alert("Error: \(reviewsViewModel.firestoreError)", isPresented: $isFirestoreErrorExists) {
             Button("OK", role: .cancel) { }
         }
+        .onChange(of: tabViewModel.selectedTab) {
+            if tabViewModel.selectedTab == .account {
+                self.presentationMode.wrappedValue.dismiss()
+            }
+        }
     }
 }
 
 #Preview {
     ReviewsView()
+        .environmentObject(TabViewModel())
 }
